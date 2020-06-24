@@ -1,4 +1,21 @@
-/* https://github.com/twbs/bootstrap/issues/1768#issuecomment-46519033 */
+.col-lg-3.menu {
+  position: fixed;
+  overflow: auto;
+  height: 100%;
+  width: 400px;
+  max-width: 400px;
+}
+
+.col-lg-9.conteudo {
+  margin-left: 400px;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  z-index: 50;
+  background: #fff;
+}
+
 h1[id]:before,
 h2[id]:before,
 h3[id]:before,
@@ -195,7 +212,7 @@ div .authors {
 }
 
 .row.body {
-  padding-top: 3rem;
+  padding-top: 5px;
 }
 
 .no-margin .row {
