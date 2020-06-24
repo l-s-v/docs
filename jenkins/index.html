@@ -1,0 +1,2419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+        Jenkins User Documentation
+    </title>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+    <!-- Favicons -->
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <!-- Open Graph data -->
+    <meta content="Jenkins User Documentation" property="og:title" />
+    <link href="assets/bower/bootstrap/css/bootstrap.min.css" media="screen" rel="stylesheet" />
+    <link href="css/font-icons.css" media="screen" rel="stylesheet" />
+    <link href="css/jenkins.css" media="screen" rel="stylesheet" />
+    <link href='css/font-awesome.min.css' media='screen' rel='stylesheet'>    
+</head>
+
+<body>
+    <div class="container">
+        <div class="row body">            
+            <div class="col-lg-3 menu">
+                <div class="sidebar-nav tour">
+                    <p>
+                        <a href="#doc" class="active">> User Documentation Home</a>
+                    </p>
+                    <h5>
+                        User Handbook
+                    </h5>
+                    <ul>
+                        <li>
+                            <a href="doc/book/getting-started" class="">User Handbook overview</a>
+                        </li>
+                        <li>
+                            <a href="doc/book/installing" class="">Installing Jenkins</a>
+                        </li>
+                        <li>
+                            <a href="doc/book/using">Using Jenkins</a>
+                            <small>
+                                <ul style="padding-left: 1rem;">
+                                    <li>
+                                        <a href="doc/book/using/using-credentials" class="">Using credentials</a>
+                                    </li>
+                                    <li>
+                                        <a href="doc/book/using/referencing-another-project-by-name"
+                                            class="">Referencing another project by name</a>
+                                    </li>
+                                    <li>
+                                        <a href="doc/book/using/aborting-a-build" class="">Aborting a build</a>
+                                    </li>
+                                    <li>
+                                        <a href="doc/book/using/fingerprints" class="">Fingerprints</a>
+                                    </li>
+                                    <li>
+                                        <a href="doc/book/using/using-local-language" class="">Using local language</a>
+                                    </li>
+                                    <li>
+                                        <a href="doc/book/using/change-time-zone" class="">Change time zone</a>
+                                    </li>
+                                    <li>
+                                        <a href="doc/book/using/remote-access-api" class="">Remote Access API</a>
+                                    </li>
+                                </ul>
+                            </small>
+                        </li>
+                        <li>
+                            <a href="doc/book/pipeline">Pipeline</a>
+                            <small>
+                                <ul style="padding-left: 1rem;">
+                                    <li>
+                                        <a href="doc/book/pipeline/getting-started" class="">Getting started with
+                                            Pipeline</a>
+                                    </li>
+                                    <li>
+                                        <a href="doc/book/pipeline/jenkinsfile" class="">Using a Jenkinsfile</a>
+                                    </li>
+                                    <li>
+                                        <a href="doc/book/pipeline/running-pipelines" class="">Running Pipelines</a>
+                                    </li>
+                                    <li>
+                                        <a href="doc/book/pipeline/multibranch" class="">Branches and Pull Requests</a>
+                                    </li>
+                                    <li>
+                                        <a href="doc/book/pipeline/docker" class="">Using Docker with Pipeline</a>
+                                    </li>
+                                    <li>
+                                        <a href="doc/book/pipeline/shared-libraries" class="">Extending with Shared
+                                            Libraries</a>
+                                    </li>
+                                    <li>
+                                        <a href="doc/book/pipeline/development" class="">Pipeline Development Tools</a>
+                                    </li>
+                                    <li>
+                                        <a href="doc/book/pipeline/syntax" class="">Pipeline Syntax</a>
+                                    </li>
+                                    <li>
+                                        <a href="doc/book/pipeline/pipeline-best-practices" class="">Pipeline Best
+                                            Practices</a>
+                                    </li>
+                                    <li>
+                                        <a href="doc/book/pipeline/scaling-pipeline" class="">Scaling Pipelines</a>
+                                    </li>
+                                    <li>
+                                        <a href="doc/book/pipeline/cps-method-mismatches" class="">Pipeline CPS Method
+                                            Mismatches</a>
+                                    </li>
+                                </ul>
+                            </small>
+                        </li>
+                        <li>
+                            <a href="book/blueocean">Blue Ocean</a>
+                            <small>
+                                <ul style="padding-left: 1rem;">
+                                    <li>
+                                        <a href="book/blueocean/getting-started" class="">Getting started with Blue
+                                            Ocean</a>
+                                    </li>
+                                    <li>
+                                        <a href="book/blueocean/creating-pipelines" class="">Creating a Pipeline</a>
+                                    </li>
+                                    <li>
+                                        <a href="book/blueocean/dashboard" class="">Dashboard</a>
+                                    </li>
+                                    <li>
+                                        <a href="book/blueocean/activity" class="">Activity View</a>
+                                    </li>
+                                    <li>
+                                        <a href="book/blueocean/pipeline-run-details" class="">Pipeline Run Details
+                                            View</a>
+                                    </li>
+                                    <li>
+                                        <a href="book/blueocean/pipeline-editor" class="">Pipeline Editor</a>
+                                    </li>
+                                </ul>
+                            </small>
+                        </li>
+                        <li>
+                            <a href="doc/book/managing">Managing Jenkins</a>
+                            <small>
+                                <ul style="padding-left: 1rem;">
+                                    <li>
+                                        <a href="doc/book/managing/system-configuration" class="">Configuring the
+                                            System</a>
+                                    </li>
+                                    <li>
+                                        <a href="doc/book/managing/system-properties" class="">Jenkins Features
+                                            Controlled with System Properties</a>
+                                    </li>
+                                    <li>
+                                        <a href="doc/book/managing/change-system-timezone" class="">Change System Time
+                                            Zone</a>
+                                    </li>
+                                    <li>
+                                        <a href="doc/book/managing/security" class="">Managing Security</a>
+                                    </li>
+                                    <li>
+                                        <a href="doc/book/managing/tools" class="">Managing Tools</a>
+                                    </li>
+                                    <li>
+                                        <a href="doc/book/managing/plugins" class="">Managing Plugins</a>
+                                    </li>
+                                    <li>
+                                        <a href="doc/book/managing/cli" class="">Jenkins CLI</a>
+                                    </li>
+                                    <li>
+                                        <a href="doc/book/managing/script-console" class="">Script Console</a>
+                                    </li>
+                                    <li>
+                                        <a href="doc/book/managing/groovy-hook-scripts" class="">Groovy Hook Scripts</a>
+                                    </li>
+                                    <li>
+                                        <a href="doc/book/managing/nodes" class="">Managing Nodes</a>
+                                    </li>
+                                    <li>
+                                        <a href="doc/book/managing/script-approval" class="">In-process Script
+                                            Approval</a>
+                                    </li>
+                                    <li>
+                                        <a href="doc/book/managing/users" class="">Managing Users</a>
+                                    </li>
+                                    <li>
+                                        <a href="doc/book/managing/ui-themes" class="">Themes for user interface</a>
+                                    </li>
+                                </ul>
+                            </small>
+                        </li>
+                        <li>
+                            <a href="doc/book/system-administration">System Administration</a>
+                            <small>
+                                <ul style="padding-left: 1rem;">
+                                    <li>
+                                        <a href="doc/book/system-administration/backing-up"
+                                            class="">Backing-up/Restoring Jenkins</a>
+                                    </li>
+                                    <li>
+                                        <a href="doc/book/system-administration/monitoring" class="">Monitoring
+                                            Jenkins</a>
+                                    </li>
+                                    <li>
+                                        <a href="doc/book/system-administration/security" class="">Securing Jenkins</a>
+                                    </li>
+                                    <li>
+                                        <a href="doc/book/system-administration/with-chef" class="">Managing Jenkins
+                                            with Chef</a>
+                                    </li>
+                                    <li>
+                                        <a href="doc/book/system-administration/with-puppet" class="">Managing Jenkins
+                                            with Puppet</a>
+                                    </li>
+                                    <li>
+                                        <a href="doc/book/system-administration/viewing-logs" class="">Viewing logs</a>
+                                    </li>
+                                    <li>
+                                        <a href="doc/book/system-administration/authenticating-scripted-clients"
+                                            class="">Authenticating scripted clients</a>
+                                    </li>
+                                </ul>
+                            </small>
+                        </li>
+                        <li>
+                            <a href="doc/book/scaling" class="">Scaling Jenkins</a>
+                        </li>
+                        <li>
+                            <a href="doc/book/appendix" class="">Appendix</a>
+                        </li>
+                        <li>
+                            <a href="doc/book/glossary" class="">Glossary</a>
+                        </li>
+                    </ul>
+                    <h5>
+                        Tutorials
+                    </h5>
+                    <ul>
+                        <li>
+                            <a href="doc/pipeline/tour/getting-started" class="">Guided Tour</a>
+                        </li>
+                        <li>
+                            <a href="doc/tutorials#pipeline" class="">Jenkins Pipeline</a>
+                        </li>
+                        <li>
+                            <a href="doc/tutorials#tools" class="">Using Build Tools</a>
+                        </li>
+                    </ul>
+                    <h5>
+                        Resources
+                    </h5>
+                    <ul>
+                        <li>
+                            <a href="doc/book/pipeline/syntax" class="">Pipeline Syntax reference</a>
+                        </li>
+                        <li>
+                            <a href="doc/pipeline/steps" class="">Pipeline Steps reference</a>
+                        </li>
+                        <li>
+                            <a href="doc/upgrade-guide" class="">LTS Upgrade guides</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="icon"><i class="fas fa-arrow-alt-to-left"></i></div>
+            <div class="icon"><i class="fa icon-caution" title="Caution"></i></div>
+            
+            <div class="col-lg-9 conteudo">
+                
+                <div id="doc" class="section"> <h1 id="jenkins-user-documentation"> Jenkins User Documentation <a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="#jenkins-user-documentation" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h1> <div class="paragraph"> <p>Welcome to the Jenkins user documentation - for people wanting to <em>use</em> Jenkins’s existing functionality and plugin features.</p> </div> <div class="paragraph"> <p>If you want to <em>extend</em> the functionality of Jenkins by developing your own Jenkins plugins, please refer to the <a href="../doc/developer/">Extend Jenkins</a> (developer documentation).</p> </div> <div class="sect1"> <h2 id="what-is-jenkins"><a class="anchor" href="#what-is-jenkins"></a>What is Jenkins?<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="#what-is-jenkins" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h2> <div class="sectionbody"> <div class="paragraph"> <p>Jenkins is a self-contained, open source automation server which can be used to automate all sorts of tasks related to building, testing, and delivering or deploying software.</p> </div> <div class="paragraph"> <p>Jenkins can be installed through native system packages, Docker, or even run standalone by any machine with a Java Runtime Environment (JRE) installed.</p> </div> </div> </div> <div class="sect1"> <h2 id="about-this-documentation"><a class="anchor" href="#about-this-documentation"></a>About this documentation<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="#about-this-documentation" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h2> <div class="sectionbody"> <div class="paragraph"> <p>This documentation begins with a <a href="../doc/pipeline/tour/getting-started/">Guided Tour</a> to help you get up and running with Jenkins and introduce you to Jenkins’s main feature, Pipeline.</p> </div> <div class="paragraph"> <p>There are also <a href="../doc/tutorials/">tutorials</a> geared to developers who want to orchestrate and automate building their project in Jenkins using Pipeline and Blue Ocean.</p> </div> <div class="paragraph"> <p>If you’ve never used Jenkins before or have limited Jenkins experience, then the Guided Tour and introductory tutorials are good places to start.</p> </div> <div class="paragraph"> <p>If you are looking for more detailed information about using Jenkins, please refer to the <a href="../doc/book/getting-started/">User Handbook</a>.</p> </div> <div class="sect2"> <h3 id="documentation-scope"><a class="anchor" href="#documentation-scope"></a>Documentation scope<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="#documentation-scope" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h3> <div class="paragraph"> <p>Jenkins is a highly extensible product whose functionality can be extended through the installation of plugins.</p> </div> <div class="paragraph"> <p>There are a vast array of plugins available to Jenkins. However, the documentation covered in the <a href="../doc/pipeline/tour/getting-started/">Guided Tour</a>, <a href="../doc/tutorials/">Tutorials</a>, <a href="..//solutions/">Solution pages</a> and <a href="../doc/book/getting-started/">User Handbook</a> of this documentation are based on a <a href="../doc/book/installing/">Jenkins installation</a> with the <a href="../doc/book/blueocean/getting-started/">Blue Ocean plugins installed</a>, as well as the "suggested plugins", which are specified when running through the <a href="../doc/book/installing/#setup-wizard">Post-installation setup wizard</a>.</p> </div> <hr> <!-- HTML inclusion for chapter and section layouts (i.e. as footers) as well as      for use in AsciiDoc file inclusions. -->  <!-- This feedback form was prepared from a Google Form, based on the techniques in the following documentation sources: https://codepen.io/learningcode/post/customize-a-google-form-for-your-website, https://mrhaki.blogspot.com.au/2014/06/awesome-asciidoc-include-raw-html.html, https://www.freshtechtips.com/2013/05/custom-google-drive-contact-form.html, https://stackoverflow.com/questions/24436165/set-value-of-hidden-input-inside-form -->  <!-- Feedback form functionality in JavaScript - refer to comments in this file      for details on the functionality. --> <script> var feedbackForm = {     formKey : 'e/1FAIpQLSfCEexH09x_-ytEyE7wetizqOvE_-06WkK89dpBLEJcYnOp8w' }; $(document).ready(function() {     window.onload = feedbackForm.start(window.location.href); }); </script> <script src="/js/feedback-form-functionality.js"></script>  <p><a href="#feedback" data-toggle="collapse">Was this page helpful?</a></p>  <div id="feedback" class="collapse">  <p>Please submit your feedback about this page through this <a href="/doc/feedback-form/">quick form</a>.</p>  <p>Alternatively, if you don't wish to complete the quick form, you can simply indicate if you found this page helpful?</p>  <!-- Redirects to custom "thank you" page once form is submitted. --> <script type="text/javascript"> var submitted=false; </script> <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {window.location='/doc/thank-you-for-your-feedback/';}"> </iframe> <form action="https://docs.google.com/forms/d/e/1FAIpQLSfCEexH09x_-ytEyE7wetizqOvE_-06WkK89dpBLEJcYnOp8w/formResponse" method="POST" id="ss-form" target="hidden_iframe" onsubmit="submitted=true;">  <!-- Set the value of the current URL into the form. --> <input type="hidden" name="entry.1246830226" id="current-url" value="https://www.jenkins.io/doc/">  <!-- The answer bit --> <p><input type="radio" name="entry.790002525" id="h1" value="Yes" required=""> <label for="h1">Yes</label>&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" name="entry.790002525" id="h2" value="No"> <label for="h2">No</label></p>  <!-- The CAPTCHA bit -->  <p><label id="ssTestLabel" for="ssTestValue">Type the answer to 10 plus 3 before clicking "Submit" below.</label><br> <input type="text" name="ssTestValue" value="" id="ssTestValue"></p>  <!-- Submit button -->  <p><input class="button" type="submit" value="Submit"></p>  </form>  <p>See existing feedback <a href="https://docs.google.com/spreadsheets/d/1IIdpVs39JDYKg0sLQIv-MNO928qcGApAIfdW5ohfD78" target="_blank">here</a>.</p>  </div> </div> </div> </div> </div>
+                <hr/>
+                <div id="doc_book_getting_started" class="section"> <h1 id="user-handbook-overview"> User Handbook overview <a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="#user-handbook-overview" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h1> <div class="paragraph"> <p>This page provides an overview of the documentation in the Jenkins User Handbook.</p> </div> <div class="paragraph"> <p>If you want to get up and running with Jenkins, see <a href="../installing">Installing Jenkins</a> for procedures on how to install Jenkins on your supported platform of choice.</p> </div> <div class="paragraph"> <p>If you are a typical Jenkins user (of any skill level) who wants to know more about Jenkins usage, see <a href="../using">Using Jenkins</a>. Also refer to the separate <a href="../pipeline">Pipeline</a> and <a href="../blueocean">Blue Ocean</a> chapters for more information about these core Jenkins features.</p> </div> <div class="paragraph"> <p>If you are a Jenkins administrator and want to know more about managing Jenkins nodes and instances, see <a href="../managing">Managing Jenkins</a>.</p> </div> <div class="paragraph"> <p>If you are a system administrator and want to learn how to back-up, restore, maintain as Jenkins servers and nodes, see <a href="../system-administration">Jenkins System Administration</a>.</p> </div> </div>
+                <hr/>
+
+<div id="doc_book_installing" class="section">
+<h1 id="installing-jenkins">
+Installing Jenkins
+<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="#installing-jenkins" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h1>
+<div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#prerequisites">Prerequisites</a></li>
+<li><a href="#installation-platforms">Installation platforms</a>
+<ul class="sectlevel2">
+<li><a href="#docker">Docker</a>
+<ul class="sectlevel3">
+<li><a href="#installing-docker">Installing Docker</a></li>
+<li><a href="#downloading-and-running-jenkins-in-docker">Downloading and running Jenkins in Docker</a>
+<ul class="sectlevel4">
+<li><a href="#on-macos-and-linux">On macOS and Linux</a></li>
+<li><a href="#on-windows">On Windows</a></li>
+</ul>
+</li>
+<li><a href="#accessing-the-jenkins-blue-ocean-docker-container">Accessing the Jenkins/Blue Ocean Docker container</a></li>
+<li><a href="#accessing-the-jenkins-console-log-through-docker-logs">Accessing the Jenkins console log through Docker logs</a></li>
+<li><a href="#accessing-the-jenkins-home-directory">Accessing the Jenkins home directory</a></li>
+</ul>
+</li>
+<li><a href="#war-file">WAR file</a></li>
+<li><a href="#macos">macOS</a></li>
+<li><a href="#linux">Linux</a>
+<ul class="sectlevel3">
+<li><a href="#debianubuntu">Debian/Ubuntu</a>
+<ul class="sectlevel4">
+<li><a href="#long-term-support-release">Long Term Support release</a></li>
+<li><a href="#weekly-release">Weekly release</a></li>
+<li><a href="#installation-of-java">Installation of Java</a></li>
+</ul>
+</li>
+<li><a href="#fedora">Fedora</a>
+<ul class="sectlevel4">
+<li><a href="#long-term-support-release-2">Long Term Support release</a></li>
+<li><a href="#weekly-release-2">Weekly release</a></li>
+<li><a href="#start-jenkins">Start Jenkins</a></li>
+</ul>
+</li>
+<li><a href="#red-hat-centos">Red Hat / CentOS</a>
+<ul class="sectlevel4">
+<li><a href="#long-term-support-release-3">Long Term Support release</a></li>
+<li><a href="#weekly-release-3">Weekly release</a></li>
+<li><a href="#start-jenkins-2">Start Jenkins</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#windows">Windows</a></li>
+<li><a href="#other-operating-systems">Other operating systems</a>
+<ul class="sectlevel3">
+<li><a href="#freebsd">FreeBSD</a>
+<ul class="sectlevel4">
+<li><a href="#long-term-support-release-4">Long Term Support release</a></li>
+<li><a href="#weekly-release-4">Weekly release</a></li>
+<li><a href="#start-jenkins-3">Start Jenkins</a></li>
+<li><a href="#enable-jenkins">Enable Jenkins</a></li>
+</ul>
+</li>
+<li><a href="#openindiana-hipster">OpenIndiana Hipster</a></li>
+<li><a href="#solaris-omnios-smartos-and-other-siblings">Solaris, OmniOS, SmartOS, and other siblings</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#setup-wizard">Post-installation setup wizard</a>
+<ul class="sectlevel2">
+<li><a href="#unlocking-jenkins">Unlocking Jenkins</a></li>
+<li><a href="#customizing-jenkins-with-plugins">Customizing Jenkins with plugins</a></li>
+<li><a href="#creating-the-first-administrator-user">Creating the first administrator user</a></li>
+</ul>
+</li>
+<li><a href="#offline-jenkins-installation">Offline Jenkins Installation</a></li>
+<li><a href="#jenkins-parameters">Jenkins Parameters</a>
+<ul class="sectlevel2">
+<li><a href="#networking-parameters">Networking parameters</a></li>
+<li><a href="#miscellaneous-parameters">Miscellaneous parameters</a></li>
+<li><a href="#jenkins-properties">Jenkins properties</a></li>
+</ul>
+</li>
+<li><a href="#configuring-http">Configuring HTTP</a>
+<ul class="sectlevel2">
+<li><a href="#https-with-an-existing-certificate">HTTPS with an existing certificate</a></li>
+<li><a href="#using-http2">Using HTTP/2</a>
+<ul class="sectlevel3">
+<li><a href="#java-11-java-8u252-and-later">Java 11, Java 8u252, and later</a></li>
+<li><a href="#java-8u242-and-earlier">Java 8u242 and earlier</a></li>
+</ul>
+</li>
+<li><a href="#https-certificates-with-windows">HTTPS certificates with Windows</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>The procedures on this page are for new installations of Jenkins on a
+single/local machine.</p>
+</div>
+<div class="paragraph">
+<p>Jenkins is typically run as a standalone application in its own process with the
+built-in
+<a href="https://stackoverflow.com/questions/7213541/what-is-java-servlet">Java
+servlet</a> container/application server
+(<a href="https://www.eclipse.org/jetty/">Jetty</a>).</p>
+</div>
+<div class="paragraph">
+<p>Jenkins can also be run as a servlet in different Java servlet containers such
+as <a href="https://tomcat.apache.org/">Apache Tomcat</a> or
+<a href="https://javaee.github.io/glassfish/">GlassFish</a>. However, instructions for
+setting up these types of installations are beyond the scope of this page.</p>
+</div>
+<div class="paragraph">
+<p><strong>Note:</strong> Although this page focuses on local installations of Jenkins, this
+content can also be used to help set up Jenkins in production environments.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="prerequisites"><a class="anchor" href="#prerequisites"></a>Prerequisites<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="#prerequisites" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Minimum hardware requirements:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>256 MB of RAM</p>
+</li>
+<li>
+<p>1 GB of drive space (although 10 GB is a recommended minimum if running
+Jenkins as a <a href="#docker">Docker</a> container)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Recommended hardware configuration for a small team:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>1 GB+ of RAM</p>
+</li>
+<li>
+<p>50 GB+ of drive space</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Comprehensive hardware recommendations:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Hardware: see the <a href="/doc/book/hardware-recommendations/#hardware-recommendations">Hardware Recommendations</a> page</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Software requirements:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Java: see the <a href="/doc/administration/requirements/java">Java Requirements</a> page</p>
+</li>
+<li>
+<p>Web browser: see the <a href="/doc/administration/requirements/web-browsers">Web Browser Compatibility</a> page</p>
+</li>
+<li>
+<p>For Windows operating system: <a href="/doc/administration/requirements/windows">Windows Support Policy</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="installation-platforms"><a class="anchor" href="#installation-platforms"></a>Installation platforms<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="#installation-platforms" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This section describes how to install/run Jenkins on different platforms and
+operating systems.</p>
+</div>
+<div class="sect2">
+<h3 id="docker"><a class="anchor" href="#docker"></a>Docker<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="#docker" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h3>
+<div class="paragraph">
+<p><a href="https://docs.docker.com/engine/docker-overview/">Docker</a> is a platform for
+running applications in an isolated environment called a "container" (or Docker
+container). Applications like Jenkins can be downloaded as read-only "images"
+(or Docker images), each of which is run in Docker as a container. A Docker
+container is in effect a "running instance" of a Docker image. From this
+perspective, an image is stored permanently more or less (i.e. insofar as image
+updates are published), whereas containers are stored temporarily. Read more
+about these concepts in the Docker documentation’s
+<a href="https://docs.docker.com/get-started/">Getting Started, Part 1: Orientation
+and setup</a> page.</p>
+</div>
+<div class="paragraph">
+<p>Docker’s fundamental platform and container design means that a single Docker
+image (for any given application like Jenkins) can be run on any supported
+operating system (macOS, Linux and Windows) or cloud service (AWS and Azure)
+which is also running Docker.</p>
+</div>
+<div class="sect3">
+<h4 id="installing-docker"><a class="anchor" href="#installing-docker"></a>Installing Docker<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="#installing-docker" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h4>
+<div class="paragraph">
+<p>To install Docker on your operating system, visit the
+<a href="https://store.docker.com/search?type=edition&amp;offering=community">Docker
+store</a> website and click the <strong>Docker Community Edition</strong> box which is suitable
+for your operating system or cloud service. Follow the installation instructions
+on their website.</p>
+</div>
+<div class="paragraph">
+<p>Jenkins can also run on Docker Enterprise Edition, which you can access through
+<strong>Docker EE</strong> on the Docker store website.</p>
+</div>
+<div class="admonitionblock caution">
+<table>
+<tbody><tr>
+<td class="icon">
+<i class="fa icon-caution" title="Caution"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>If you are installing Docker on a Linux-based operating system, ensure
+you configure Docker so it can be managed as a non-root user. Read more about
+this in Docker’s
+<a href="https://docs.docker.com/engine/installation/linux/linux-postinstall/">Post-installation
+steps for Linux</a> page of their documentation. This page also contains
+information about how to configure Docker to start on boot.</p>
+</div>
+</td>
+</tr>
+</tbody></table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="downloading-and-running-jenkins-in-docker"><a class="anchor" href="#downloading-and-running-jenkins-in-docker"></a>Downloading and running Jenkins in Docker<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="#downloading-and-running-jenkins-in-docker" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h4>
+<div class="paragraph">
+<p>There are several Docker images of Jenkins available.</p>
+</div>
+<div class="paragraph">
+<p>The recommended Docker image to use is the
+<a href="https://hub.docker.com/r/jenkinsci/blueocean/"><code>jenkinsci/blueocean</code> image</a>
+(from the <a href="https://hub.docker.com/">Docker Hub repository</a>). This image
+contains the current <a href="/download">Long-Term Support (LTS) release of Jenkins</a>
+(which is production-ready) bundled with all Blue Ocean plugins and features.
+This means that you do not need to install the Blue Ocean plugins separately.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tbody><tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>A new <code>jenkinsci/blueocean</code> image is published each time a new release of Blue
+Ocean is published. You can see a list of previously published versions of the
+<code>jenkinsci/blueocean</code> image on the
+<a href="https://hub.docker.com/r/jenkinsci/blueocean/tags/">tags</a> page.</p>
+</div>
+<div class="paragraph">
+<p>There are also other Jenkins Docker images you can use (accessible through
+<a href="https://hub.docker.com/r/jenkins/jenkins/"><code>jenkins/jenkins</code></a> on Docker
+Hub). However, these do not come with Blue Ocean, which would need to be
+installed via the <a href="../managing"><strong>Manage Jenkins</strong></a> &gt;
+<a href="../managing/plugins"><strong>Manage Plugins</strong></a> page in Jenkins. Read more
+about this in <a href="../blueocean/getting-started">Getting started with Blue Ocean</a>.</p>
+</div>
+</td>
+</tr>
+</tbody></table>
+</div>
+<div class="sect4">
+<h5 id="on-macos-and-linux"><a class="anchor" href="#on-macos-and-linux"></a>On macOS and Linux<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="#on-macos-and-linux" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h5>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Open up a terminal window.</p>
+</li>
+<li>
+<p>Create a <a href="https://docs.docker.com/network/bridge/">bridge network</a> in
+Docker using the following
+<a href="https://docs.docker.com/engine/reference/commandline/network_create/"><code>docker network create</code></a>
+command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight nowrap"><code data-lang="bash">docker network create jenkins</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Create the following <a href="https://docs.docker.com/storage/volumes/">volumes</a> to
+share the Docker client TLS certificates needed to connect to the Docker
+daemon and persist the Jenkins data using
+the following
+<a href="https://docs.docker.com/engine/reference/commandline/volume_create/"><code>docker volume create</code></a>
+commands:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight nowrap"><code data-lang="bash">docker volume create jenkins-docker-certs
+docker volume create jenkins-data</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>In order to execute Docker commands inside Jenkins nodes, download and run
+the <code>docker:dind</code> Docker image using the following
+<a href="https://docs.docker.com/engine/reference/commandline/container_run/"><code>docker container run</code></a>
+command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight nowrap"><code data-lang="bash">docker container run \
+  --name jenkins-docker \<i class="conum" data-value="1"></i><b>(1)</b>
+  --rm \<i class="conum" data-value="2"></i><b>(2)</b>
+  --detach \<i class="conum" data-value="3"></i><b>(3)</b>
+  --privileged \<i class="conum" data-value="4"></i><b>(4)</b>
+  --network jenkins \<i class="conum" data-value="5"></i><b>(5)</b>
+  --network-alias docker \<i class="conum" data-value="6"></i><b>(6)</b>
+  --env DOCKER_TLS_CERTDIR=/certs \<i class="conum" data-value="7"></i><b>(7)</b>
+  --volume jenkins-docker-certs:/certs/client \<i class="conum" data-value="8"></i><b>(8)</b>
+  --volume jenkins-data:/var/jenkins_home \<i class="conum" data-value="9"></i><b>(9)</b>
+  --publish 2376:2376 \<i class="conum" data-value="10"></i><b>(10)</b>
+  docker:dind<i class="conum" data-value="11"></i><b>(11)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tbody><tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>( <em>Optional</em> ) Specifies the Docker container name to use for running the
+image. By default, Docker will generate a unique name for the container.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>( <em>Optional</em> ) Automatically removes the Docker container (the instance of
+the Docker image) when it is shut down. This contains the Docker image cache
+used by Docker when invoked from the <code>jenkinsci/blueocean</code> container described
+below.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>( <em>Optional</em> ) Runs the Docker container in the background. This instance
+can be stopped later by running <code>docker container stop jenkins-docker</code> and
+started again with <code>docker container start jenkins-docker</code>. See
+<a href="https://docs.docker.com/engine/reference/commandline/container/"><code>docker container</code></a>
+for more container management commands.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>Running Docker in Docker currently requires privileged access to function
+properly. This requirement may be relaxed with newer Linux kernel versions.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="5"></i><b>5</b></td>
+<td>This corresponds with the network created in the earlier step.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="6"></i><b>6</b></td>
+<td>Makes the Docker in Docker container available as the hostname <code>docker</code>
+within the <code>jenkins</code> network.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="7"></i><b>7</b></td>
+<td>Enables the use of TLS in the Docker server. Due to the use
+of a privileged container, this is recommended, though it requires the use of
+the shared volume described below. This environment variable controls the root
+directory where Docker TLS certificates are managed.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="8"></i><b>8</b></td>
+<td>Maps the <code>/certs/client</code> directory inside the container to
+a Docker volume named <code>jenkins-docker-certs</code> as created above.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="9"></i><b>9</b></td>
+<td>Maps the <code>/var/jenkins_home</code> directory inside the container to the Docker
+volume named <code>jenkins-data</code> as created above. This will allow for other Docker
+containers controlled by this Docker container’s Docker daemon to mount data
+from Jenkins.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="10"></i><b>10</b></td>
+<td>( <em>Optional</em> ) Exposes the Docker daemon port on the host machine. This is
+useful for executing <code>docker</code> commands on the host machine to control this
+inner Docker daemon.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="11"></i><b>11</b></td>
+<td>The <code>docker:dind</code> image itself. This image can be downloaded before running
+by using the command: <code>docker image pull docker:dind</code>.</td>
+</tr>
+</tbody></table>
+</div>
+<div class="paragraph">
+<p><strong>Note:</strong> If copying and pasting the command snippet above does not work, try
+copying and pasting this annotation-free version here:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight nowrap"><code data-lang="bash">docker container run --name jenkins-docker --rm --detach \
+  --privileged --network jenkins --network-alias docker \
+  --env DOCKER_TLS_CERTDIR=/certs \
+  --volume jenkins-docker-certs:/certs/client \
+  --volume jenkins-data:/var/jenkins_home \
+  --publish 2376:2376 docker:dind</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Download the <code>jenkinsci/blueocean</code> image and run it as a container in Docker
+using the following
+<a href="https://docs.docker.com/engine/reference/commandline/container_run/"><code>docker container run</code></a>
+command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight nowrap"><code data-lang="bash">docker container run \
+  --name jenkins-blueocean \<i class="conum" data-value="1"></i><b>(1)</b>
+  --rm \<i class="conum" data-value="2"></i><b>(2)</b>
+  --detach \<i class="conum" data-value="3"></i><b>(3)</b>
+  --network jenkins \<i class="conum" data-value="4"></i><b>(4)</b>
+  --env DOCKER_HOST=tcp://docker:2376 \<i class="conum" data-value="5"></i><b>(5)</b>
+  --env DOCKER_CERT_PATH=/certs/client \
+  --env DOCKER_TLS_VERIFY=1 \
+  --publish 8080:8080 \<i class="conum" data-value="6"></i><b>(6)</b>
+  --publish 50000:50000 \<i class="conum" data-value="7"></i><b>(7)</b>
+  --volume jenkins-data:/var/jenkins_home \<i class="conum" data-value="8"></i><b>(8)</b>
+  --volume jenkins-docker-certs:/certs/client:ro \<i class="conum" data-value="9"></i><b>(9)</b>
+  jenkinsci/blueocean<i class="conum" data-value="10"></i><b>(10)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tbody><tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>( <em>Optional</em> ) Specifies the Docker container name for this instance of
+the <code>jenkinsci/blueocean</code> Docker image. This makes it simpler to reference
+by subsequent <code>docker container</code> commands.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>( <em>Optional</em> ) Automatically removes the Docker container (which is the
+instantiation of the <code>jenkinsci/blueocean</code> image below) when it is shut down.
+This keeps things tidy if you need to quit Jenkins.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>( <em>Optional</em> ) Runs the <code>jenkinsci/blueocean</code> container in the background
+(i.e. "detached" mode) and outputs the container ID. If you do not specify this
+option, then the running Docker log for this container is output in the terminal
+window.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>Connects this container to the <code>jenkins</code> network defined in the earlier
+step. This makes the Docker daemon from the previous step available to this
+Jenkins container through the hostname <code>docker</code>.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="5"></i><b>5</b></td>
+<td>Specifies the environment variables used by <code>docker</code>, <code>docker-compose</code>, and
+other Docker tools to connect to the Docker daemon from the previous step.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="6"></i><b>6</b></td>
+<td>Maps (i.e. "publishes") port 8080 of the <code>jenkinsci/blueocean</code> container to
+port 8080 on the host machine. The first number represents the port on the host
+while the last represents the container’s port. Therefore, if you specified <code>-p
+49000:8080</code> for this option, you would be accessing Jenkins on your host machine
+through port 49000.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="7"></i><b>7</b></td>
+<td>( <em>Optional</em> ) Maps port 50000 of the <code>jenkinsci/blueocean</code> container to
+port 50000 on the host machine. This is only necessary if you have set up one or
+more JNLP-based Jenkins agents on other machines, which in turn interact with
+the <code>jenkinsci/blueocean</code> container (acting as the "master" Jenkins server, or
+simply "Jenkins master"). JNLP-based Jenkins agents communicate with the Jenkins
+master through TCP port 50000 by default. You can change this port number on
+your Jenkins master through the <a href="../managing/security/">Configure Global Security</a>
+page. If you were to change your Jenkins master’s <strong>TCP port for JNLP agents</strong>
+value to 51000 (for example), then you would need to re-run Jenkins (via this
+<code>docker run …​</code> command) and specify this "publish" option with something like
+<code>--publish 52000:51000</code>, where the last value matches this changed value on the
+Jenkins master and the first value is the port number on the Jenkins master’s
+host machine through which the JNLP-based Jenkins agents communicate (to the
+Jenkins master) - i.e. 52000.
+Note that WebSocket agents in Jenkins 2.217 do not need this configuration.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="8"></i><b>8</b></td>
+<td>Maps the <code>/var/jenkins_home</code> directory in the container to the Docker
+<a href="https://docs.docker.com/engine/admin/volumes/volumes/">volume</a> with the name
+<code>jenkins-data</code>. Instead of mapping the <code>/var/jenkins_home</code> directory to a Docker
+volume, you could also map this directory to one on your machine’s local file
+system. For example, specifying the option<br>
+<code>--volume $HOME/jenkins:/var/jenkins_home</code> would map the container’s
+<code>/var/jenkins_home</code> directory to the <code>jenkins</code> subdirectory within the <code>$HOME</code>
+directory on your local machine, which would typically be
+<code>/Users/&lt;your-username&gt;/jenkins</code> or <code>/home/&lt;your-username&gt;/jenkins</code>.
+Note that if you change the source volume or directory for this, the volume
+from the <code>docker:dind</code> container above needs to be updated to match this.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="9"></i><b>9</b></td>
+<td>Maps the <code>/certs/client</code> directory to the previously created
+<code>jenkins-docker-certs</code> volume. This makes the client TLS certificates needed
+to connect to the Docker daemon available in the path specified by the
+<code>DOCKER_CERT_PATH</code> environment variable.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="10"></i><b>10</b></td>
+<td>The <code>jenkinsci/blueocean</code> Docker image itself. If this image has not already
+been downloaded, then this <code>docker container run</code> command will automatically download the
+image for you. Furthermore, if any updates to this image were published since
+you last ran this command, then running this command again will automatically
+download these published image updates for you.<br>
+<strong>Note:</strong> This Docker image could also be downloaded (or updated) independently
+using the
+<a href="https://docs.docker.com/engine/reference/commandline/image_pull/"><code>docker image pull</code></a>
+command:<br>
+<code>docker image pull jenkinsci/blueocean</code></td>
+</tr>
+</tbody></table>
+</div>
+<div class="paragraph">
+<p><strong>Note:</strong> If copying and pasting the command snippet above does not work, try
+copying and pasting this annotation-free version here:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight nowrap"><code data-lang="bash">docker container run --name jenkins-blueocean --rm --detach \
+  --network jenkins --env DOCKER_HOST=tcp://docker:2376 \
+  --env DOCKER_CERT_PATH=/certs/client --env DOCKER_TLS_VERIFY=1 \
+  --volume jenkins-data:/var/jenkins_home \
+  --volume jenkins-docker-certs:/certs/client:ro \
+  --publish 8080:8080 --publish 50000:50000 jenkinsci/blueocean</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Proceed to the <a href="#setup-wizard">Post-installation setup wizard</a>.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect4">
+<h5 id="on-windows"><a class="anchor" href="#on-windows"></a>On Windows<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="#on-windows" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h5>
+<div class="paragraph">
+<p>The Jenkins project provides a Linux container image, not a Windows container image.
+Be sure that your Docker for Windows installation is configured to run <code>Linux Containers</code> rather than <code>Windows Containers</code>.
+See the Docker documentation for instructions to <a href="https://docs.docker.com/docker-for-windows/#switch-between-windows-and-linux-containers">switch to Linux containers</a>.
+Once configured to run <code>Linux Containers</code>, the steps are:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Open up a command prompt window.</p>
+</li>
+<li>
+<p>Create a <a href="https://docs.docker.com/network/bridge/">bridge network</a> in
+Docker using the following
+<a href="https://docs.docker.com/engine/reference/commandline/network_create/"><code>docker network create</code></a>
+command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight nowrap"><code>docker network create jenkins</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Create the following <a href="https://docs.docker.com/storage/volumes/">volumes</a> to
+share the Docker client TLS certificates needed to connect to the Docker
+daemon and persist the Jenkins data using the following
+<a href="https://docs.docker.com/engine/reference/commandline/volume_create/"><code>docker volume create</code></a>
+commands:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight nowrap"><code>docker volume create jenkins-docker-certs
+docker volume create jenkins-data</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>In order to execute Docker commands inside Jenkins nodes, download and run
+the <code>docker:dind</code> Docker image using the following
+<a href="https://docs.docker.com/engine/reference/commandline/container_run/"><code>docker container run</code></a>
+command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight nowrap"><code>docker container run --name jenkins-docker --rm --detach ^
+  --privileged --network jenkins --network-alias docker ^
+  --env DOCKER_TLS_CERTDIR=/certs ^
+  --volume jenkins-docker-certs:/certs/client ^
+  --volume jenkins-data:/var/jenkins_home ^
+  docker:dind</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Download the <code>jenkinsci/blueocean</code> image and run it as a container in Docker
+using the following
+<a href="https://docs.docker.com/engine/reference/commandline/container_run/"><code>docker container run</code></a>
+command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight nowrap"><code>docker container run --name jenkins-blueocean --rm --detach ^
+  --network jenkins --env DOCKER_HOST=tcp://docker:2376 ^
+  --env DOCKER_CERT_PATH=/certs/client --env DOCKER_TLS_VERIFY=1 ^
+  --volume jenkins-data:/var/jenkins_home ^
+  --volume jenkins-docker-certs:/certs/client:ro ^
+  --publish 8080:8080 --publish 50000:50000 jenkinsci/blueocean</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>For an explanation of each of these options, refer to the <a href="#on-macos-and-linux">macOS and Linux</a> instructions above.</p>
+</div>
+</li>
+<li>
+<p>Proceed to the <a href="#setup-wizard">Post-installation setup wizard</a>.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="accessing-the-jenkins-blue-ocean-docker-container"><a class="anchor" href="#accessing-the-jenkins-blue-ocean-docker-container"></a>Accessing the Jenkins/Blue Ocean Docker container<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="#accessing-the-jenkins-blue-ocean-docker-container" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h4>
+<div class="paragraph">
+<p>If you have some experience with Docker and you wish or need to access the
+<code>jenkinsci/blueocean</code> container through a terminal/command prompt using the
+<a href="https://docs.docker.com/engine/reference/commandline/container_exec/"><code>docker container exec</code></a>
+command, you can add an option like <code>--name jenkins-blueocean</code> (with the
+<a href="https://docs.docker.com/engine/reference/commandline/container_run/"><code>docker container run</code></a>
+above), which would give the <code>jenkinsci/blueocean</code> container the name
+"jenkins-blueocean".</p>
+</div>
+<div class="paragraph">
+<p>This means you could access the container (through a separate terminal/command
+prompt window) with a <code>docker container exec</code> command like:</p>
+</div>
+<div class="paragraph">
+<p><code>docker container exec -it jenkins-blueocean bash</code></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="accessing-the-jenkins-console-log-through-docker-logs"><a class="anchor" href="#accessing-the-jenkins-console-log-through-docker-logs"></a>Accessing the Jenkins console log through Docker logs<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="#accessing-the-jenkins-console-log-through-docker-logs" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h4>
+<div class="paragraph">
+<p>There is a possibility you may need to access the Jenkins console log, for
+instance, when <a href="#unlocking-jenkins">Unlocking Jenkins</a> as part of the
+<a href="#setup-wizard">Post-installation setup wizard</a>.</p>
+</div>
+<div class="paragraph">
+<p>If you did not specify the detached mode option <code>--detach</code> with the
+<code>docker container run …​</code> command
+<a href="#downloading-and-running-jenkins-in-docker">above</a>, then the Jenkins
+console log is easily accessible through the terminal/command prompt window from
+which you ran this Docker command.</p>
+</div>
+<div class="paragraph">
+<p>Otherwise, you can access the Jenkins console log through the
+<a href="https://docs.docker.com/engine/reference/commandline/container_logs/">Docker logs</a> of
+the <code>jenkinsci/blueocean</code> container using the following command:</p>
+</div>
+<div class="paragraph">
+<p><code>docker container logs &lt;docker-container-name&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>Your <code>&lt;docker-container-name&gt;</code> can be obtained using the
+<a href="https://docs.docker.com/engine/reference/commandline/container_ls/"><code>docker container ls</code></a>
+command. If you specified the<br>
+<code>--name jenkins-blueocean</code> option in the <code>docker container run …​</code> command above (see
+also
+<a href="#accessing-the-jenkins-blue-ocean-docker-container">Accessing the Jenkins/Blue
+Ocean Docker container</a>), you can simply use the <code>docker container logs</code> command:</p>
+</div>
+<div class="paragraph">
+<p><code>docker container logs jenkins-blueocean</code></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="accessing-the-jenkins-home-directory"><a class="anchor" href="#accessing-the-jenkins-home-directory"></a>Accessing the Jenkins home directory<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="#accessing-the-jenkins-home-directory" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h4>
+<div class="paragraph">
+<p>There is a possibility you may need to access the Jenkins home directory, for
+instance, to check the details of a Jenkins build in the <code>workspace</code>
+subdirectory.</p>
+</div>
+<div class="paragraph">
+<p>If you mapped the Jenkins home directory (<code>/var/jenkins_home</code>) to one on your
+machine’s local file system (i.e. in the <code>docker container run …​</code> command
+<a href="#downloading-and-running-jenkins-in-docker">above</a>), then you can access the
+contents of this directory through your machine’s usual terminal/command prompt.</p>
+</div>
+<div class="paragraph">
+<p>Otherwise, if you specified the <code>--volume jenkins-data:/var/jenkins_home</code> option in
+the <code>docker container run …​</code> command, you can access the contents of the Jenkins home
+directory through the <code>jenkinsci/blueocean</code> container’s terminal/command prompt
+using the
+<a href="https://docs.docker.com/engine/reference/commandline/container_exec/"><code>docker container exec</code></a>
+command:</p>
+</div>
+<div class="paragraph">
+<p><code>docker container exec -it &lt;docker-container-name&gt; bash</code></p>
+</div>
+<div class="paragraph">
+<p>As mentioned <a href="#accessing-the-jenkins-console-log-through-docker-logs">above</a>,
+your <code>&lt;docker-container-name&gt;</code> can be obtained using the
+<a href="https://docs.docker.com/engine/reference/commandline/container_ls/"><code>docker container ls</code></a>
+command. If you specified the<br>
+<code>--name jenkins-blueocean</code> option in the <code>docker container run …​</code>
+command above (see also
+<a href="#accessing-the-jenkins-blue-ocean-docker-container">Accessing the Jenkins/Blue
+Ocean Docker container</a>), you can simply use the <code>docker container exec</code> command:</p>
+</div>
+<div class="paragraph">
+<p><code>docker container exec -it jenkins-blueocean bash</code></p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="war-file"><a class="anchor" href="#war-file"></a>WAR file<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="#war-file" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h3>
+<div class="paragraph">
+<p>The Web application ARchive (WAR) file version of Jenkins can be installed on
+any operating system or platform that supports Java.</p>
+</div>
+<div class="paragraph">
+<p><strong>To download and run the WAR file version of Jenkins:</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Download the
+<a href="http://mirrors.jenkins.io/war-stable/latest/jenkins.war">latest stable
+Jenkins WAR file</a> to an appropriate directory on your machine.</p>
+</li>
+<li>
+<p>Open up a terminal/command prompt window to the download directory.</p>
+</li>
+<li>
+<p>Run the command <code>java -jar jenkins.war</code>.</p>
+</li>
+<li>
+<p>Browse to <code>http://localhost:8080</code> and wait until the <strong>Unlock Jenkins</strong> page
+appears.</p>
+</li>
+<li>
+<p>Continue on with the <a href="#setup-wizard">Post-installation setup wizard</a> below.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Notes:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Unlike downloading and running Jenkins with Blue Ocean in Docker
+(<a href="#docker">above</a>), this process does not automatically install the Blue Ocean
+features, which would need to installed separately via the
+<a href="../../book/managing"><strong>Manage Jenkins</strong></a> &gt;
+<a href="../../book/managing/plugins/"><strong>Manage Plugins</strong></a> page in Jenkins. Read
+more about the specifics for installing Blue Ocean on the
+<a href="../../book/blueocean/getting-started/">Getting started with Blue Ocean</a>
+page.</p>
+</li>
+<li>
+<p>You can change the port by specifying the <code>--httpPort</code> option when you run the
+<code>java -jar jenkins.war</code> command. For example, to make Jenkins accessible
+through port 9090, then run Jenkins using the command:<br>
+<code>java -jar jenkins.war --httpPort=9090</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="macos"><a class="anchor" href="#macos"></a>macOS<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="#macos" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="/download/lts/macos">Installing Jenkins LTS on macOS</a></p>
+</li>
+<li>
+<p><a href="/download/weekly/macos">Installing Jenkins Weekly on macOS</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="linux"><a class="anchor" href="#linux"></a>Linux<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="#linux" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h3>
+<div class="paragraph">
+<p>Jenkins installers are available for several Linux distributions.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#debianubuntu">Debian/Ubuntu</a></p>
+</li>
+<li>
+<p><a href="#fedora">Fedora</a></p>
+</li>
+<li>
+<p><a href="#red-hat-centos">Red Hat / CentOS</a></p>
+</li>
+</ul>
+</div>
+<div class="sect3">
+<h4 id="debianubuntu"><a class="anchor" href="#debianubuntu"></a>Debian/Ubuntu<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="#debianubuntu" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h4>
+<div class="paragraph">
+<p>On Debian and Debian-based distributions like Ubuntu you can install Jenkins through <code>apt</code>.</p>
+</div>
+<div class="sect4">
+<h5 id="long-term-support-release"><a class="anchor" href="#long-term-support-release"></a>Long Term Support release<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="#long-term-support-release" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h5>
+<div class="paragraph">
+<p>A <a href="/download/lts/">LTS (Long-Term Support) release</a> is chosen every 12 weeks from the stream of regular releases as the stable release for that time period.
+It can be installed from the <a href="https://pkg.jenkins.io/debian-stable/"><code>debian-stable</code> apt repository</a>.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight nowrap"><code data-lang="bash">wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -
+sudo sh -c 'echo deb https://pkg.jenkins.io/debian-stable binary/ &gt; \
+    /etc/apt/sources.list.d/jenkins.list'
+sudo apt-get update
+sudo apt-get install jenkins</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="weekly-release"><a class="anchor" href="#weekly-release"></a>Weekly release<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="#weekly-release" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h5>
+<div class="paragraph">
+<p>A new release is produced weekly to deliver bug fixes and features to users and plugin developers.
+It can be installed from the <a href="https://pkg.jenkins.io/debian/"><code>debian</code> apt repository</a>.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight nowrap"><code data-lang="bash">wget -q -O - https://pkg.jenkins.io/debian/jenkins.io.key | sudo apt-key add -
+sudo sh -c 'echo deb https://pkg.jenkins.io/debian binary/ &gt; \
+    /etc/apt/sources.list.d/jenkins.list'
+sudo apt-get update
+sudo apt-get install jenkins</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tbody><tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>If an error is reported, “jenkins : Depends: daemon but it is not installable”, add the <a href="https://help.ubuntu.com/community/Repositories/Ubuntu">"universe" apt repository</a> of community maintained free and open source software for Ubuntu by executing this command after <code>sudo apt-get update</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight nowrap"><code data-lang="bash">sudo add-apt-repository universe</code></pre>
+</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</div>
+<div class="paragraph">
+<p>This package installation will:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Setup Jenkins as a daemon launched on start. See <code>/etc/init.d/jenkins</code> for more details.</p>
+</li>
+<li>
+<p>Create a ‘jenkins’ user to run this service.</p>
+</li>
+<li>
+<p>Direct console log output to the file <code>/var/log/jenkins/jenkins.log</code>. Check this file if you are troubleshooting Jenkins.</p>
+</li>
+<li>
+<p>Populate <code>/etc/default/jenkins</code> with configuration parameters for the launch, e.g <code>JENKINS_HOME</code></p>
+</li>
+<li>
+<p>Set Jenkins to listen on port 8080. Access this port with your browser to start configuration.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tbody><tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>If your <code>/etc/init.d/jenkins</code> file fails to start Jenkins, edit the <code>/etc/default/jenkins</code> to replace the line
+<code>----HTTP_PORT=8080----</code> with <code>----HTTP_PORT=8081----</code>
+Here, "8081" was chosen but you can put another port available.</p>
+</div>
+</td>
+</tr>
+</tbody></table>
+</div>
+</div>
+<div class="sect4">
+<h5 id="installation-of-java"><a class="anchor" href="#installation-of-java"></a>Installation of Java<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="#installation-of-java" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h5>
+<div class="paragraph">
+<p>Jenkins requires Java in order to run, yet certain distributions don’t include this by default and  <a href="/doc/administration/requirements/java/">some Java versions are incompatible</a> with Jenkins.</p>
+</div>
+<div class="paragraph">
+<p>There are multiple Java implementations which you can use. <a href="https://openjdk.java.net/">OpenJDK</a> is the most popular one at the moment, we will use it in this guide.</p>
+</div>
+<div class="paragraph">
+<p>To install the Open Java Development Kit (OpenJDK) run the following:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Update the repositories</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="nowrap">sudo apt update</pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>search of all available packages:</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="nowrap">sudo apt search openjdk</pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Pick one option and install it:</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="nowrap">sudo apt install openjdk-8-jdk</pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Confirm installation:</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="nowrap">sudo apt install openjdk-8-jdk</pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>checking installation:</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="nowrap">java -version</pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>the result must be something like:</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="nowrap">openjdk version "1.8.0_252"
+OpenJDK Runtime Environment (build 1.8.0_252-8u252-b09-1ubuntu1-b09)
+OpenJDK 64-Bit Server VM (build 25.252-b09, mixed mode)</pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tbody><tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Why use <code>apt</code> and not <code>apt-get</code> or another command?
+The apt command has been available since 2014.
+It has a command structure that is similar to <code>apt-get</code> but was created to be a more pleasant experience for typical users.
+Simple software management tasks like install, search and remove are easier with <code>apt</code>.</p>
+</div>
+</td>
+</tr>
+</tbody></table>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="fedora"><a class="anchor" href="#fedora"></a>Fedora<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="#fedora" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h4>
+<div class="paragraph">
+<p>You can install Jenkins through <code>dnf</code>. You need to add the Jenkins repository from the Jenkins website to the package manager first.</p>
+</div>
+<div class="sect4">
+<h5 id="long-term-support-release-2"><a class="anchor" href="#long-term-support-release-2"></a>Long Term Support release<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="#long-term-support-release-2" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h5>
+<div class="paragraph">
+<p>A <a href="/download/lts/">LTS (Long-Term Support) release</a> is chosen every 12 weeks from the stream of regular releases as the stable release for that time period.
+It can be installed from the <a href="https://pkg.jenkins.io/redhat-stable/"><code>redhat-stable</code></a> yum repository.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight nowrap"><code data-lang="bash">sudo wget -O /etc/yum.repos.d/jenkins.repo \
+    https://pkg.jenkins.io/redhat-stable/jenkins.repo
+sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+sudo dnf upgrade
+sudo dnf install jenkins java-devel</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="weekly-release-2"><a class="anchor" href="#weekly-release-2"></a>Weekly release<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="#weekly-release-2" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h5>
+<div class="paragraph">
+<p>A new release is produced weekly to deliver bug fixes and features to users and plugin developers.
+It can be installed from the <a href="https://pkg.jenkins.io/redhat/"><code>redhat</code></a> yum repository.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight nowrap"><code data-lang="bash">sudo wget -O /etc/yum.repos.d/jenkins.repo \
+    http://pkg.jenkins-ci.org/redhat/jenkins.repo
+sudo rpm --import https://jenkins-ci.org/redhat/jenkins-ci.org.key
+sudo dnf upgrade
+sudo dnf install jenkins java-devel</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="start-jenkins"><a class="anchor" href="#start-jenkins"></a>Start Jenkins<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="#start-jenkins" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h5>
+<div class="paragraph">
+<p>You can start the Jenkins service with the command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight nowrap"><code data-lang="bash">sudo systemctl start jenkins</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can check the status of the Jenkins service using the command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight nowrap"><code data-lang="bash">sudo systemctl status jenkins</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If everything has been set up correctly, you should see an output like this:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight nowrap"><code data-lang="bash">Loaded: loaded (/etc/rc.d/init.d/jenkins; generated)
+Active: active (running) since Tue 2018-11-13 16:19:01 +03; 4min 57s ago</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tbody><tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>If you have a firewall installed, you must add Jenkins as an exception.
+You must change <code>YOURPORT</code> in the script below to the port you want to use.
+Port <code>8080</code> is the most common.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight nowrap"><code data-lang="bash">YOURPORT=8080
+PERM="--permanent"
+SERV="$PERM --service=jenkins"
+
+firewall-cmd $PERM --new-service=jenkins
+firewall-cmd $SERV --set-short="Jenkins ports"
+firewall-cmd $SERV --set-description="Jenkins port exceptions"
+firewall-cmd $SERV --add-port=$YOURPORT/tcp
+firewall-cmd $PERM --add-service=jenkins
+firewall-cmd --zone=public --add-service=http --permanent
+firewall-cmd --reload</code></pre>
+</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="red-hat-centos"><a class="anchor" href="#red-hat-centos"></a>Red Hat / CentOS<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="#red-hat-centos" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h4>
+<div class="paragraph">
+<p>You can install Jenkins through <code>yum</code> on Red Hat Enterprise Linux, CentOS, and other Red Hat based distributions.
+You need to choose either the Jenkins Long Term Support release or the Jenkins weekly release.</p>
+</div>
+<div class="sect4">
+<h5 id="long-term-support-release-3"><a class="anchor" href="#long-term-support-release-3"></a>Long Term Support release<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="#long-term-support-release-3" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h5>
+<div class="paragraph">
+<p>A <a href="/download/lts/">LTS (Long-Term Support) release</a> is chosen every 12 weeks from the stream of regular releases as the stable release for that time period.
+It can be installed from the <a href="https://pkg.jenkins.io/redhat-stable/"><code>redhat-stable</code></a> yum repository.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight nowrap"><code data-lang="bash">sudo wget -O /etc/yum.repos.d/jenkins.repo \
+    https://pkg.jenkins.io/redhat-stable/jenkins.repo
+sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+sudo yum upgrade
+sudo yum install jenkins java-1.8.0-openjdk-devel</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="weekly-release-3"><a class="anchor" href="#weekly-release-3"></a>Weekly release<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="#weekly-release-3" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h5>
+<div class="paragraph">
+<p>A new release is produced weekly to deliver bug fixes and features to users and plugin developers.
+It can be installed from the <a href="https://pkg.jenkins.io/redhat/"><code>redhat</code></a> yum repository.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight nowrap"><code data-lang="bash">sudo wget -O /etc/yum.repos.d/jenkins.repo \
+    https://pkg.jenkins.io/redhat/jenkins.repo
+sudo rpm --import https://pkg.jenkins.io/redhat/jenkins.io.key
+sudo yum upgrade
+sudo yum install jenkins java-1.8.0-openjdk-devel</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="start-jenkins-2"><a class="anchor" href="#start-jenkins-2"></a>Start Jenkins<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="#start-jenkins-2" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h5>
+<div class="paragraph">
+<p>You can start the Jenkins service with the command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight nowrap"><code data-lang="bash">sudo systemctl start jenkins</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can check the status of the Jenkins service using the command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight nowrap"><code data-lang="bash">sudo systemctl status jenkins</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If everything has been set up correctly, you should see an output like this:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight nowrap"><code data-lang="bash">Loaded: loaded (/etc/rc.d/init.d/jenkins; generated)
+Active: active (running) since Tue 2018-11-13 16:19:01 +03; 4min 57s ago
+...</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tbody><tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>If you have a firewall installed, you must add Jenkins as an exception.
+You must change <code>YOURPORT</code> in the script below to the port you want to use.
+Port <code>8080</code> is the most common.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight nowrap"><code data-lang="bash">YOURPORT=8080
+PERM="--permanent"
+SERV="$PERM --service=jenkins"
+
+firewall-cmd $PERM --new-service=jenkins
+firewall-cmd $SERV --set-short="Jenkins ports"
+firewall-cmd $SERV --set-description="Jenkins port exceptions"
+firewall-cmd $SERV --add-port=$YOURPORT/tcp
+firewall-cmd $PERM --add-service=jenkins
+firewall-cmd --zone=public --add-service=http --permanent
+firewall-cmd --reload</code></pre>
+</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="windows"><a class="anchor" href="#windows"></a>Windows<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="#windows" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h3>
+<div class="paragraph">
+<p>To install from the website, using the installer:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="http://mirrors.jenkins.io/windows/latest">Download the latest package</a></p>
+</li>
+<li>
+<p>Open the package and follow the instructions</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="other-operating-systems"><a class="anchor" href="#other-operating-systems"></a>Other operating systems<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="#other-operating-systems" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h3>
+<div class="sect3">
+<h4 id="freebsd"><a class="anchor" href="#freebsd"></a>FreeBSD<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="#freebsd" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h4>
+<div class="paragraph">
+<p>Jenkins can be installed on FreeBSD using the standard FreeBSD package manager, <code>pkg</code>.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tbody><tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Disclaimer: The <a href="https://www.freebsd.org/">FreeBSD project</a> maintains the Jenkins packaging for FreeBSD.
+The Jenkins package for FreeBSD is NOT officially supported by the Jenkins project,
+but it is actively used by the <a href="https://www.freebsd.org/">FreeBSD project</a> at <a href="https://ci.freebsd.org/" class="bare">https://ci.freebsd.org/</a> .</p>
+</div>
+</td>
+</tr>
+</tbody></table>
+</div>
+<div class="sect4">
+<h5 id="long-term-support-release-4"><a class="anchor" href="#long-term-support-release-4"></a>Long Term Support release<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="#long-term-support-release-4" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h5>
+<div class="paragraph">
+<p>A <a href="/download/lts/">LTS (Long-Term Support) release</a> is chosen every 12 weeks from the stream of regular releases as the stable release for that time period.
+It can be installed from the FreeBSD <code>pkg</code> package manager.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight nowrap"><code data-lang="bash"># pkg install jenkins-lts</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="weekly-release-4"><a class="anchor" href="#weekly-release-4"></a>Weekly release<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="#weekly-release-4" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h5>
+<div class="paragraph">
+<p>A new release is produced weekly to deliver bug fixes and features to users and plugin developers.
+It can be installed from the FreeBSD <code>pkg</code> package manager.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight nowrap"><code data-lang="bash"># pkg install jenkins</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The long term support package <code>jenkins-lts</code> and the weekly package installation <code>jenkins</code> will:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Configure Jenkins as a daemon which may optionally be launched on start. See <code>/etc/rc.conf</code> for more details</p>
+</li>
+<li>
+<p>Create a ‘jenkins’ user to run the service</p>
+</li>
+<li>
+<p>Direct console log output to the file <code>/var/log/jenkins.log</code>. Check this file when troubleshooting Jenkins</p>
+</li>
+<li>
+<p>Set Jenkins to listen on port 8180 from the path <code>/jenkins</code>.  Open http://localhost:8180/jenkins to login to Jenkins</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="start-jenkins-3"><a class="anchor" href="#start-jenkins-3"></a>Start Jenkins<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="#start-jenkins-3" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h5>
+<div class="paragraph">
+<p>You can start the Jenkins service with the command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight nowrap"><code data-lang="bash"># service jenkins onestart</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can check the status of the Jenkins service using the command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight nowrap"><code data-lang="bash"># service jenkins status</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can stop the Jenkins service with the command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight nowrap"><code data-lang="bash"># service jenkins stop</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="enable-jenkins"><a class="anchor" href="#enable-jenkins"></a>Enable Jenkins<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="#enable-jenkins" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h5>
+<div class="paragraph">
+<p>Add the following to <code>/etc/rc.conf</code> to start Jenkins automatically on system boot:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight nowrap"><code data-lang="bash">jenkins_enable="YES"</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Once Jenkins is enabled, it can be started with:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight nowrap"><code data-lang="bash"># service jenkins start</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Other configuration values that can be set in <code>/etc/rc.conf</code> or in <code>/etc/rc.conf.d/jenkins</code> are described in <code>/usr/local/etc/rc.d/jenkins</code>.
+Refer to the <a href="https://wiki.freebsd.org/Jenkins">Jenkins page</a> on the <a href="https://wiki.freebsd.org/">FreeBSD wiki</a> for more information specific to Jenkins on FreeBSD.</p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="openindiana-hipster"><a class="anchor" href="#openindiana-hipster"></a>OpenIndiana Hipster<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="#openindiana-hipster" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h4>
+<div class="paragraph">
+<p>On a system running <a href="https://www.openindiana.org/">OpenIndiana Hipster</a>
+Jenkins can be installed in either the local or global zone using the
+<a href="https://en.wikipedia.org/wiki/Image_Packaging_System">Image Packaging
+System</a> (IPS).</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tbody><tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Disclaimer: This platform is NOT officially supported by the Jenkins team,
+use it at your own risk. Packaging and integration described in this section
+is maintained by the OpenIndiana Hipster team, bundling the generic <code>jenkins.war</code>
+to work in that operating environment.</p>
+</div>
+</td>
+</tr>
+</tbody></table>
+</div>
+<div class="paragraph">
+<p>For the common case of running the newest packaged weekly build as a standalone (Jetty) server, simply execute:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight nowrap"><code data-lang="bash">pkg install jenkins
+svcadm enable jenkins</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The common packaging integration for a standalone service will:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Create a <code>jenkins</code> user to run the service and to own the directory structures under <code>/var/lib/jenkins</code>.</p>
+</li>
+<li>
+<p>Pull the OpenJDK8 and other packages required to execute Jenkins, including
+the <code>jenkins-core-weekly</code> package with the latest <code>jenkins.war</code>.</p>
+<div class="admonitionblock caution">
+<table>
+<tbody><tr>
+<td class="icon">
+<i class="fa icon-caution" title="Caution"></i>
+</td>
+<td class="content">
+Long-Term Support (LTS) Jenkins releases currently do not support OpenZFS-based
+systems, so no packaging is provided at this time.
+</td>
+</tr>
+</tbody></table>
+</div>
+</li>
+<li>
+<p>Set up Jenkins as an SMF service instance (<code>svc:/network/http:jenkins</code>) which
+&nbsp;can then be enabled with the <code>svcadm</code> command demonstrated above.</p>
+</li>
+<li>
+<p>Set up Jenkins to listen on port 8080.</p>
+</li>
+<li>
+<p>Configure the log output to be managed by SMF at <code>/var/svc/log/network-http:jenkins.log</code>.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Once Jenkins is running, consult the log
+(<code>/var/svc/log/network-http:jenkins.log</code>) to retrieve the generated
+administrator password for the initial set up of Jenkins, usually it will be
+found at <code>/var/lib/jenkins/home/secrets/initialAdminPassword</code>. Then navigate to
+<a href="http://localhost:8080">localhost:8080</a> to <a href="#setup-wizard">complete configuration of the
+Jenkins instance</a>.</p>
+</div>
+<div class="paragraph">
+<p>To change attributes of the service, such as environment variables like <code>JENKINS_HOME</code>
+or the port number used for the Jetty web server, use the <code>svccfg</code> utility:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight nowrap"><code data-lang="bash">svccfg -s svc:/network/http:jenkins editprop
+svcadm refresh svc:/network/http:jenkins</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can also refer to <code>/lib/svc/manifest/network/jenkins-standalone.xml</code> for more
+details and comments about currently supported tunables of the SMF service.
+Note that the <code>jenkins</code> user account created by the packaging is specially privileged
+to allow binding to port numbers under 1024.</p>
+</div>
+<div class="paragraph">
+<p>The current status of Jenkins-related packages available for the given release
+of OpenIndiana can be queried with:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight nowrap"><code data-lang="bash">pkg info -r '*jenkins*'</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Upgrades to the package can be performed by updating the entire operating
+environment with <code>pkg update</code>, or specifically for Jenkins core software with:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight nowrap"><code data-lang="bash">pkg update jenkins-core-weekly</code></pre>
+</div>
+</div>
+<div class="admonitionblock caution">
+<table>
+<tbody><tr>
+<td class="icon">
+<i class="fa icon-caution" title="Caution"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Procedure for updating the package will restart the currently running Jenkins
+process. Make sure to prepare it for shutdown and finish all running jobs
+before updating, if needed.</p>
+</div>
+</td>
+</tr>
+</tbody></table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="solaris-omnios-smartos-and-other-siblings"><a class="anchor" href="#solaris-omnios-smartos-and-other-siblings"></a>Solaris, OmniOS, SmartOS, and other siblings<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="#solaris-omnios-smartos-and-other-siblings" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h4>
+<div class="paragraph">
+<p>Generally it should suffice to install Java 8 and <a href="/download">download</a> the
+<code>jenkins.war</code> and run it as a standalone process or under an application server
+such as <a href="https://tomcat.apache.org">Apache Tomcat</a>.</p>
+</div>
+<div class="paragraph">
+<p>Some caveats apply:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Headless JVM and fonts: For OpenJDK builds on minimalized-footprint systems,
+there may be
+<a href="https://wiki.jenkins.io/display/JENKINS/Jenkins+got+java.awt.headless+problem">issues
+running the headless JVM</a>, because Jenkins needs some fonts to render certain
+pages.</p>
+</li>
+<li>
+<p>ZFS-related JVM crashes: When Jenkins runs on a system detected as a <code>SunOS</code>,
+it tries to load integration for advanced ZFS features using the bundled
+<code>libzfs.jar</code> which maps calls from Java to native <code>libzfs.so</code> routines
+provided by the host OS. Unfortunately, that library was made for binary
+utilities built and bundled by the OS along with it at the same time, and was
+never intended as a stable interface exposed to consumers. As the forks of
+Solaris legacy, including ZFS and later the OpenZFS initiative evolved, many
+different binary function signatures were provided by different host
+operating systems - and when Jenkins <code>libzfs.jar</code> invoked the wrong
+signature, the whole JVM process crashed. A solution was proposed and
+integrated in <code>jenkins.war</code> since weekly release 2.55 (and not yet in any LTS
+to date) which enables the administrator to configure which function
+signatures should be used for each function known to have different variants,
+apply it to their application server initialization options and then run and
+update the generic <code>jenkins.war</code> without further workarounds. See
+<a href="https://github.com/kohsuke/libzfs4j">the libzfs4j Git repository</a> for
+more details, including a script to try and "lock-pick" the configuration
+needed for your particular distribution (in particular if your kernel updates
+bring a new incompatible <code>libzfs.so</code>).</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Also note that forks of the OpenZFS initiative may provide ZFS on various
+BSD, Linux, and macOS distributions. Once Jenkins supports detecting ZFS
+capabilities, rather than relying on the <code>SunOS</code> check, the above caveats for
+ZFS integration with Jenkins should be considered.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="setup-wizard"><a class="anchor" href="#setup-wizard"></a>Post-installation setup wizard<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="#setup-wizard" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>After downloading, installing and running Jenkins using one of the procedures
+above, the post-installation setup wizard begins.</p>
+</div>
+<div class="paragraph">
+<p>This setup wizard takes you through a few quick "one-off" steps to unlock
+Jenkins, customize it with plugins and create the first administrator user
+through which you can continue accessing Jenkins.</p>
+</div>
+<div class="sect2">
+<h3 id="unlocking-jenkins"><a class="anchor" href="#unlocking-jenkins"></a>Unlocking Jenkins<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="#unlocking-jenkins" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h3>
+<div class="paragraph">
+<p>When you first access a new Jenkins instance, you are asked to unlock it using
+an automatically-generated password.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Browse to <code>http://localhost:8080</code> (or whichever port you configured for
+Jenkins when installing it) and wait until the <strong>Unlock Jenkins</strong> page appears.</p>
+<div class="paragraph boxshadow">
+<p><span class="image"><img src="../resources/tutorials/setup-jenkins-01-unlock-jenkins-page.jpg" alt="Unlock Jenkins page" width="80%"></span></p>
+</div>
+</li>
+<li>
+<p>From the Jenkins console log output, copy the automatically-generated
+alphanumeric password (between the 2 sets of asterisks).</p>
+<div class="paragraph boxshadow">
+<p><span class="image"><img src="../resources/tutorials/setup-jenkins-02-copying-initial-admin-password.png" alt="Copying initial admin password" width="80%"></span><br>
+  <strong>Note:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The command: <code>sudo cat /var/lib/jenkins/secrets/initialAdminPassword</code> will print the password at console.<br></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>On the <strong>Unlock Jenkins</strong> page, paste this password into the <strong>Administrator
+password</strong> field and click <strong>Continue</strong>.<br>
+<strong>Notes:</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>If you ran Jenkins in Docker in detached mode, you can access the Jenkins
+console log from the Docker logs
+(<a href="#accessing-the-jenkins-console-log-through-docker-logs">above</a>).</p>
+</li>
+<li>
+<p>The Jenkins console log indicates the location (in the Jenkins home directory)
+where this password can also be obtained. This password must be entered in the
+setup wizard on new Jenkins installations before you can access Jenkins’s main
+UI. This password also serves as the default admininstrator account’s password
+(with username "admin") if you happen to skip the subsequent user-creation
+step in the setup wizard.</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="customizing-jenkins-with-plugins"><a class="anchor" href="#customizing-jenkins-with-plugins"></a>Customizing Jenkins with plugins<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="#customizing-jenkins-with-plugins" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h3>
+<div class="paragraph">
+<p>After <a href="#unlocking-jenkins">unlocking Jenkins</a>, the <strong>Customize Jenkins</strong> page
+appears. Here you can install any number of useful plugins as part of your
+initial setup.</p>
+</div>
+<div class="paragraph">
+<p>Click one of the two options shown:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Install suggested plugins</strong> - to install the recommended set of plugins, which
+are based on most common use cases.</p>
+</li>
+<li>
+<p><strong>Select plugins to install</strong> - to choose which set of plugins to initially
+install. When you first access the plugin selection page, the suggested
+plugins are selected by default.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tbody><tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+If you are not sure what plugins you need, choose <strong>Install suggested
+plugins</strong>.
+You can install (or remove) additional Jenkins plugins at a later point in time
+via the
+<a href="../../book/managing"><strong>Manage Jenkins</strong></a> &gt;
+<a href="../../book/managing/plugins/"><strong>Manage Plugins</strong></a> page in Jenkins.
+</td>
+</tr>
+</tbody></table>
+</div>
+<div class="paragraph">
+<p>The setup wizard shows the progression of Jenkins being configured and your
+chosen set of Jenkins plugins being installed. This process may take a few
+minutes.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="creating-the-first-administrator-user"><a class="anchor" href="#creating-the-first-administrator-user"></a>Creating the first administrator user<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="#creating-the-first-administrator-user" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h3>
+<div class="paragraph">
+<p>Finally, after <a href="#customizing-jenkins-with-plugins">customizing Jenkins with
+plugins</a>, Jenkins asks you to create your first administrator user.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>When the <strong>Create First Admin User</strong> page appears, specify the details for your
+administrator user in the respective fields and click <strong>Save and Finish</strong>.</p>
+</li>
+<li>
+<p>When the <strong>Jenkins is ready</strong> page appears, click <strong>Start using Jenkins</strong>.<br>
+<strong>Notes:</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>This page may indicate <strong>Jenkins is almost ready!</strong> instead and if so, click
+<strong>Restart</strong>.</p>
+</li>
+<li>
+<p>If the page does not automatically refresh after a minute, use your web
+browser to refresh the page manually.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>If required, log in to Jenkins with the credentials of the user you just
+created and you are ready to start using Jenkins!</p>
+</li>
+</ol>
+</div>
+<div class="admonitionblock important">
+<table>
+<tbody><tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+From this point on, the Jenkins UI is only accessible by providing
+valid username and password credentials.
+</td>
+</tr>
+</tbody></table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="offline-jenkins-installation"><a class="anchor" href="#offline-jenkins-installation"></a>Offline Jenkins Installation<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="#offline-jenkins-installation" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This section describes how to install Jenkins on a machine
+that does not have an internet connection.</p>
+</div>
+<div class="paragraph">
+<p>To install Jenkins itself, download the appropriate war file and
+transfer it to your machine.</p>
+</div>
+<div class="paragraph">
+<p>Plugins are a different matter, due to dependency requirements.</p>
+</div>
+<div class="paragraph">
+<p>The recommended approach is to use <a href="https://github.com/jenkinsci/plugin-installation-manager-tool">Plugin Installation Manager Tool</a>.</p>
+</div>
+<div class="paragraph">
+<p>If you want to transfer the individual plugins, you’ll need to retrieve
+all dependencies as well. There are several dependency retrieval scripts and tools
+on Github. For example:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/jenkinsci/docker/blob/master/install-plugins.sh">install-plugins.sh</a>&nbsp;- Bash script for managing plugins from the official Docker image for Jenkins</p>
+</li>
+<li>
+<p><a href="https://github.com/samrocketman/jenkins-bootstrap-shared">samrocketman/jenkins-bootstrap-shared</a>&nbsp;- Java is
+required; packages Jenkins and plugins into an immutable package
+installer.&nbsp; Supported formats include: RPM, DEB, Docker.&nbsp; Can proxy
+Jenkins and plugins through Nexus or Artifactory since Gradle is used to
+assemble plugins.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="jenkins-parameters"><a class="anchor" href="#jenkins-parameters"></a>Jenkins Parameters<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="#jenkins-parameters" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Jenkins initialization can also be controlled by run time parameters passed as arguments.
+Command line arguments can adjust networking, security, monitoring, and other settings.</p>
+</div>
+<div class="sect2">
+<h3 id="networking-parameters"><a class="anchor" href="#networking-parameters"></a>Networking parameters<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="#networking-parameters" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h3>
+<div class="paragraph">
+<p>Jenkins networking configuration is generally controlled by command line arguments.
+The networking configuration areguments are:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 1. Jenkins Networking Command Line Parameters</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Command Line Parameter</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--httpPort=$HTTP_PORT</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Runs Jenkins listener on port $HTTP_PORT using standard <em>http</em> protocol.
+The default is port 8080.
+To disable (because you’re using <em>https</em>), use port <code>-1</code>.
+This option does not impact the root URL being generated within Jenkins logic (UI, JNLP files, etc.).
+It is defined by the Jenkins URL specified in the global configuration.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--httpListenAddress=$HTTP_HOST</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Binds Jenkins to the IP address represented by $HTTP_HOST.
+The default is 0.0.0.0 — i.e. listening on all available interfaces.
+For example, to only listen for requests from localhost, you could use:
+<code>--httpListenAddress=127.0.0.1</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--httpsPort=$HTTPS_PORT</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Uses HTTPS protocol on port $HTTPS_PORT.
+This option does not impact the root URL being generated within Jenkins logic (UI, JNLP files, etc.).
+It is defined by the Jenkins URL specified in the global configuration.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--httpsListenAddress=$HTTPS_HOST</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Binds Jenkins to listen for HTTPS requests on the IP address represented by $HTTPS_HOST.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--http2Port=$HTTP_PORT</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Uses HTTP/2 protocol on port $HTTP_PORT.
+This option does not impact the root URL being generated within Jenkins logic (UI, JNLP files, etc.).
+It is defined by the Jenkins URL specified in the global configuration.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--http2ListenAddress=$HTTPS_HOST</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Binds Jenkins to listen for HTTP/2 requests on the IP address represented by $HTTPS_HOST.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--prefix=$PREFIX</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Runs Jenkins to include the $PREFIX at the end of the URL.
+For example, set <em>--prefix=/jenkins</em> to make Jenkins accessible at <em>http://myServer:8080/jenkins</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--ajp13Port=$AJP_PORT</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Runs Jenkins listener on port $AJP_PORT using standard <em>AJP13</em> protocol.
+The default is port 8009.
+To disable (because you’re using <em>https</em>), use port <code>-1</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--ajp13ListenAddress=$AJP_ADDR</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Binds Jenkins to the IP address represented by $AJP_HOST.
+The default is 0.0.0.0 — i.e. listening on all available interfaces.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--sessionTimeout=$TIMEOUT</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sets the http session timeout value
+to $SESSION_TIMEOUT minutes. Default to what webapp specifies, and then
+to 60 minutes</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="miscellaneous-parameters"><a class="anchor" href="#miscellaneous-parameters"></a>Miscellaneous parameters<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="#miscellaneous-parameters" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h3>
+<div class="paragraph">
+<p>Other Jenkins initialization configuration is also controlled by command line arguments.
+The miscellaneous configuration arguments are:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 2. Jenkins Miscellaneous Command Line Parameters</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Command Line Parameter</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--argumentsRealm.passwd.$USER=$PASS</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Assigns the password for user $USER.
+If Jenkins security is enabled, you must log in as a user who has an <em>admin</em> role to configure Jenkins.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--argumentsRealm.roles.$USER=admin</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Assigns user $USER the admin  role.
+The user can configure Jenkins even if security is enabled in Jenkins.
+See <a href="/doc/book/system-administration/security/">Securing Jenkins</a> for more information.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--useJmx</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enable <a href="https://www.eclipse.org/jetty/documentation/current/jmx-chapter.html">Jetty Java Management Extension (JMX)</a></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Jenkins passes all command line parameters to the Winstone servlet container.
+More information about Jenkins Winstone command line parameters is available from the
+<a href="https://github.com/jenkinsci/winstone#command-line-options">Winstone Command Line Parameter Reference</a>.</p>
+</div>
+<div class="admonitionblock caution">
+<table>
+<tbody><tr>
+<td class="icon">
+<i class="fa icon-caution" title="Caution"></i>
+</td>
+<td class="content">
+<strong>Be Careful with Command Line Parameters</strong><br>
+Jenkins ignores command line parameters it doesn’t understand instead of
+producing an error. Be careful when using command line parameters and
+make sure you have the correct spelling. For example, the parameter
+needed for defining the Jenkins administrative user is
+<code>--argument<strong>s</strong>Realm</code> and not <code>--argumentRealm</code>.
+</td>
+</tr>
+</tbody></table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="jenkins-properties"><a class="anchor" href="#jenkins-properties"></a>Jenkins properties<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="#jenkins-properties" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h3>
+<div class="paragraph">
+<p>Some Jenkins behaviors are configured with Java properties.
+Java properties are set from the command line that started Jenkins.
+Property assignments use the form <code>-DsomeName=someValue</code> to assign the value <code>someValue</code> to the property named <code>someName</code>.
+For example, to assign the value <code>true</code> to a property <code>testName</code>, the command line argument would be <code>-DtestName=true</code>.</p>
+</div>
+<div class="paragraph">
+<p>Refer to the detailed list of <a href="/doc/book/managing/system-properties/#Featurescontrolledbysystemproperties-PropertiesinJenkinsCore">Jenkins properties</a> for more information.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="configuring-http"><a class="anchor" href="#configuring-http"></a>Configuring HTTP<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="#configuring-http" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="https-with-an-existing-certificate"><a class="anchor" href="#https-with-an-existing-certificate"></a>HTTPS with an existing certificate<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="#https-with-an-existing-certificate" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h3>
+<div class="paragraph">
+<p>If you’re setting up Jenkins using the built-in Winstone server and want
+to use an existing certificate for HTTPS:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight nowrap"><code data-lang="bash">--httpPort=-1 \
+--httpsPort=443 \
+--httpsKeyStore=path/to/keystore \
+--httpsKeyStorePassword=keystorePassword</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The keystore should be in JKS format (as created by the JDK 'keytool')
+and the keystore and target key must have the same password. (Placing
+the keystore arguments after Jenkins-specific parameters does not seem
+to work; either they are not forwarded to Winstone or Winstone ignores
+them coming after unknown parameters. So, make sure they are adjacent to
+the working <code>--httpsPort</code> argument.)</p>
+</div>
+<div class="paragraph">
+<p>If your keystore contains multiple certificates (e.g. you are using CA
+signed certificate) Jenkins might end-up using a incorrect one. In this
+case you can
+<a href="http://stackoverflow.com/questions/7528944/convert-ca-signed-jks-keystore-to-pem">convert
+the keystore to PEM</a> and use following command line options:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight nowrap"><code data-lang="bash">--httpPort=-1 \
+--httpsPort=443 \
+--httpsCertificate=path/to/cert \
+--httpsPrivateKey=path/to/privatekey</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="using-http2"><a class="anchor" href="#using-http2"></a>Using HTTP/2<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="#using-http2" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h3>
+<div class="paragraph">
+<p>The <a href="https://tools.ietf.org/html/rfc7540">HTTP/2 protocol</a> allows web servers to reduce latency over encrypted connections by pipelining requests, multiplexing requests, and allowing servers to push in some cases before receiving a client request for the data.
+The Jetty server used by Jenkins supports HTTP/2 with the addition of the Application-Layer Protocol Negotiation (ALPN) TLS extension.
+The ALPN TLS extension is connected to the specific Jetty version and has specific requirements depending on the Java version.</p>
+</div>
+<div class="sect3">
+<h4 id="java-11-java-8u252-and-later"><a class="anchor" href="#java-11-java-8u252-and-later"></a>Java 11, Java 8u252, and later<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="#java-11-java-8u252-and-later" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h4>
+<div class="paragraph">
+<p>Java 11,  Java 8 update 252 and Java 8 versions after update 252 can run the ALPN TLS extension by installing the Jetty ALPN java server jar and passing it as a java command line argument.
+Steps to install the extension are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Identify the Jetty version included in your Jenkins server by searching the Jenkins startup log for the string <code>org.eclipse.jetty.server.Server#doStart</code>. For example:<br>
+<code>org.eclipse.jetty.server.Server#doStart: jetty-9.4.27.v20200227</code></p>
+</li>
+<li>
+<p>Locate the Java version on the "System Information" page of "Manage Jenkins" to confirm it is Java 11 or 8u252 (or later)</p>
+</li>
+<li>
+<p>Download the <a href="https://mvnrepository.com/artifact/org.eclipse.jetty/jetty-alpn-java-server">jetty-alpn-java-server</a> with the version number matching the Jetty version bundled with your Jenkins version</p>
+</li>
+<li>
+<p>Place the jetty-alpn-java-server.jar file in a directory accessible to the JVM</p>
+</li>
+<li>
+<p>Add <code>--extraLibFolder=/path/to/extra/lib/folder</code> to the Java command line arguments that start Jenkins</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight nowrap"><code data-lang="bash">java --extraLibFolder=/opt/java/jetty-alpn-java-server-9.4.27.v20200227.jar \
+    -jar target/jenkins.war \
+    --http2Port=9090</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="java-8u242-and-earlier"><a class="anchor" href="#java-8u242-and-earlier"></a>Java 8u242 and earlier<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="#java-8u242-and-earlier" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h4>
+<div class="paragraph">
+<p>Java 8 update 242 and earlier can run the ALPN TLS extension by installing the Jetty ALPN boot library corresponding to the <em>exact OpenJDK version</em> you are using into the Java boot classpath.
+Steps to install the extension are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Identify the Java version running your Jenkins server from the "Manage Jenkins" → "System Information" page</p>
+</li>
+<li>
+<p>Find the <a href="https://www.eclipse.org/jetty/documentation/current/alpn-chapter.html#alpn-versions">boot library</a> for your OpenJDK version</p>
+</li>
+<li>
+<p>Download the matching <a href="https://repo1.maven.org/maven2/org/mortbay/jetty/alpn/alpn-boot/">alpn-boot.jar</a> file to a directory accessible to the JVM</p>
+</li>
+<li>
+<p>Add the alpn-boot.jar to the JVM boot classpath by adding <code>-Xbootclasspath/p:/path/to/alpn-boot.jar</code> to the Java command line arguments that start Jenkins</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight nowrap"><code data-lang="bash">java -Xbootclasspath/p:/opt/java/alpn-boot-8.1.13.v20181017.jar \
+    -jar target/jenkins.war \
+    --http2Port=9090</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="https-certificates-with-windows"><a class="anchor" href="#https-certificates-with-windows"></a>HTTPS certificates with Windows<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="#https-certificates-with-windows" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h3>
+<div class="paragraph">
+<p>These instructions use a stock Jenkins installation on Windows Server.
+The instructions assume a certificate signed by a Certificate Authority such as Digicert.
+If you are making your own certificate skip steps 3, 4, and 5.</p>
+</div>
+<div class="paragraph">
+<p>This process utilizes Java’s keytool.
+Use the Java <code>keytool</code> included with your Java installation.</p>
+</div>
+<div class="paragraph">
+<p><strong>Step 1</strong>: Create a new keystore on your server. This will place a
+'keystore' file in your current directory.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight nowrap"><code>C:\&gt;keytool -genkeypair -keysize 2048 -keyalg RSA -alias jenkins -keystore keystore
+Enter keystore password:
+Re-enter new password:
+What is your first and last name?
+[Unknown]: server.example.com
+What is the name of your organizational unit?
+[Unknown]: A Unit
+What is the name of your organization?
+[Unknown]: A Company
+What is the name of your City or Locality?
+[Unknown]: A City
+What is the name of your State or Province?
+[Unknown]: A State
+What is the two-letter country code for this unit?
+[Unknown]: US
+Is CN=server.example.com, OU=A Unit, O=A Company, L=A City, ST=A State, C=US correct?
+[no]: yes
+
+Enter key password for &lt;jenkins&gt;
+(RETURN if same as keystore password):</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Step 2</strong>: Verify the keystore was created (your fingerprint will vary)</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight nowrap"><code>C:\&gt;keytool -list -keystore keystore
+Enter keystore password:
+
+Keystore type: JKS
+Keystore provider: SUN
+
+Your keystore contains 1 entry
+
+jenkins, May 6, 2015, PrivateKeyEntry,
+Certificate fingerprint (SHA1): AA:AA:AA:AA:AA:AA:AA:AA:AA:AA ...</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Step 3</strong>: Create the certificate request.  This will create a
+'certreq.csr' file in your current directory.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight nowrap"><code>C:\&gt;keytool -certreq -alias jenkins -keyalg RSA ^
+-file certreq.csr ^
+-ext SAN=dns:server-name,dns:server-name.your.company.com ^
+-keystore keystore
+Enter keystore password:</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Step 4</strong>: Use the contents of the <code>certreq.csr</code> file to generate a
+certificate from your certificate provider. Request a SHA-1 certificate
+(SHA-2 is untested but will likely work). If using DigiCert, download
+the resulting certificate as Other format  "a .p7b bundle of all the
+certs in a .p7b file".</p>
+</div>
+<div class="paragraph">
+<p><strong>Step 5</strong>: Add the resulting .p7b into the keystore you created above.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight nowrap"><code>C:\&gt;keytool -import ^
+-alias jenkins ^
+-trustcacerts ^
+-file response_from_digicert.p7b ^
+-keystore keystore
+Enter keystore password:
+Certificate reply was installed in keystore</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Step 6</strong>: Copy the 'keystore' file to your Jenkins secrets directory. On a
+stock installation, this will be at</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight nowrap"><code>C:\Program Files (x86)\Jenkins\secrets</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Step 7</strong>: Modify the &lt;arguments&gt; section of your
+<code>C:\Program Files (x86)\Jenkins\jenkins.xml</code> file to reflect the new
+certificate. Note: This example disables http via <code>--httpPort=-1</code> and
+places the server on <code>8443</code> via <code>--httpsPort=8443</code>.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight nowrap"><code data-lang="xml"><span style="color:#070;font-weight:bold">&lt;arguments&gt;</span>
+  -Xrs
+  -Xmx256m
+  -Dhudson.lifecycle=hudson.lifecycle.WindowsServiceLifecycle
+  -jar "%BASE%\jenkins.war"
+  --httpPort=-1
+  --httpsPort=8443
+  --httpsKeyStore="%BASE%\secrets\keystore"
+  --httpsKeyStorePassword=your.password.here
+<span style="color:#070;font-weight:bold">&lt;/arguments&gt;</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Step 8</strong>: Restart the jenkins service to initialize the new configuration.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight nowrap"><code>net stop jenkins
+net start jenkins</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Step 9</strong>: After 30-60 seconds, Jenkins will have completed the startup
+process and you should be able to access the website at <em>https://server.example.com:8443</em>.
+Verify the certificate looks good via your browser’s tools.
+If the service terminates immediately, there’s an error somewhere in your configuration.
+Useful error information can be found in:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight nowrap"><code>C:\Program Files (x86)\Jenkins\jenkins.err.log
+C:\Program Files (x86)\Jenkins\jenkins.out.log</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>                
+
+                <hr/>
+                <div id="doc_book_using" class="section"> <h1 id="using-jenkins"> Using Jenkins <a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="#using-jenkins" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h1> <div id="subsections"> <div class="toc"> <div id="toc-title"> Chapter Sub-Sections </div> <ul> <li> <a href="using-credentials"> Using credentials </a> </li> <li> <a href="referencing-another-project-by-name"> Referencing another project by name </a> </li> <li> <a href="aborting-a-build"> Aborting a build </a> </li> <li> <a href="fingerprints"> Fingerprints </a> </li> <li> <a href="using-local-language"> Using local language </a> </li> <li> <a href="change-time-zone"> Change time zone </a> </li> <li> <a href="remote-access-api"> Remote Access API </a> </li> </ul> </div> </div> <div class="paragraph"> <p>This chapter contains topics for typical Jenkins users (of all skill levels) about Jenkins usage which is outside the scope of the core Jenkins features: Pipeline and Blue Ocean.</p> </div> <div class="paragraph"> <p>If you want to create and configure a Pipeline project through a <code>Jenkinsfile</code> or through Blue Ocean, or you wish to find out more about these core Jenkins features, refer to the relevant topics within the respective <a href="../pipeline">Pipeline</a> and <a href="../blueocean">Blue Ocean</a> chapters.</p> </div> <div class="paragraph"> <p>If you are a Jenkins administrator and want to know more about managing Jenkins nodes and instances, see <a href="../managing">Managing Jenkins</a>.</p> </div> <div class="paragraph"> <p>If you are a system administrator and want learn how to back-up, restore, maintain as Jenkins servers and nodes, see <a href="../system-administration">Jenkins System Administration</a>.</p> </div> <div class="paragraph"> <p>For an overview of content in the Jenkins User Handbook, see <a href="../getting-started">User Handbook overview</a>.</p> </div> </div>
+                <hr/>
+                <div id="doc_book_using_credentials" class="section"> <h1 id="using-credentials"> Using credentials <a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="#using-credentials" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h1> <div id="toc" class="toc"> <div id="toctitle">Table of Contents</div> <ul class="sectlevel1"> <li><a href="#credential-security">Credential security</a></li> <li><a href="#configuring-credentials">Configuring credentials</a> <ul class="sectlevel2"> <li><a href="#adding-new-global-credentials">Adding new global credentials</a></li> </ul> </li> </ul> </div> <div id="preamble"> <div class="sectionbody"> <div class="paragraph"> <p>There are numerous 3rd-party sites and applications that can interact with Jenkins, for example, artifact repositories, cloud-based storage systems and services, and so on.</p> </div> <div class="paragraph"> <p>A systems administrator of such an application can configure credentials in the application for dedicated use by Jenkins. This would typically be done to "lock down" areas of the application’s functionality available to Jenkins, usually by applying access controls to these credentials. Once a Jenkins manager (i.e. a Jenkins user who administers a Jenkins site) adds/configures these credentials in Jenkins, the credentials can be used by Pipeline projects to interact with these 3rd party applications.</p> </div> <div class="paragraph"> <p><strong>Note:</strong> The Jenkins credentials functionality described on this and related pages is provided by the <a href="https://plugins.jenkins.io/credentials-binding">Credentials Binding plugin</a>.</p> </div> <div class="paragraph"> <p>Credentials stored in Jenkins can be used:</p> </div> <div class="ulist"> <ul> <li> <p>anywhere applicable throughout Jenkins (i.e. global credentials), <a id="types-of-credentials"></a></p> </li> <li> <p>by a specific Pipeline project/item (read more about this in the <a href="../../pipeline/jenkinsfile#handling-credentials">Handling credentials</a> section of <a href="../../pipeline/jenkinsfile">Using a Jenkinsfile</a>),</p> </li> <li> <p>by a specific Jenkins user (as is the case for <a href="../../blueocean/creating-pipelines">Pipeline projects created in Blue Ocean</a>).</p> </li> </ul> </div> <div class="paragraph"> <p>Jenkins can store the following types of credentials:</p> </div> <div class="ulist"> <ul> <li> <p><strong>Secret text</strong> - a token such as an API token (e.g. a GitHub personal access token),</p> </li> <li> <p><strong>Username and password</strong> - which could be handled as separate components or as a colon separated string in the format <code>username:password</code> (read more about this in <a href="../../pipeline/jenkinsfile#handling-credentials">Handling credentials</a>),</p> </li> <li> <p><strong>Secret file</strong> - which is essentially secret content in a file,</p> </li> <li> <p><strong>SSH Username with private key</strong> - an <a href="http://www.snailbook.com/protocols.html">SSH public/private key pair</a>,</p> </li> <li> <p><strong>Certificate</strong> - a <a href="https://tools.ietf.org/html/rfc7292">PKCS#12 certificate file</a> and optional password, or</p> </li> <li> <p><strong>Docker Host Certificate Authentication</strong> credentials.</p> </li> </ul> </div> </div> </div> <div class="sect1"> <h2 id="credential-security"><a class="anchor" href="#credential-security"></a>Credential security<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="#credential-security" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h2> <div class="sectionbody"> <div class="paragraph"> <p>To maximize security, credentials configured in Jenkins are stored in an encrypted form on the master Jenkins instance (encrypted by the Jenkins instance ID) and are only handled in Pipeline projects via their credential IDs.</p> </div> <div class="paragraph"> <p>This minimizes the chances of exposing the actual credentials themselves to Jenkins users and hinders the ability to copy functional credentials from one Jenkins instance to another.</p> </div> </div> </div> <div class="sect1"> <h2 id="configuring-credentials"><a class="anchor" href="#configuring-credentials"></a>Configuring credentials<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="#configuring-credentials" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h2> <div class="sectionbody"> <div class="paragraph"> <p>This section describes procedures for configuring credentials in Jenkins.</p> </div> <div class="paragraph"> <p>Credentials can be added to Jenkins by any Jenkins user who has the <strong>Credentials &gt; Create</strong> permission (set through <strong>Matrix-based security</strong>). These permissions can be configured by a Jenkins user with the <strong>Administer</strong> permission. Read more about this in the <a href="../../managing/security/#authorization">Authorization</a> section of <a href="../../managing/security">Managing Security</a>.</p> </div> <div class="paragraph"> <p>Otherwise, any Jenkins user can add and configure credentials if the <strong>Authorization</strong> settings of your Jenkins instance’s <strong>Configure Global Security</strong> settings page is set to the default <strong>Logged-in users can do anything</strong> setting or <strong>Anyone can do anything</strong> setting.</p> </div> <div class="sect2"> <h3 id="adding-new-global-credentials"><a class="anchor" href="#adding-new-global-credentials"></a>Adding new global credentials<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="#adding-new-global-credentials" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h3> <div class="paragraph"> <p>To add new global credentials to your Jenkins instance:</p> </div> <div class="olist arabic"> <ol class="arabic"> <li> <p>If required, ensure you are logged in to Jenkins (as a user with the <strong>Credentials &gt; Create</strong> permission).</p> </li> <li> <p>From the Jenkins home page (i.e. the Dashboard of the Jenkins classic UI), click <strong>Credentials &gt; System</strong> on the left.</p> </li> <li> <p>Under <strong>System</strong>, click the <strong>Global credentials (unrestricted)</strong> link to access this default domain.</p> </li> <li> <p>Click <strong>Add Credentials</strong> on the left.<br> <strong>Note:</strong> If there are no credentials in this default domain, you could also click the <strong>add some credentials</strong> link (which is the same as clicking the <strong>Add Credentials</strong> link).</p> </li> <li> <p>From the <strong>Kind</strong> field, choose the <a href="#types-of-credentials">type of credentials</a> to add.</p> </li> <li> <p>From the <strong>Scope</strong> field, choose either:</p> <div class="ulist"> <ul> <li> <p><strong>Global</strong> - if the credential/s to be added is/are for a Pipeline project/item. Choosing this option applies the scope of the credential/s to the Pipeline project/item "object" and all its descendent objects.</p> </li> <li> <p><strong>System</strong> - if the credential/s to be added is/are for the Jenkins instance itself to interact with system administration functions, such as email authentication, agent connection, etc. Choosing this option applies the scope of the credential/s to a single object only.</p> </li> </ul> </div> </li> <li> <p>Add the credentials themselves into the appropriate fields for your chosen credential type:</p> <div class="ulist"> <ul> <li> <p><strong>Secret text</strong> - copy the secret text and paste it into the <strong>Secret</strong> field.</p> </li> <li> <p><strong>Username and password</strong> - specify the credential’s <strong>Username</strong> and <strong>Password</strong> in their respective fields.</p> </li> <li> <p><strong>Secret file</strong> - click the <strong>Choose file</strong> button next to the <strong>File</strong> field to select the secret file to upload to Jenkins.</p> </li> <li> <p><strong>SSH Username with private key</strong> - specify the credentials <strong>Username</strong>, <strong>Private Key</strong> and optional <strong>Passphrase</strong> into their respective fields.<br> <strong>Note:</strong> Choosing <strong>Enter directly</strong> allows you to copy the private key’s text and paste it into the resulting <strong>Key</strong> text box.</p> </li> <li> <p><strong>Certificate</strong> - specify the <strong>Certificate</strong> and optional <strong>Password</strong>. Choosing <strong>Upload PKCS#12 certificate</strong> allows you to upload the certificate as a file via the resulting <strong>Upload certificate</strong> button.</p> </li> <li> <p><strong>Docker Host Certificate Authentication</strong> - copy and paste the appropriate details into the <strong>Client Key</strong>, <strong>Client Certificate</strong> and <strong>Server CA Certificate</strong> fields.</p> </li> </ul> </div> </li> <li> <p>In the <strong>ID</strong> field, specify a meaningful credential ID value - for example, <code>jenkins-user-for-xyz-artifact-repository</code>. You can use upper- or lower-case letters for the credential ID, as well as any valid separator character. However, for the benefit of all users on your Jenkins instance, it is best to use a single and consistent convention for specifying credential IDs.<br> <strong>Note:</strong> This field is optional. If you do not specify its value, Jenkins assigns a globally unique ID (GUID) value for the credential ID. Bear in mind that once a credential ID is set, it can no longer be changed.</p> </li> <li> <p>Specify an optional <strong>Description</strong> for the credential/s.</p> </li> <li> <p>Click <strong>OK</strong> to save the credentials.</p> </li> </ol> </div> </div> </div> </div> </div>
+                <hr/>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
