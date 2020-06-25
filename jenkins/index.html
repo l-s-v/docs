@@ -18,11 +18,17 @@
 
 <body>
     <div class="container">
-        <div class="row body">            
+        <div class="row body">
+
+            <div class="icon bt-menu active">
+                <i class="fa fa-arrow-circle-left bt-ocultar" aria-hidden="true" title="Ocultar menu"></i>
+                <i class="fa fa-arrow-circle-right bt-exibir" aria-hidden="true" title="Exibir menu"></i>
+            </div>
+
             <div class="col-lg-3 menu">
                 <div class="sidebar-nav tour">
                     <p>
-                        <a href="#doc" class="active">> User Documentation Home</a>
+                        <a href="#doc">User Documentation Home</a>
                     </p>
                     <h5>
                         User Handbook
@@ -34,8 +40,9 @@
                         <li>
                             <a href="doc/book/installing" class="">Installing Jenkins</a>
                         </li>
-                        <li>
+                        <li class="li-menu">
                             <a href="doc/book/using">Using Jenkins</a>
+                            <i class="fa ico-sub-menu" aria-hidden="true"></i>
                             <small>
                                 <ul style="padding-left: 1rem;">
                                     <li>
@@ -63,8 +70,9 @@
                                 </ul>
                             </small>
                         </li>
-                        <li>
+                        <li class="li-menu">
                             <a href="doc/book/pipeline">Pipeline</a>
+                            <i class="fa ico-sub-menu" aria-hidden="true"></i>
                             <small>
                                 <ul style="padding-left: 1rem;">
                                     <li>
@@ -107,8 +115,9 @@
                                 </ul>
                             </small>
                         </li>
-                        <li>
+                        <li class="li-menu">
                             <a href="book/blueocean">Blue Ocean</a>
+                            <i class="fa ico-sub-menu" aria-hidden="true"></i>
                             <small>
                                 <ul style="padding-left: 1rem;">
                                     <li>
@@ -134,8 +143,9 @@
                                 </ul>
                             </small>
                         </li>
-                        <li>
+                        <li class="li-menu">
                             <a href="doc/book/managing">Managing Jenkins</a>
+                            <i class="fa ico-sub-menu" aria-hidden="true"></i>                            
                             <small>
                                 <ul style="padding-left: 1rem;">
                                     <li>
@@ -184,8 +194,9 @@
                                 </ul>
                             </small>
                         </li>
-                        <li>
+                        <li class="li-menu">
                             <a href="doc/book/system-administration">System Administration</a>
+                            <i class="fa ico-sub-menu" aria-hidden="true"></i>
                             <small>
                                 <ul style="padding-left: 1rem;">
                                     <li>
@@ -257,8 +268,6 @@
                     </ul>
                 </div>
             </div>
-            <div class="icon"><i class="fas fa-arrow-alt-to-left"></i></div>
-            <div class="icon"><i class="fa icon-caution" title="Caution"></i></div>
             
             <div class="col-lg-9 conteudo">
                 
@@ -2414,6 +2423,33 @@ C:\Program Files (x86)\Jenkins\jenkins.out.log</code></pre>
             </div>
         </div>
     </div>
+
+    <script>
+		var fnClick = function(obj) {
+			var className = "active";
+
+			if(obj.classList.contains(className)) {
+				obj.classList.remove(className);
+			}
+			else {
+				obj.classList.add(className);
+			}
+			return false;
+		};
+
+        document.getElementsByClassName("bt-menu")[0].onclick = function(){
+            fnClick(this);
+        };
+        
+		var submenus = document.getElementsByClassName("ico-sub-menu");
+		for(var l = 0; l < submenus.length; l++){
+			submenus[l].onclick = function(){
+                fnClick(this.parentElement);
+            };
+		}        
+
+    </script>
+    
 </body>
 
 </html>

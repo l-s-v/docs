@@ -4,6 +4,7 @@
   height: 100%;
   width: 400px;
   max-width: 400px;
+  background-color: #f9f9fb;
 }
 
 .col-lg-9.conteudo {
@@ -14,6 +15,62 @@
   flex-grow: 1;
   z-index: 50;
   background: #fff;
+  padding-left: 40px;
+}
+
+.bt-menu {
+  position: fixed;
+  margin-left: 345px;
+  z-index: 999;
+}
+
+.bt-menu > i {
+  font-size: 2.5em;
+  text-shadow: 1px 1px 2px rgba(0,0,0,.5);
+  cursor: pointer;
+  color: #069;
+}
+
+.bt-menu.active > .bt-exibir,
+.bt-menu:not(.active) > .bt-ocultar,
+.bt-menu:not(.active) + .col-lg-3.menu {
+  display: none;
+}
+
+.bt-menu:not(.active),
+.bt-menu:not(.active) + div + .col-lg-9.conteudo {
+  margin-left: 0;
+}
+
+.li-menu i.fa {
+  font-size: 0.8em;
+  cursor: pointer;
+  color: #069;
+  float: right;
+  margin-right: 8px;
+  margin-top: -19px;
+}
+
+.li-menu i.fa::before {
+  content: "\f078";
+}
+
+.li-menu.active i.fa::before {
+  content: "\f077";
+}
+
+.li-menu:not(.active) small {
+  display: none;
+}
+
+.sidebar-nav ul li a {
+  display: block;
+  text-decoration: none;
+}
+
+.sidebar-nav ul li a:hover {
+  background-color: #e8eff5;
+  color: #76a8d4;
 }
 
 h1[id]:before,
