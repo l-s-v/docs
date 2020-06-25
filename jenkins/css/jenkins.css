@@ -84,6 +84,10 @@
   color: #76a8d4;
 }
 
+hr {
+  width: 100%;
+}
+
 h1[id]:before,
 h2[id]:before,
 h3[id]:before,
