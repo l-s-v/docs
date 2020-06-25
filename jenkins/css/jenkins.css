@@ -1,3 +1,10 @@
+.logo {
+  z-index: 999;
+  position: fixed;
+  right: 5px;
+  top: 5px;
+}
+
 .col-lg-3.menu {
   position: fixed;
   overflow: auto;
@@ -22,17 +29,21 @@
   position: fixed;
   margin-left: 345px;
   z-index: 999;
-}
 
-.bt-menu > i {
-  font-size: 2.5em;
+  font-size: 2.5em !important;
   text-shadow: 1px 1px 2px rgba(0,0,0,.5);
   cursor: pointer;
   color: #069;
 }
 
-.bt-menu.active > .bt-exibir,
-.bt-menu:not(.active) > .bt-ocultar,
+.bt-menu::before {
+  content: "\f0a9";
+}
+
+.bt-menu.active::before {
+  content: "\f0a8";
+}
+
 .bt-menu:not(.active) + .col-lg-3.menu {
   display: none;
 }
