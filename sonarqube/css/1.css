@@ -1,3 +1,10 @@
+.logo {
+  z-index: 999;
+  position: fixed;
+  right: 5px;
+  top: 5px;
+}
+
 .update-center-meta-data {
   margin: 16px 0;
   padding: 16px 16px 8px;
