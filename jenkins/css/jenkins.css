@@ -1,3 +1,8 @@
+span.image {
+    display: block;
+    max-width: 57%;
+}
+
 .logo {
   z-index: 999;
   position: fixed;
