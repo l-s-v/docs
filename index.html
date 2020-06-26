@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        margin: 0 auto;
+        max-width: 56em;
+        padding: 1em 0;
+    }
+
+    .grid {
+        /* Grid Fallback */
+        display: flex;
+        flex-wrap: wrap;
+
+        /* Supports Grid */
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        grid-auto-rows: minmax(150px, auto);
+        grid-gap: 1em;
+    }
+
+    .module {
+        /* Demo-Specific Styles */
+        background: #81b0c426;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 300px;
+        border: solid 1px #335061; 
+
+        /* Flex Fallback */
+        margin-left: 5px;
+        margin-right: 5px;
+        flex: 1 1 200px;
+    }
+
+    /* If Grid is supported, remove the margin we set for the fallback */
+    @supports (display: grid) {
+        .module {
+            margin: 0;
+        }
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    li {
+        padding-top: 10px;
+    }
+</style>
+
+<body>
+    <div class="grid">
+
+        <div class="module">
+            <a><img alt="Continuous Code Quality" class="sidebar-logo" src="sonarqube/images/logo.svg" width="128"></a>
+            <ul>
+                <li><a href="https://docs.sonarqube.org/8.3/">Site original</a></li>
+                <li><a href="sonarqube/index.html">Texto corrido</a></li>
+                <li><a href="sonarqube/pt/index.html">Traduzido português by <img src="images/google_translate.ico" width="16"> </a></li>
+
+                <li><a href="sonarqube/sonarqube.pdf">Texto corrido <img src="images/pdf-icon.png" width="16"> </a></li>
+                <li><a href="sonarqube/pt/sonarqube_pt.pdf">Traduzido português by <img src="images/google_translate.ico" width="16"> <img src="images/pdf-icon.png" width="16"> </a></li>
+            </ul>
+        </div>
+
+        <div class="module">
+            <a><img alt="Continuous Code Quality" class="sidebar-logo" src="jenkins/images/logo_128.png" width="93"></a>
+            <ul>
+                <li><a href="https://www.jenkins.io/doc/">Site original</a></li>
+                <li><a href="jenkins/index.html">Texto corrido</a></li>
+                <li><a href="jenkins/pt/index.html">Traduzido português by <img src="images/google_translate.ico" width="16"> </a></li>
+
+                <li><a href="jenkins/jenkins.pdf">Texto corrido <img src="images/pdf-icon.png" width="16"> </a></li>
+                <li><a href="jenkins/pt/jenkins_pt.pdf">Traduzido português by <img src="images/google_translate.ico" width="16"> <img src="images/pdf-icon.png" width="16"> </a></li>
+            </ul>            
+        </div>
+
+    </div>
+</body>
+
+</html>
