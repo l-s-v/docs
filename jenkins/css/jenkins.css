@@ -89,6 +89,20 @@ span.image {
   color: #76a8d4;
 }
 
+.listingblock.pipeline-script{
+  display: none;
+}
+
+.pipeline-script-expand.active + .listingblock.pipeline-script {
+  display: initial;
+}
+
+
+
+
+
+
+
 hr {
   width: 100%;
 }
