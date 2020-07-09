@@ -4952,32 +4952,35 @@ For instance, copy the following Declarative example Pipeline code (below the
 <em>Jenkinsfile ( …​ )</em> heading) or its Scripted version equivalent and paste
 this into the <strong>Script</strong> text area. (The Declarative example below is used
 throughout the remainder of this procedure.)</p>
-<div class="pipeline-block">  <div class="listingblock pipeline-declarative">
-<div class="title">Jenkinsfile (Declarative Pipeline)</div>
-<div class="content">
-<pre class="CodeRay highlight nowrap"><code class="language-groovy" data-lang="groovy">pipeline {
-agent any <span style="color:#777"><i class="conum" data-value="1"></i><b>(1)</b></span>
-stages {
-stage(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">Stage 1</span><span style="color:#710">'</span></span>) {
-steps {
-echo <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">Hello world!</span><span style="color:#710">'</span></span> <span style="color:#777"><i class="conum" data-value="2"></i><b>(2)</b></span>
-}
-}
-}
+<div class="pipeline-block">
+<div class="listingblock pipeline-declarative">
+    <div class="title">Jenkinsfile (Declarative Pipeline)</div>
+    <div class="content">
+  <pre class="CodeRay highlight nowrap"><code class="language-groovy" data-lang="groovy">pipeline {
+    agent any <span style="color:#777"><i class="conum" data-value="1"></i><b>(1)</b></span>
+    stages {
+        stage(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">Stage 1</span><span style="color:#710">'</span></span>) {
+            steps {
+                echo <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">Hello world!</span><span style="color:#710">'</span></span> <span style="color:#777"><i class="conum" data-value="2"></i><b>(2)</b></span>
+            }
+        }
+    }
 }</code></pre>
-</div></div>  <div class="pipeline-script-expand">
+</div></div>
+<div class="pipeline-script-expand">
 <a href="#" onclick="return fnClick(this.parentElement);">Toggle Scripted Pipeline</a>
 <em>(Advanced)</em>
 </div>
-<div class="listingblock pipeline-script">
-<div class="title">Jenkinsfile (Scripted Pipeline)</div>
-<div class="content">
-<pre class="CodeRay highlight nowrap"><code class="language-groovy" data-lang="groovy">node { <span style="color:#777"><i class="conum" data-value="3"></i><b>(3)</b></span>
-stage(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">Stage 1</span><span style="color:#710">'</span></span>) {
-echo <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">Hello World</span><span style="color:#710">'</span></span> <span style="color:#777"><i class="conum" data-value="2"></i><b>(2)</b></span>
-}
+<div class="listingblock pipeline-script" style="">
+    <div class="title">Jenkinsfile (Scripted Pipeline)</div>
+    <div class="content">
+  <pre class="CodeRay highlight nowrap"><code class="language-groovy" data-lang="groovy">node { <span style="color:#777"><i class="conum" data-value="3"></i><b>(3)</b></span>
+    stage(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">Stage 1</span><span style="color:#710">'</span></span>) {
+        echo <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">Hello World</span><span style="color:#710">'</span></span> <span style="color:#777"><i class="conum" data-value="2"></i><b>(2)</b></span>
+    }
 }</code></pre>
-</div></div></div>
+</div></div>
+</div>
 <div class="colist arabic">
 <table>
 <tbody><tr>
