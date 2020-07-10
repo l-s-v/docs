@@ -94,7 +94,7 @@ span.image {
 }
 
 .pipeline-script-expand.active + .listingblock.pipeline-script {
-  display: initial;
+  display: block;
 }
 
 

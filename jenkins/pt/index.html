@@ -65,7 +65,7 @@
                                     <li><a href="#doc_book_pipeline_getting-started">Introdução ao Pipeline</a></li>
                                     <li><a href="#doc_book_pipeline_jenkinsfile">Usando um arquivo Jenkins</a></li>
                                     <li><a href="#doc_book_pipeline_running-pipelines">Pipelines em execução</a></li>
-                                    <li><a href="#doc_book_pipeline_multibranch">Ramificações e solicitações pull</a></li>
+                                    <li><a href="#doc_book_pipeline_multibranch">Branches e pull requests</a></li>
                                     <li><a href="#doc_book_pipeline_docker">Usando o Docker com pipeline</a></li>
                                     <li><a href="#doc_book_pipeline_shared-libraries">Estendendo com bibliotecas compartilhadas</a></li>
                                     <li><a href="#doc_book_pipeline_development">Ferramentas de desenvolvimento de pipeline</a></li>
@@ -2975,7 +2975,7 @@ Fazendo referência a outro projeto por nome
 </div>
 </div>
 <div class="sect2">
-<h3 id="multibranch-pipelines"><a class="anchor" href="#multibranch-pipelines"></a>Pipelines de várias filiais<a class="anchorjs-link " aria-label="Âncora" data-anchorjs-icon="" href="#multibranch-pipelines" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h3>
+<h3 id="multibranch-pipelines"><a class="anchor" href="#multibranch-pipelines"></a>Pipelines multibranch<a class="anchorjs-link " aria-label="Âncora" data-anchorjs-icon="" href="#multibranch-pipelines" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h3>
 <div class="paragraph">
 <p>Você pode se referir a um ramo específico:</p>
 </div>
@@ -2991,7 +2991,7 @@ Fazendo referência a outro projeto por nome
 <h2 id="name-encoding"><a class="anchor" href="#name-encoding"></a>Codificação de nome<a class="anchorjs-link " aria-label="Âncora" data-anchorjs-icon="" href="#name-encoding" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Caracteres especiais nos caminhos devem ser codificados em URL. Por exemplo, se o seu Pipeline Multibranch possuir uma ramificação com uma barra ( <code>feature/myfeature</code>), substitua a barra por <code>%2F</code>:</p>
+<p>Caracteres especiais nos caminhos devem ser codificados em URL. Por exemplo, se o seu Pipeline Multibranch possuir uma branch com uma barra ( <code>feature/myfeature</code>), substitua a barra por <code>%2F</code>:</p>
 </div>
 <div class="literalblock">
 <div class="content">
@@ -3621,7 +3621,7 @@ Pipelines em execução
 </li>
 <li>
 <a href="#multibranch">
-Ramificações e solicitações pull
+Branches e pull requests
 </a>
 </li>
 <li>
@@ -3707,7 +3707,7 @@ Incompatibilidades do método CPS do pipeline
 <p><a href="#jenkinsfile">criar e usar a<code>Jenkinsfile</code></a> - abrange cenários de casos de uso sobre como criar e construir seus <code>Jenkinsfile</code>,</p>
 </li>
 <li>
-<p>trabalhe com <a href="#multibranch">ramificações e solicitações pull</a>,</p>
+<p>trabalhe com <a href="#multibranch">branches e pull requests</a>,</p>
 </li>
 <li>
 <p><a href="#docker">use Docker with Pipeline</a> - cobre como o Jenkins pode chamar contêineres Docker em agentes/nodes (de a <code>Jenkinsfile</code>) para criar seus projetos de Pipeline,</p>
@@ -3755,7 +3755,7 @@ Essa é a base do "Pipeline como código"; tratando o pipeline do CD como parte 
 <div class="ulist">
 <ul>
 <li>
-<p>Cria automaticamente um processo de construção de Pipeline para todas as filiais e solicitações de recebimento.</p>
+<p>Cria automaticamente um processo de construção de Pipeline para todas as branches e solicitações de recebimento.</p>
 </li>
 <li>
 <p>Revisão/iteração de código no Pipeline (junto com o código-fonte restante).</p>
@@ -4085,7 +4085,7 @@ stage(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#7
 </tr>
 <tr>
 <td><i class="conum" data-value="2"></i><b>2</b></td>
-<td><a href="#agent"><code>agent</code></a> é uma sintaxe específica do Pipeline declarativa que instrui Jenkins a alocar um executor (em um node) e a área de trabalho para todo o Pipeline.</td>
+<td><a href="#agent"><code>agent</code></a> é uma sintaxe específica do Pipeline declarativa que instrui Jenkins a alocar um executor (em um node) e a workspace para todo o Pipeline.</td>
 </tr>
 <tr>
 <td><i class="conum" data-value="3"></i><b>3</b></td>
@@ -4157,7 +4157,7 @@ Introdução ao Pipeline
 </li>
 <li><a href="#built-in-documentation">Documentação Integrada</a>
 <ul class="sectlevel2">
-<li><a href="#snippet-generator">Gerador de trechos</a></li>
+<li><a href="#trecho-generator">Gerador de trechos</a></li>
 <li><a href="#global-variable-reference">Referência de variável global</a></li>
 <li><a href="#directive-generator">Gerador de diretiva declarativa</a></li>
 </ul>
@@ -4457,15 +4457,15 @@ que podem corrigir o problema.</p>
 <p><span class="image"><img src="../images/pipeline/classic-ui-left-column-on-item.png" alt="Coluna esquerda da interface do usuário clássica em um item" width="35%"></span></p>
 </div>
 <div class="sect2">
-<h3 id="snippet-generator"><a class="anchor" href="#snippet-generator"></a>Gerador de trechos<a class="anchorjs-link " aria-label="Âncora" data-anchorjs-icon="" href="#snippet-generator" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h3>
+<h3 id="trecho-generator"><a class="anchor" href="#trecho-generator"></a>Gerador de trechos<a class="anchorjs-link " aria-label="Âncora" data-anchorjs-icon="" href="#trecho-generator" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h3>
 <div class="paragraph">
-<p>O utilitário interno "Snippet Generator" é útil para criar bits de código para steps individuais, descobrir novas steps fornecidas por plug-ins ou experimentar diferentes parâmetros para uma step específica.</p>
+<p>O utilitário interno "Trecho Generator" é útil para criar bits de código para steps individuais, descobrir novas steps fornecidas por plug-ins ou experimentar diferentes parâmetros para uma step específica.</p>
 </div>
 <div class="paragraph">
-<p>O Snippet Generator é preenchido dinamicamente com uma lista das steps disponíveis para a instância Jenkins. O número de steps disponíveis depende dos plug-ins instalados, que expõem explicitamente as steps para uso no Pipeline.</p>
+<p>O Trecho Generator é preenchido dinamicamente com uma lista das steps disponíveis para a instância Jenkins. O número de steps disponíveis depende dos plug-ins instalados, que expõem explicitamente as steps para uso no Pipeline.</p>
 </div>
 <div class="paragraph">
-<p>Para gerar um snippet de step com o Snippet Generator:</p>
+<p>Para gerar um trecho de step com o Trecho Generator:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -4479,12 +4479,12 @@ que podem corrigir o problema.</p>
 <p>Use a área preenchida dinamicamente abaixo da <strong>amostra Step</strong> suspensa para configurar a step selecionada.</p>
 </li>
 <li>
-<p>Clique em <strong>Gerar script de pipeline</strong> para criar um snippet de pipeline que pode ser copiado e colado em um pipeline.</p>
+<p>Clique em <strong>Gerar script de pipeline</strong> para criar um trecho de pipeline que pode ser copiado e colado em um pipeline.</p>
 </li>
 </ol>
 </div>
 <div class="paragraph boxshadow">
-<p><span class="image"><img src="../images/pipeline/snippet-generator.png" alt="Gerador de trechos" width="100%"></span></p>
+<p><span class="image"><img src="../images/pipeline/trecho-generator.png" alt="Gerador de trechos" width="100%"></span></p>
 </div>
 <div class="paragraph">
 <p>Para acessar informações e/ou documentação adicionais sobre a step selecionada, clique no ícone de ajuda (indicado pela seta vermelha na imagem acima).</p>
@@ -4493,7 +4493,7 @@ que podem corrigir o problema.</p>
 <div class="sect2">
 <h3 id="global-variable-reference"><a class="anchor" href="#global-variable-reference"></a>Referência de variável global<a class="anchorjs-link " aria-label="Âncora" data-anchorjs-icon="" href="#global-variable-reference" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h3>
 <div class="paragraph">
-<p>Além do Gerador de trechos, que apenas apresenta steps, o Pipeline também fornece uma " <strong>Referência variável global</strong> ". Assim como o Snippet Generator, ele também é preenchido dinamicamente por plug-ins. Porém, diferentemente do Snippet Generator, a Global Variable Reference contém apenas documentação para
+<p>Além do Gerador de trechos, que apenas apresenta steps, o Pipeline também fornece uma " <strong>Referência variável global</strong> ". Assim como o Trecho Generator, ele também é preenchido dinamicamente por plug-ins. Porém, diferentemente do Trecho Generator, a Global Variable Reference contém apenas documentação para
  <strong>variáveis</strong> fornecidas pelo Pipeline ou plug-ins, que estão disponíveis para Pipelines.</p>
 </div>
 <div class="paragraph">
@@ -4526,7 +4526,7 @@ obter uma lista completa e atualizada de propriedades disponíveis em <code>curr
 <h3 id="directive-generator"><a class="anchor" href="#directive-generator"></a>Gerador de diretiva declarativa<a class="anchorjs-link " aria-label="Âncora" data-anchorjs-icon="" href="#directive-generator" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h3>
 <div class="paragraph">
 <p>Enquanto o Gerador de trechos ajuda na geração de steps para um pipeline com script ou para o <code>steps</code> bloco em um <code>stage</code> pipeline declarativo, ele não cobre as <a href="#declarative-sections">seções</a> e
- <a href="#declarative-directives">diretrizes</a> usadas para definir um pipeline declarativo. O utilitário "Gerador de diretiva declarativa" ajuda nisso. Semelhante ao <a href="#snippet-generator">Gerador de trechos</a>, o Gerador de diretivas permite escolher uma diretiva declarativa, configurá-la em um formulário e gerar a configuração dessa diretiva, que você pode usar no seu pipeline declarativo.</p>
+ <a href="#declarative-directives">diretrizes</a> usadas para definir um pipeline declarativo. O utilitário "Gerador de diretiva declarativa" ajuda nisso. Semelhante ao <a href="#trecho-generator">Gerador de trechos</a>, o Gerador de diretivas permite escolher uma diretiva declarativa, configurá-la em um formulário e gerar a configuração dessa diretiva, que você pode usar no seu pipeline declarativo.</p>
 </div>
 <div class="paragraph">
 <p>Para gerar uma diretiva declarativa usando o gerador de diretiva declarativa:</p>
@@ -4617,7 +4617,7 @@ Usando um arquivo Jenkins
 <ul class="sectlevel2">
 <li><a href="#build">Construir</a></li>
 <li><a href="#test">Teste</a></li>
-<li><a href="#deploy">Implantar</a></li>
+<li><a href="#deploy">Deploy</a></li>
 </ul>
 </li>
 <li><a href="#working-with-your-jenkinsfile">Trabalhando com seu arquivo Jenkins</a>
@@ -4772,7 +4772,7 @@ também são necessárias para um pipeline declarativo válido, pois instruem Je
 <div class="exampleblock scripted-pipeline">
 <div class="content">
 <div class="paragraph">
-<p>Para uso mais avançado com o Pipeline com script, o exemplo acima <code>node</code> é uma primeira step crucial, pois aloca um executor e uma área de trabalho para o Pipeline. Essencialmente, sem <code>node</code>, um Pipeline não pode fazer nenhum trabalho! A partir de dentro <code>node</code>, a primeira ordem do dia será fazer o check-out do código-fonte deste projeto. Como <code>Jenkinsfile</code> está sendo extraído diretamente do source control, o Pipeline fornece uma maneira rápida e fácil de acessar a revisão correta do código-fonte</p>
+<p>Para uso mais avançado com o Pipeline com script, o exemplo acima <code>node</code> é uma primeira step crucial, pois aloca um executor e uma workspace para o Pipeline. Essencialmente, sem <code>node</code>, um Pipeline não pode fazer nenhum trabalho! A partir de dentro <code>node</code>, a primeira ordem do dia será fazer o check-out do código-fonte deste projeto. Como <code>Jenkinsfile</code> está sendo extraído diretamente do source control, o Pipeline fornece uma maneira rápida e fácil de acessar a revisão correta do código-fonte</p>
 </div>
 <div class="pipeline-block">  <div class="listingblock pipeline-script" style="display: true">
     <div class="title">Jenkinsfile (pipeline com script)</div>
@@ -4918,7 +4918,7 @@ também são necessárias para um pipeline declarativo válido, pois instruem Je
 </div>
 </div>
 <div class="sect2">
-<h3 id="deploy"><a class="anchor" href="#deploy"></a>Implantar<a class="anchorjs-link " aria-label="Âncora" data-anchorjs-icon="" href="#deploy" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h3>
+<h3 id="deploy"><a class="anchor" href="#deploy"></a>Deploy<a class="anchorjs-link " aria-label="Âncora" data-anchorjs-icon="" href="#deploy" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h3>
 <div class="paragraph">
 <p>A implantação pode implicar uma variedade de steps, dependendo dos requisitos do projeto ou da organização, e pode ser qualquer coisa, desde a publicação de artefatos construídos em um servidor Artifactory, até o envio de código para um sistema de produção.</p>
 </div>
@@ -4974,7 +4974,7 @@ também são necessárias para um pipeline declarativo válido, pois instruem Je
 <p>Supondo que tudo tenha sido executado com êxito no exemplo Jenkins Pipeline, cada execução bem-sucedida do Pipeline terá artefatos de construção associados arquivados, resultados de testes relatados e a saída completa do console no Jenkins.</p>
 </div>
 <div class="paragraph scripted-pipeline">
-<p>Um pipeline com script pode incluir testes condicionais (mostrados acima), loops, blocos try/catch/finalmente e até funções. A próxima seção abordará essa sintaxe avançada do Pipeline com script em mais detalhes.</p>
+<p>Um pipeline com script pode incluir testes condicionais (mostrados acima), loops, blocos try/catch/finally e até funções. A próxima seção abordará essa sintaxe avançada do Pipeline com script em mais detalhes.</p>
 </div>
 </div>
 </div>
@@ -5032,7 +5032,7 @@ I said, Hello Mr. Jenkins</code></pre>
 <div class="sect2">
 <h3 id="using-environment-variables"><a class="anchor" href="#using-environment-variables"></a>Usando variáveis ​​de ambiente<a class="anchorjs-link " aria-label="Âncora" data-anchorjs-icon="" href="#using-environment-variables" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h3>
 <div class="paragraph">
-<p>O Jenkins Pipeline expõe variáveis ​​de ambiente por meio da variável global <code>env</code>, disponível em qualquer lugar dentro de um <code>Jenkinsfile</code>. A lista completa de variáveis ​​de ambiente acessíveis no Jenkins Pipeline está documentada em $ {YOUR_JENKINS_URL}/pipeline-syntax/globals # env e inclui:</p>
+<p>O Jenkins Pipeline expõe variáveis ​​de ambiente por meio da variável global <code>env</code>, disponível em qualquer lugar dentro de um <code>Jenkinsfile</code>. A lista completa de variáveis ​​de ambiente acessíveis no Jenkins Pipeline está documentada em $ {YOUR_JENKINS_URL}/pipeline-syntax/globals#env e inclui:</p>
 </div>
 <div class="dlist">
 <dl>
@@ -5072,9 +5072,9 @@ I said, Hello Mr. Jenkins</code></pre>
 <dd>
 <p>O nome do node no qual a construção atual está sendo executada. Defina como 'master' para o node principal.</p>
 </dd>
-<dt class="hdlist1">ÁREA DE TRABALHO</dt>
+<dt class="hdlist1">WORKSPACE</dt>
 <dd>
-<p>O caminho absoluto da área de trabalho</p>
+<p>O caminho absoluto da workspace</p>
 </dd>
 </dl>
 </div>
@@ -5327,7 +5327,7 @@ método (acima) sempre serão anexadas com <code>_USR</code> e <code>_PSW</code>
 </tbody></table>
 </div>
 <div class="paragraph">
-<p>O seguinte snippet de código mostra o exemplo Pipeline na sua totalidade:</p>
+<p>O seguinte trecho de código mostra o exemplo Pipeline na sua totalidade:</p>
 </div>
 <div class="pipeline-block">  <div class="listingblock pipeline-declarative">
     <div class="title">Jenkinsfile (pipeline declarativo)</div>
@@ -5436,7 +5436,7 @@ stage 1</code>, portanto, essas variáveis ​​de credencial não estão dispo
 <p>Se você precisar definir credenciais em um Pipeline para algo que não seja texto secreto, nomes de usuário e senhas ou arquivos secretos ( <a href="#for-secret-text-usernames-and-passwords-and-secret-files">acima</a> ) - por exemplo, chaves ou certificados SSH, use o recurso <strong>Gerador de trechos de</strong> Jenkins , que você pode acessar através da interface clássica do Jenkins .</p>
 </div>
 <div class="paragraph">
-<p>Para acessar o <strong>Snippet Generator</strong> para seu projeto/item do Pipeline:</p>
+<p>Para acessar o <strong>Trecho Generator</strong> para seu projeto/item do Pipeline:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -5445,7 +5445,7 @@ stage 1</code>, portanto, essas variáveis ​​de credencial não estão dispo
 </li>
 <li>
 <p>À esquerda, clique em <strong>Pipeline Syntax</strong> e verifique se o 
-link <strong>Snippet Generator</strong> está em negrito no canto superior esquerdo. (Caso contrário, clique no link.)</p>
+link <strong>Trecho Generator</strong> está em negrito no canto superior esquerdo. (Caso contrário, clique no link.)</p>
 </li>
 <li>
 <p>No campo <strong>Step</strong> da <strong>amostra</strong> , escolha com <strong>Credenciais: vincular credenciais a variáveis</strong> .</p>
@@ -5471,7 +5471,7 @@ associada ao par de chaves pública/privada SSH.</p>
 <p><strong>Variável de</strong> nome de <strong>usuário</strong> ( <em>opcional</em> ) - o nome da variável de ambiente que será vinculada ao nome de usuário associado ao par de chaves pública/privada SSH.</p>
 </li>
 <li>
-<p><strong>Credenciais</strong> - escolha as credenciais de chave pública/privada SSH armazenadas no Jenkins. O valor desse campo é o ID da credencial, que Jenkins grava no snippet gerado.</p>
+<p><strong>Credenciais</strong> - escolha as credenciais de chave pública/privada SSH armazenadas no Jenkins. O valor desse campo é o ID da credencial, que Jenkins grava no trecho gerado.</p>
 </li>
 </ul>
 </div>
@@ -5490,7 +5490,7 @@ associada ao par de chaves pública/privada SSH.</p>
 <p><strong>Variável de alias</strong> ( <em>opcional</em> ) - o nome da variável de ambiente que será vinculada ao alias exclusivo associado ao certificado.</p>
 </li>
 <li>
-<p><strong>Credenciais</strong> - escolha as credenciais de certificado armazenadas no Jenkins. O valor desse campo é o ID da credencial, que Jenkins grava no snippet gerado.</p>
+<p><strong>Credenciais</strong> - escolha as credenciais de certificado armazenadas no Jenkins. O valor desse campo é o ID da credencial, que Jenkins grava no trecho gerado.</p>
 </li>
 </ul>
 </div>
@@ -5503,7 +5503,7 @@ associada ao par de chaves pública/privada SSH.</p>
 </li>
 <li>
 <p>Clique em <strong>Gerar script de pipeline</strong> e Jenkins gera um
- <code>withCredentials( …​ ) { …​ }</code> snippet de step do pipeline para as credenciais especificadas, que você pode copiar e colar no código do pipeline declarativo ou com script. <br>
+ <code>withCredentials( …​ ) { …​ }</code> trecho de step do pipeline para as credenciais especificadas, que você pode copiar e colar no código do pipeline declarativo ou com script. <br>
 <strong>Notas:</strong></p>
 <div class="ulist">
 <ul>
@@ -5552,7 +5552,7 @@ associada ao par de chaves pública/privada SSH.</p>
 <p>As definições opcionais <code>aliasVariable</code> e <code>passwordVariable</code> variáveis ​​podem ser excluídas no seu código final do Pipeline.</p>
 </div>
 <div class="paragraph">
-<p>O seguinte snippet de código mostra um exemplo de Pipeline na sua totalidade, que implementa os snippets de <strong>chave</strong> e <strong>certificado de </strong><strong>usuário SSH</strong> acima:</p>
+<p>O seguinte trecho de código mostra um exemplo de Pipeline na sua totalidade, que implementa os trechos de <strong>chave</strong> e <strong>certificado de </strong><strong>usuário SSH</strong> acima:</p>
 </div>
 <div class="pipeline-block">  <div class="listingblock pipeline-declarative">
     <div class="title">Jenkinsfile (pipeline declarativo)</div>
@@ -5620,13 +5620,13 @@ Isso reduz apenas o risco de <strong>exposição acidental</strong> . Isso não 
 <div class="ulist">
 <ul>
 <li>
-<p>Ao usar a opção <strong>withCredentials: Vincular credenciais a variáveis</strong> do campo <strong>Step de amostra,</strong> no <strong>Snippet Generator</strong> , somente as credenciais às quais seu projeto/item atual do Pipeline tem acesso podem ser selecionadas na lista de qualquer
+<p>Ao usar a opção <strong>withCredentials: Vincular credenciais a variáveis</strong> do campo <strong>Step de amostra,</strong> no <strong>Trecho Generator</strong> , somente as credenciais às quais seu projeto/item atual do Pipeline tem acesso podem ser selecionadas na lista de qualquer
  campo de <strong>Credenciais</strong> . Embora você possa escrever manualmente uma
  step para o seu Pipeline (como os exemplos
- <a href="#withcredentials-script-examples">acima</a> ), é recomendável usar o <strong>Snippet Generator</strong> para evitar a especificação de credenciais que estão fora do escopo desse projeto/item do Pipeline, que, quando executado, fará com que a step falhe.<strong></strong><strong></strong><strong></strong><code>withCredentials( …​ ) { …​ }</code><a href="#withcredentials-script-examples"></a><strong></strong></p>
+ <a href="#withcredentials-script-examples">acima</a> ), é recomendável usar o <strong>Trecho Generator</strong> para evitar a especificação de credenciais que estão fora do escopo desse projeto/item do Pipeline, que, quando executado, fará com que a step falhe.<strong></strong><strong></strong><strong></strong><code>withCredentials( …​ ) { …​ }</code><a href="#withcredentials-script-examples"></a><strong></strong></p>
 </li>
 <li>
-<p>Você também pode usar o <strong>Snippet Generator</strong> para gerar <code>withCredentials( …​ )
+<p>Você também pode usar o <strong>Trecho Generator</strong> para gerar <code>withCredentials( …​ )
 { …​ }</code> steps para lidar com texto secreto, nomes de usuário e senhas e arquivos secretos. No entanto, se você precisar lidar apenas com esses tipos de credenciais, é recomendável usar o procedimento relevante descrito na seção
  <a href="#for-secret-text-usernames-and-passwords-and-secret-files">acima</a> para melhorar a legibilidade do código do Pipeline.</p>
 </li>
@@ -5659,7 +5659,7 @@ Isso reduz apenas o risco de <strong>exposição acidental</strong> . Isso não 
 <div class="sect4">
 <h5 id="combining-credentials-in-one-step"><a class="anchor" href="#combining-credentials-in-one-step"></a>Combinando credenciais em uma step<a class="anchorjs-link " aria-label="Âncora" data-anchorjs-icon="" href="#combining-credentials-in-one-step" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h5>
 <div class="paragraph">
-<p>Usando o <strong>Snippet Generator</strong> , você pode disponibilizar várias credenciais em uma única <code>withCredentials( …​ ) { …​ }</code> step, fazendo o seguinte:</p>
+<p>Usando o <strong>Trecho Generator</strong> , você pode disponibilizar várias credenciais em uma única <code>withCredentials( …​ ) { …​ }</code> step, fazendo o seguinte:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -5668,7 +5668,7 @@ Isso reduz apenas o risco de <strong>exposição acidental</strong> . Isso não 
 </li>
 <li>
 <p>À esquerda, clique em <strong>Pipeline Syntax</strong> e verifique se o 
-link <strong>Snippet Generator</strong> está em negrito no canto superior esquerdo. (Caso contrário, clique no link.)</p>
+link <strong>Trecho Generator</strong> está em negrito no canto superior esquerdo. (Caso contrário, clique no link.)</p>
 </li>
 <li>
 <p>No campo <strong>Step</strong> da <strong>amostra</strong> , escolha com <strong>Credenciais: vincular credenciais a variáveis</strong> .</p>
@@ -5687,7 +5687,7 @@ link <strong>Snippet Generator</strong> está em negrito no canto superior esque
 <p>Repita em "Clique em <strong>Adicionar</strong> ..." (acima) para cada (conjunto de) credenciais/s a ​​serem adicionadas à <code>withCredentials( …​ ) { …​ }</code> step.</p>
 </li>
 <li>
-<p>Clique em <strong>Gerar script de pipeline</strong> para gerar o <code>withCredentials( …​ ) { …​ }</code> snippet da step final
+<p>Clique em <strong>Gerar script de pipeline</strong> para gerar o <code>withCredentials( …​ ) { …​ }</code> trecho da step final
  .</p>
 </li>
 </ol>
@@ -5698,7 +5698,7 @@ link <strong>Snippet Generator</strong> está em negrito no canto superior esque
 <div class="sect2">
 <h3 id="handling-parameters"><a class="anchor" href="#handling-parameters"></a>Parâmetros de manipulação<a class="anchorjs-link " aria-label="Âncora" data-anchorjs-icon="" href="#handling-parameters" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h3>
 <div class="paragraph">
-<p>O Pipeline declarativo suporta parâmetros prontos para uso, permitindo que o Pipeline aceite parâmetros especificados pelo usuário em tempo de execução por meio da <a href="#parameters">diretiva de parâmetros</a>. A configuração de parâmetros com o Scripted Pipeline é feita com a <code>properties</code> step, que pode ser encontrada no Snippet Generator.</p>
+<p>O Pipeline declarativo suporta parâmetros prontos para uso, permitindo que o Pipeline aceite parâmetros especificados pelo usuário em tempo de execução por meio da <a href="#parameters">diretiva de parâmetros</a>. A configuração de parâmetros com o Scripted Pipeline é feita com a <code>properties</code> step, que pode ser encontrada no Trecho Generator.</p>
 </div>
 <div class="paragraph">
 <p>Se você configurou seu pipeline para aceitar parâmetros usando a opção <strong>Construir com Parâmetros</strong> , esses parâmetros estarão acessíveis como membros da <code>params</code>
@@ -5741,8 +5741,8 @@ node {
 <div class="sect2">
 <h3 id="handling-failure"><a class="anchor" href="#handling-failure"></a>Falha no manuseio<a class="anchorjs-link " aria-label="Âncora" data-anchorjs-icon="" href="#handling-failure" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h3>
 <div class="paragraph">
-<p>Declarativa Pipeline suporta tratamento de falhas robusta por padrão através de sua
- <a href="#post">seção de pós</a> que permite declarar um número de diferentes "pós-condições", tais como: <code>always</code>, <code>unstable</code>, <code>success</code>, <code>failure</code>, e
+<p>Pipeline declarativa suporta tratamento de falhas robusta por padrão através de sua
+ <a href="#post">seção de post</a> que permite declarar um número de diferentes "pós-condições", tais como: <code>always</code>, <code>unstable</code>, <code>success</code>, <code>failure</code>, e
  <code>changed</code>. A seção <a href="#syntax">Sintaxe do pipeline</a> fornece mais detalhes sobre como usar as várias condições de publicação.</p>
 </div>
 <div class="pipeline-block">  <div class="listingblock pipeline-declarative">
@@ -5789,7 +5789,7 @@ node {
 <div class="exampleblock scripted-pipeline">
 <div class="content">
 <div class="paragraph">
-<p>O Pipeline com script, no entanto, depende da semântica / <code>try</code>/ interna do Groovy para lidar com falhas durante a execução do Pipeline.<code>catch</code><code>finally</code></p>
+<p>O Pipeline com script, no entanto, depende da semântica <code>try</code>/<code>catch</code>/<code>finally</code> interna do Groovy para lidar com falhas durante a execução do Pipeline.</p>
 </div>
 <div class="paragraph">
 <p>No exemplo de <a href="#test">teste</a> acima, a <code>sh</code> step foi modificada para nunca retornar um código de saída diferente de zero ( <code>sh 'make check || true'</code>). Essa abordagem, embora válida, significa que os seguintes stages precisam verificar <code>currentBuild.result</code> se houve uma falha no teste ou não.</p>
@@ -5956,7 +5956,7 @@ execução levar 30 minutos para ser concluída, o stage "Test" levará 60 minut
 <div class="paragraph">
 <p>Refatorando o exemplo acima para usar a <code>parallel</code> step:</p>
 </div>
-<div class="pipeline-block">  <div class="listingblock pipeline-script" style="display: true">
+<div class="pipeline-block"> <div class="pipeline-script-expand active"></div> <div class="listingblock pipeline-script" style="display: true">
     <div class="title">Jenkinsfile (pipeline com script)</div>
     <div class="content">
     <pre class="CodeRay highlight nowrap"><code class="language-groovy" data-lang="groovy">stage(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">Build</span><span style="color:#710">'</span></span>) {
@@ -6152,15 +6152,15 @@ Pipelines em execução
 <hr>
 <div id="doc_book_pipeline_multibranch" class="section">
 <h1 id="branches-and-pull-requests">
-Ramificações e solicitações pull
+Branches e pull requests
 <a class="anchorjs-link " aria-label="Âncora" data-anchorjs-icon="" href="#branches-and-pull-requests" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h1>
 <div id="toc" class="toc">
 <div id="toctitle">Índice</div>
 <ul class="sectlevel1">
-<li><a href="#creating-a-multibranch-pipeline">Criando um pipeline de várias filiais</a>
+<li><a href="#creating-a-multibranch-pipeline">Criando um pipeline multibranch</a>
 <ul class="sectlevel2">
 <li><a href="#additional-environment-variables">Variáveis ​​de ambiente adicionais</a></li>
-<li><a href="#supporting-pull-requests">Suporte a solicitações pull</a></li>
+<li><a href="#supporting-pull-requests">Suporte a pull requests</a></li>
 </ul>
 </li>
 <li><a href="#organization-folders">Usando pastas da organização</a></li>
@@ -6175,16 +6175,16 @@ Ramificações e solicitações pull
 </div>
 </div>
 <div class="sect1">
-<h2 id="creating-a-multibranch-pipeline"><a class="anchor" href="#creating-a-multibranch-pipeline"></a>Criando um pipeline de várias filiais<a class="anchorjs-link " aria-label="Âncora" data-anchorjs-icon="" href="#creating-a-multibranch-pipeline" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h2>
+<h2 id="creating-a-multibranch-pipeline"><a class="anchor" href="#creating-a-multibranch-pipeline"></a>Criando um pipeline multibranch<a class="anchorjs-link " aria-label="Âncora" data-anchorjs-icon="" href="#creating-a-multibranch-pipeline" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>O tipo de projeto <strong>Multibranch Pipeline</strong> permite implementar diferentes arquivos Jenkins para diferentes ramificações do mesmo projeto. Em um projeto de Pipeline Multibranch, Jenkins descobre, gerencia e executa Pipelines automaticamente para ramificações que contêm um <code>Jenkinsfile</code> source control.</p>
+<p>O tipo de projeto <strong>Multibranch Pipeline</strong> permite implementar diferentes arquivos Jenkins para diferentes branches do mesmo projeto. Em um projeto de Pipeline Multibranch, Jenkins descobre, gerencia e executa Pipelines automaticamente para branches que contêm um <code>Jenkinsfile</code> source control.</p>
 </div>
 <div class="paragraph">
 <p>Isso elimina a necessidade de criação e gerenciamento manuais de pipeline.</p>
 </div>
 <div class="paragraph">
-<p>Para criar um pipeline de várias filiais:</p>
+<p>Para criar um pipeline multibranch:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -6227,13 +6227,13 @@ Ramificações e solicitações pull
 <div class="ulist">
 <ul>
 <li>
-<p>Adicione uma <strong>fonte de ramificação</strong> (por exemplo, Git) e insira o local do repositório.</p>
+<p>Adicione uma <strong>fonte de branch</strong> (por exemplo, Git) e insira o local do repositório.</p>
 </li>
 </ul>
 </div>
 <div class="imageblock center">
 <div class="content">
-<img src="../images/pipeline/multibranch-branch-source.png" alt="Adicionar uma fonte de ramificação">
+<img src="../images/pipeline/multibranch-branch-source.png" alt="Adicionar uma fonte de branch">
 </div>
 </div>
 <div class="imageblock center">
@@ -6249,11 +6249,11 @@ Ramificações e solicitações pull
 </ul>
 </div>
 <div class="paragraph">
-<p>Ao <strong>salvar</strong> , o Jenkins verifica automaticamente o repositório designado e cria itens apropriados para cada ramificação no repositório que contém um
+<p>Ao <strong>salvar</strong> , o Jenkins verifica automaticamente o repositório designado e cria itens apropriados para cada branch no repositório que contém um
  <code>Jenkinsfile</code>.</p>
 </div>
 <div class="paragraph">
-<p>Por padrão, o Jenkins não indexa automaticamente novamente o repositório para adições ou exclusões de ramificações (a menos que esteja usando uma <a href="#organization-folders">Pasta da Organização</a> ); portanto, é útil configurar um pipeline de várias filiais para indexar periodicamente na configuração:</p>
+<p>Por padrão, o Jenkins não indexa automaticamente novamente o repositório para adições ou exclusões de branches (a menos que esteja usando uma <a href="#organization-folders">Pasta da Organização</a> ); portanto, é útil configurar um pipeline multibranch para indexar periodicamente na configuração:</p>
 </div>
 <div class="imageblock center">
 <div class="content">
@@ -6263,17 +6263,17 @@ Ramificações e solicitações pull
 <div class="sect2">
 <h3 id="additional-environment-variables"><a class="anchor" href="#additional-environment-variables"></a>Variáveis ​​de ambiente adicionais<a class="anchorjs-link " aria-label="Âncora" data-anchorjs-icon="" href="#additional-environment-variables" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h3>
 <div class="paragraph">
-<p>Os pipelines de várias filiais expõem informações adicionais sobre a filial que está sendo construída por meio da <code>env</code> variável global, como:</p>
+<p>Os pipelines multibranch expõem informações adicionais sobre a branch que está sendo construída por meio da <code>env</code> variável global, como:</p>
 </div>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">BRANCH_NAME</dt>
 <dd>
-<p>Nome da ramificação para a qual este Pipeline está executando, por exemplo <code>master</code>.</p>
+<p>Nome da branch para a qual este Pipeline está executando, por exemplo <code>master</code>.</p>
 </dd>
 <dt class="hdlist1">CHANGE_ID</dt>
 <dd>
-<p>Um identificador correspondente a algum tipo de solicitação de alteração, como um número de solicitação pull</p>
+<p>Um identificador correspondente a algum tipo de solicitação de alteração, como um número de pull request</p>
 </dd>
 </dl>
 </div>
@@ -6283,29 +6283,29 @@ Ramificações e solicitações pull
 </div>
 </div>
 <div class="sect2">
-<h3 id="supporting-pull-requests"><a class="anchor" href="#supporting-pull-requests"></a>Suporte a solicitações pull<a class="anchorjs-link " aria-label="Âncora" data-anchorjs-icon="" href="#supporting-pull-requests" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h3>
+<h3 id="supporting-pull-requests"><a class="anchor" href="#supporting-pull-requests"></a>Suporte a pull requests<a class="anchorjs-link " aria-label="Âncora" data-anchorjs-icon="" href="#supporting-pull-requests" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h3>
 <div class="paragraph">
-<p>Os pipelines de várias filiais podem ser usados ​​para validar solicitações de recebimento/alteração com o plug-in apropriado. Essa funcionalidade é fornecida pelos seguintes plugins:</p>
+<p>Os pipelines multibranch podem ser usados ​​para validar solicitações de recebimento/alteração com o plug-in apropriado. Essa funcionalidade é fornecida pelos seguintes plugins:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="https://plugins.jenkins.io/github-branch-source">Origem do GitHub Branch</a></p>
+<p><a href="https://plugins.jenkins.io/github-branch-source">GitHub Branch Source</a></p>
 </li>
 <li>
-<p><a href="https://plugins.jenkins.io/cloudbees-bitbucket-branch-source">Origem da Filial Bitbucket</a></p>
+<p><a href="https://plugins.jenkins.io/cloudbees-bitbucket-branch-source">Bitbucket Branch Source</a></p>
 </li>
 <li>
-<p><a href="https://plugins.jenkins.io/gitlab-branch-source">Origem do GitLab Branch</a></p>
+<p><a href="https://plugins.jenkins.io/gitlab-branch-source">GitLab Branch Source</a></p>
 </li>
 <li>
 <p><a href="https://plugins.jenkins.io/gitea">Gitea</a></p>
 </li>
 <li>
-<p><a href="https://plugins.jenkins.io/tuleap-git-branch-source">Tuleap Git Branch Origem</a></p>
+<p><a href="https://plugins.jenkins.io/tuleap-git-branch-source">Tuleap Git Branch Source</a></p>
 </li>
 <li>
-<p><a href="https://plugins.jenkins.io/aws-codecommit-jobs">Tarefas do CodeCommit da AWS</a></p>
+<p><a href="https://plugins.jenkins.io/aws-codecommit-jobs">AWS CodeCommit Jobs</a></p>
 </li>
 </ul>
 </div>
@@ -6319,7 +6319,7 @@ Ramificações e solicitações pull
 <h2 id="organization-folders"><a class="anchor" href="#organization-folders"></a>Usando pastas da organização<a class="anchorjs-link " aria-label="Âncora" data-anchorjs-icon="" href="#organization-folders" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>As Pastas de Organização permitem que Jenkins monitore toda uma Organização GitHub, Equipe/Projeto Bitbucket, organização GitLab ou organização Gitea e crie automaticamente novos Pipelines Multibranch para repositórios que contenham ramificações e solicitações pull que contenham a <code>Jenkinsfile</code>.</p>
+<p>As Pastas de Organização permitem que Jenkins monitore toda uma Organização GitHub, Equipe/Projeto Bitbucket, organização GitLab ou organização Gitea e crie automaticamente novos Pipelines Multibranch para repositórios que contenham branches e pull requests que contenham a <code>Jenkinsfile</code>.</p>
 </div>
 <div class="paragraph">
 <p>As pastas da organização são implementadas para:</p>
@@ -6372,7 +6372,7 @@ Usando o Docker com pipeline
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>Muitas organizações usam o <a href="https://www.docker.com">Docker</a> para unificar seus ambientes de construção e teste entre máquinas e para fornecer um mecanismo eficiente para implantar aplicativos. A partir das versões 2.5 e superior do Pipeline, o Pipeline oferece suporte interno para interagir com o Docker de dentro de um
+<p>Muitas organizações usam o <a href="https://www.docker.com">Docker</a> para unificar seus ambientes de construção e teste entre máquinas e para fornecer um mecanismo eficiente para deploy aplicativos. A partir das versões 2.5 e superior do Pipeline, o Pipeline oferece suporte interno para interagir com o Docker de dentro de um
  <code>Jenkinsfile</code>.</p>
 </div>
 <div class="paragraph">
@@ -6930,7 +6930,7 @@ Estendendo com bibliotecas compartilhadas
 <p>Uma Biblioteca Compartilhada é definida com um nome, um método de recuperação de código-fonte como o SCM e, opcionalmente, uma versão padrão. O nome deve ser um identificador curto, pois será usado em scripts.</p>
 </div>
 <div class="paragraph">
-<p>A versão pode ser qualquer coisa entendida por esse SCM; por exemplo, ramificações, tags e hashes de confirmação funcionam para o Git. Você também pode declarar se os scripts precisam solicitar explicitamente essa biblioteca (detalhada abaixo) ou se ela está presente por padrão. Além disso, se você especificar uma versão na configuração do Jenkins, poderá impedir que os scripts selecionem uma versão <em>diferente</em> .</p>
+<p>A versão pode ser qualquer coisa entendida por esse SCM; por exemplo, branches, tags e hashes de confirmação funcionam para o Git. Você também pode declarar se os scripts precisam solicitar explicitamente essa biblioteca (detalhada abaixo) ou se ela está presente por padrão. Além disso, se você especificar uma versão na configuração do Jenkins, poderá impedir que os scripts selecionem uma versão <em>diferente</em> .</p>
 </div>
 <div class="paragraph">
 <p>A melhor maneira de especificar o SCM é usar um plug-in do SCM que foi especificamente atualizado para oferecer suporte a uma nova API para fazer check-out de uma versão nomeada arbitrária ( opção <em>Modern SCM</em> ). Até o momento em que este artigo foi escrito, as versões mais recentes dos plugins Git e Subversion suportam esse modo; outros devem seguir.</p>
@@ -7012,7 +7012,7 @@ quantas bibliotecas forem necessárias podem ser configuradas.</p>
 <div class="paragraph">
 <p>Outros plugins podem adicionar maneiras de definir bibliotecas rapidamente. Por exemplo, o
  plug-in <a href="https://plugins.jenkins.io/github-branch-source">GitHub Branch Source</a> fornece um item "GitHub Organization Folder" que permite que um script use uma biblioteca não confiável, como <code>github.com/someorg/somerepo</code> sem nenhuma configuração adicional. Nesse caso, o repositório GitHub especificado seria carregado, a partir da <code>master</code>
-ramificação, usando um checkout anônimo.</p>
+branch, usando um checkout anônimo.</p>
 </div>
 </div>
 </div>
@@ -7158,7 +7158,7 @@ vez de uma constante como na anotação; por exemplo:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>carregaria uma biblioteca usando a mesma ramificação SCM da multibranch <code>Jenkinsfile</code>. Como outro exemplo, você pode escolher uma biblioteca por parâmetro:</p>
+<p>carregaria uma biblioteca usando a mesma branch SCM da multibranch <code>Jenkinsfile</code>. Como outro exemplo, você pode escolher uma biblioteca por parâmetro:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -7558,7 +7558,7 @@ para obter detalhes, mas basta colocar:</p>
 <p>Se você perceber um erro em uma compilação usando uma biblioteca não confiável, basta clicar no link <em>Repetir</em> para tentar editar um ou mais de seus arquivos de origem e ver se a compilação resultante se comporta conforme o esperado. Quando estiver satisfeito com o resultado, siga o link do diff na página de status da compilação e aplique o diff ao repositório da biblioteca e confirme.</p>
 </div>
 <div class="paragraph">
-<p>(Mesmo que a versão solicitada para a biblioteca fosse uma ramificação, em vez de uma versão fixa como uma tag, as construções repetidas usarão exatamente a mesma revisão que a construção original: as fontes da biblioteca não serão retiradas novamente.)</p>
+<p>(Mesmo que a versão solicitada para a biblioteca fosse uma branch, em vez de uma versão fixa como uma tag, as construções repetidas usarão exatamente a mesma revisão que a construção original: as fontes da biblioteca não serão retiradas novamente.)</p>
 </div>
 <div class="paragraph">
 <p><em></em>Atualmente, a <em>reprodução</em> não é suportada para bibliotecas confiáveis. A modificação de arquivos de recursos também não é suportada no momento durante a <em>reprodução</em> .</p>
@@ -7659,8 +7659,8 @@ Ferramentas de desenvolvimento de pipeline
 <div class="sectionbody">
 <div class="paragraph">
 <p>O Jenkins Pipeline inclui
- <a href="#built-in-documentation">documentação </a><a href="#snippet-generator">interna</a> e o
- <a href="#snippet-generator">Snippet Generator,</a> que são os principais recursos ao desenvolver Pipelines. Eles fornecem ajuda e informações detalhadas personalizadas para a versão atualmente instalada do Jenkins e plugins relacionados. Nesta seção, discutiremos outras ferramentas e recursos que podem ajudar no desenvolvimento dos Pipelines Jenkins.</p>
+ <a href="#built-in-documentation">documentação </a><a href="#trecho-generator">interna</a> e o
+ <a href="#trecho-generator">Trecho Generator,</a> que são os principais recursos ao desenvolver Pipelines. Eles fornecem ajuda e informações detalhadas personalizadas para a versão atualmente instalada do Jenkins e plugins relacionados. Nesta seção, discutiremos outras ferramentas e recursos que podem ajudar no desenvolvimento dos Pipelines Jenkins.</p>
 </div>
 </div>
 </div>
@@ -7671,7 +7671,7 @@ Ferramentas de desenvolvimento de pipeline
 <p>O
  <a href="#doc_book_blueocean_pipeline-editor">Blue Ocean Pipeline Editor</a> fornece uma
  
-maneira <a href="https://en.wikipedia.org/wiki/WYSIWYG">WYSIWYG</a> de criar pipelines declarativos. O editor oferece uma visão estrutural de todos os stages, ramificações paralelas e steps em um pipeline. O editor valida as alterações no Pipeline à medida que são feitas, eliminando muitos erros antes mesmo de serem confirmados. Nos bastidores, ele ainda gera código de pipeline declarativo.</p>
+maneira <a href="https://en.wikipedia.org/wiki/WYSIWYG">WYSIWYG</a> de criar pipelines declarativos. O editor oferece uma visão estrutural de todos os stages, branches paralelas e steps em um pipeline. O editor valida as alterações no Pipeline à medida que são feitas, eliminando muitos erros antes mesmo de serem confirmados. Nos bastidores, ele ainda gera código de pipeline declarativo.</p>
 </div>
 </div>
 </div>
@@ -7837,7 +7837,7 @@ Jenkinsfile successfully validated.</code></pre>
 <p><strong>As execuções de pipeline com erros de sintaxe não podem ser reproduzidas</strong> - o que significa que seu código não pode ser exibido e as alterações feitas nelas não podem ser recuperadas. Ao usar o Replay para modificações mais significativas, salve as alterações em um arquivo ou editor fora do Jenkins antes de executá-las. Veja <a href="https://issues.jenkins-ci.org/browse/JENKINS-37589">JENKINS-37589</a></p>
 </li>
 <li>
-<p><strong>O comportamento do pipeline repetido pode diferir das execuções iniciadas por outros métodos</strong> - Para os pipelines que não fazem parte de um pipeline de várias ramificações, as informações de confirmação podem diferir para a execução original e a execução repetida. Veja <a href="https://issues.jenkins-ci.org/browse/JENKINS-36453">JENKINS-36453</a></p>
+<p><strong>O comportamento do pipeline repetido pode diferir das execuções iniciadas por outros métodos</strong> - Para os pipelines que não fazem parte de um pipeline de várias branches, as informações de confirmação podem diferir para a execução original e a execução repetida. Veja <a href="https://issues.jenkins-ci.org/browse/JENKINS-36453">JENKINS-36453</a></p>
 </li>
 </ul>
 </div>
@@ -7966,15 +7966,15 @@ Sintaxe de Pipeline
 <ul class="sectlevel2">
 <li><a href="#declarative-sections">Seções</a>
 <ul class="sectlevel3">
-<li><a href="#agent">agente</a></li>
-<li><a href="#post">postar</a></li>
+<li><a href="#agent">agent</a></li>
+<li><a href="#post">post</a></li>
 <li><a href="#stages">stages</a></li>
-<li><a href="#steps">passos</a></li>
+<li><a href="#steps">steps</a></li>
 </ul>
 </li>
 <li><a href="#declarative-directives">Diretivas</a>
 <ul class="sectlevel3">
-<li><a href="#environment">meio Ambiente</a></li>
+<li><a href="#environment">environment</a></li>
 <li><a href="#options">opções</a></li>
 <li><a href="#parameters">parâmetros</a></li>
 <li><a href="#triggers">gatilhos</a></li>
@@ -8193,7 +8193,7 @@ seção for colocada. A seção deve ser definida no nível superior dentro do
 <dt class="hdlist1">dockerfile</dt>
 <dd>
 <p>Execute o Pipeline, ou stage, com um contêiner criado a partir de um
- <code>Dockerfile</code> contido no repositório de origem. Para usar esta opção, é <code>Jenkinsfile</code> necessário carregar um <strong>pipeline de várias filiais</strong> ou um
+ <code>Dockerfile</code> contido no repositório de origem. Para usar esta opção, é <code>Jenkinsfile</code> necessário carregar um <strong>pipeline multibranch</strong> ou um
  <strong>pipeline do SCM</strong> . Convencionalmente este é o <code>Dockerfile</code> na raiz do repositório de origem: <code>agent { dockerfile true }</code>. Se a construção de um <code>Dockerfile</code> em outro diretório, use a <code>dir</code> opção: <code>agent { dockerfile { dir 'someSubDir'
 } }</code>. Se você <code>Dockerfile</code> tiver outro nome, poderá especificar o nome do arquivo com a <code>filename</code> opção Você pode passar argumentos adicionais para o <code>docker build …​</code>
 comando com a <code>additionalBuildArgs</code> opção like <code>agent { dockerfile {
@@ -8231,7 +8231,7 @@ additionalBuildArgs '--build-arg foo=bar' } }</code>. Por exemplo, um repositór
 </dd>
 <dt class="hdlist1">kubernetes</dt>
 <dd>
-<p>Execute o Pipeline, ou stage, dentro de um pod implantado em um cluster Kubernetes. Para usar esta opção, é <code>Jenkinsfile</code> necessário carregar um <strong>pipeline de várias filiais</strong> ou um
+<p>Execute o Pipeline, ou stage, dentro de um pod implantado em um cluster Kubernetes. Para usar esta opção, é <code>Jenkinsfile</code> necessário carregar um <strong>pipeline multibranch</strong> ou um
  <strong>pipeline do SCM</strong> . O modelo de Pod é definido dentro do bloco kubernetes {}. Por exemplo, se você quiser um pod com um contêiner Kaniko dentro dele, defina-o da seguinte maneira:</p>
 <div class="listingblock">
 <div class="content">
@@ -8304,7 +8304,7 @@ spec:
 <dt class="hdlist1">workspace personalizado</dt>
 <dd>
 <p>Uma linha. Execute o Pipeline ou indivíduo <code>stage</code> esta <code>agent</code>
-é aplicada dentro desta área de trabalho personalizada, em vez do padrão. Pode ser um caminho relativo; nesse caso, o workspace customizado estará sob a raiz do workspace no node ou um caminho absoluto. Por exemplo:</p>
+é aplicada dentro desta workspace personalizada, em vez do padrão. Pode ser um caminho relativo; nesse caso, o workspace customizado estará sob a raiz do workspace no node ou um caminho absoluto. Por exemplo:</p>
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight nowrap"><code data-lang="groovy">agent {
@@ -8653,7 +8653,7 @@ a serem executadas em uma determinada <code>stage</code> diretiva.</p>
 <div class="sect2">
 <h3 id="declarative-directives"><a class="anchor" href="#declarative-directives"></a>Diretivas<a class="anchorjs-link " aria-label="Âncora" data-anchorjs-icon="" href="#declarative-directives" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h3>
 <div class="sect3">
-<h4 id="environment"><a class="anchor" href="#environment"></a>meio Ambiente<a class="anchorjs-link " aria-label="Âncora" data-anchorjs-icon="" href="#environment" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h4>
+<h4 id="environment"><a class="anchor" href="#environment"></a>environment<a class="anchorjs-link " aria-label="Âncora" data-anchorjs-icon="" href="#environment" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h4>
 <div class="paragraph">
 <p>A <code>environment</code> diretiva especifica uma sequência de pares de valores-chave que serão definidos como variáveis ​​de ambiente para todas as steps ou steps específicas do stage, dependendo de onde a <code>environment</code> diretiva está localizada no Pipeline.</p>
 </div>
@@ -8842,7 +8842,7 @@ e <code>MYVARNAME_PSW</code> respectivamente.</p>
 </dd>
 <dt class="hdlist1">checkoutToSubdirectory</dt>
 <dd>
-<p>Execute a verificação automática do source control em um subdiretório da área de trabalho. Por exemplo:<code>options { checkoutToSubdirectory('foo') }</code></p>
+<p>Execute a verificação automática do source control em um subdiretório da workspace. Por exemplo:<code>options { checkoutToSubdirectory('foo') }</code></p>
 </dd>
 <dt class="hdlist1">disableConcurrentBuilds</dt>
 <dd>
@@ -8858,8 +8858,8 @@ e <code>MYVARNAME_PSW</code> respectivamente.</p>
 </dd>
 <dt class="hdlist1">overrideIndexTriggers</dt>
 <dd>
-<p>Permite substituir o tratamento padrão dos gatilhos de indexação de ramificação. Se os gatilhos de indexação de ramificação estiverem desativados no rótulo multibranch ou na organização, <code>options { overrideIndexTriggers(true) }</code>
-eles serão ativados apenas para este trabalho. Caso contrário, <code>options { overrideIndexTriggers(false) }</code> desabilitará os gatilhos de indexação de ramificação apenas para este trabalho.</p>
+<p>Permite substituir o tratamento padrão dos gatilhos de indexação de branch. Se os gatilhos de indexação de branch estiverem desativados no rótulo multibranch ou na organização, <code>options { overrideIndexTriggers(true) }</code>
+eles serão ativados apenas para este trabalho. Caso contrário, <code>options { overrideIndexTriggers(false) }</code> desabilitará os gatilhos de indexação de branch apenas para este trabalho.</p>
 </dd>
 <dt class="hdlist1">preserveStashes</dt>
 <dd>
@@ -9559,7 +9559,7 @@ for aprovado, o <code>stage</code> continuará. Quaisquer parâmetros fornecidos
 <dl>
 <dt class="hdlist1">ramo</dt>
 <dd>
-<p>Executar a fase em que o ramo que está sendo construído corresponde ao padrão ramo (estilo ANT caminho glob) dada, por exemplo: <code>when { branch 'master' }</code>. Observe que isso funciona apenas em um pipeline de várias filiais.</p>
+<p>Executar a fase em que o ramo que está sendo construído corresponde ao padrão ramo (estilo ANT caminho glob) dada, por exemplo: <code>when { branch 'master' }</code>. Observe que isso funciona apenas em um pipeline multibranch.</p>
 <div class="paragraph">
 <p>O parâmetro opcional <code>comparator</code> pode ser adicionado após um atributo para especificar como quaisquer padrões são avaliados para uma correspondência:
  <code>EQUALS</code> para uma comparação simples de cadeias,
@@ -9599,7 +9599,7 @@ for aprovado, o <code>stage</code> continuará. Quaisquer parâmetros fornecidos
  <code>REGEXP</code> para correspondência de expressão regular. Exemplo:<code>when { changeRequest authorEmail: "[\\w_-.]+@example.com", comparator: 'REGEXP' }</code></p>
 </div>
 </dd>
-<dt class="hdlist1">meio Ambiente</dt>
+<dt class="hdlist1">environment</dt>
 <dd>
 <p>Execute o stage quando a variável de ambiente especificada estiver configurada para o valor fornecido, por exemplo: <code>when { environment name: 'DEPLOY_TO', value: 'production' }</code></p>
 </dd>
@@ -10432,7 +10432,7 @@ This section is identical to any other
 <p><a href="#agent">agente</a></p>
 </li>
 <li>
-<p><a href="#environment">meio Ambiente</a></p>
+<p><a href="#environment">environment</a></p>
 </li>
 <li>
 <p><a href="#input">entrada</a></p>
@@ -10801,8 +10801,8 @@ Práticas recomendadas de pipeline
 <p>Idealmente, os volumes/discos compartilhados são montados em um local separado e os arquivos são copiados desse local para o workspace atual. Depois que a compilação for concluída, os arquivos poderão ser copiados novamente se houver atualizações feitas.</p>
 </div>
 <div class="paragraph">
-<p>Construa em contêineres distintos que criam os recursos necessários a partir do zero (agentes do tipo nuvem funcionam muito bem para isso). A construção desses contêineres garantirá que o processo de construção comece no início de cada vez e seja facilmente repetível. Se a construção de contêineres não funcionar, desative a simultaneidade no Pipeline ou use o Plugin de Recursos Bloqueáveis ​​para bloquear a área de trabalho quando estiver em execução, para que nenhuma outra compilação possa usá-lo enquanto estiver bloqueado.
-<strong>AVISO</strong> : Desabilitar a simultaneidade ou bloquear a área de trabalho quando estiver em execução pode causar o bloqueio de pipelines ao aguardar recursos, se esses recursos estiverem bloqueados arbitrariamente.</p>
+<p>Construa em contêineres distintos que criam os recursos necessários a partir do zero (agentes do tipo nuvem funcionam muito bem para isso). A construção desses contêineres garantirá que o processo de construção comece no início de cada vez e seja facilmente repetível. Se a construção de contêineres não funcionar, desative a simultaneidade no Pipeline ou use o Plugin de Recursos Bloqueáveis ​​para bloquear a workspace quando estiver em execução, para que nenhuma outra compilação possa usá-lo enquanto estiver bloqueado.
+<strong>AVISO</strong> : Desabilitar a simultaneidade ou bloquear a workspace quando estiver em execução pode causar o bloqueio de pipelines ao aguardar recursos, se esses recursos estiverem bloqueados arbitrariamente.</p>
 </div>
 <div class="paragraph">
 <p><strong>Além disso, esteja ciente de que ambos os métodos têm menos tempo para resultados de compilações do que o uso de recursos exclusivos para cada tarefa</strong></p>
@@ -10923,7 +10923,7 @@ Escalonamento de Pipelines
 <p><strong>Por trabalho de pipeline:</strong> na parte superior da configuração do trabalho, rotulado como "Velocidade de pipeline personalizada/nível de durabilidade" - isso substitui a configuração global. Ou use uma step "propriedades" - a configuração será aplicada à próxima execução após a execução da step (mesmo resultado).</p>
 </li>
 <li>
-<p><strong>Por filial para um projeto com várias ramificações:</strong> configure uma Estratégia de propriedade de filial personalizada (no SCM) e adicione uma propriedade para o Nível de velocidade/durabilidade do pipeline personalizado. Isso substitui a configuração global. Você também pode usar uma step "propriedades" para substituir a configuração, mas lembre-se de que talvez seja necessário executar a step novamente para desfazer isso.</p>
+<p><strong>Por branch para um projeto com várias branches:</strong> configure uma Estratégia de propriedade de branch personalizada (no SCM) e adicione uma propriedade para o Nível de velocidade/durabilidade do pipeline personalizado. Isso substitui a configuração global. Você também pode usar uma step "propriedades" para substituir a configuração, mas lembre-se de que talvez seja necessário executar a step novamente para desfazer isso.</p>
 </li>
 </ol>
 </div>
@@ -10951,7 +10951,7 @@ Escalonamento de Pipelines
 <p>Por exemplo: <code>readFile</code> avance com um arquivo XML/JSON grande ou use as informações de configuração para analisar esse arquivo com <a href="https://www.jenkins.io/doc/pipeline/steps/pipeline-utility-steps/#code-readjson-code-read-json-from-files-in-the-workspace">uma das steps do utilitário</a>.</p>
 </li>
 <li>
-<p>Outro padrão comum é um objeto "resumo" que contém dados de várias ramificações (logs, resultados ou estatísticas). Muitas vezes, isso é visível, porque você o adiciona frequentemente por meio de um add/append ou <code>Map.put()</code> operações.</p>
+<p>Outro padrão comum é um objeto "resumo" que contém dados de várias branches (logs, resultados ou estatísticas). Muitas vezes, isso é visível, porque você o adiciona frequentemente por meio de um add/append ou <code>Map.put()</code> operações.</p>
 </li>
 <li>
 <p>Grandes matrizes de dados ou <code>Map</code> informações de configuração são outro exemplo comum dessa situação.</p>
@@ -11069,7 +11069,7 @@ Escalonamento de Pipelines
 </div>
 </li>
 <li>
-<p>Defina um padrão global (veja acima) de "otimizado para desempenho" para a Configuração de durabilidade e, quando necessário, defina "durabilidade máxima" em tarefas específicas do Pipeline ou ramificações do Multibranch Pipeline ("master" ou ramificações de liberação).</p>
+<p>Defina um padrão global (veja acima) de "otimizado para desempenho" para a Configuração de durabilidade e, quando necessário, defina "durabilidade máxima" em tarefas específicas do Pipeline ou branches do Multibranch Pipeline ("master" ou branches de liberação).</p>
 </li>
 <li>
 <p>Você pode forçar um pipeline a persistir dados pausando-o.</p>
@@ -11484,7 +11484,7 @@ Editor de Pipeline
 </li>
 <li>
 <p>use a <a href="#activity">visualização Atividade</a> - onde você pode acessar
- <a href="#activity">listas de execuções de itens/pipeline atuais e concluídas anteriormente</a>, bem como as <a href="#branches">ramificações</a> do seu projeto de pipeline e quaisquer <a href="#pull-requests">solicitações de recebimento</a> abertas ,</p>
+ <a href="#activity">listas de execuções de itens/pipeline atuais e concluídas anteriormente</a>, bem como as <a href="#branches">branches</a> do seu projeto de pipeline e quaisquer <a href="#pull-requests">solicitações de recebimento</a> abertas ,</p>
 </li>
 <li>
 <p>use a <a href="#pipeline-run-details">exibição Detalhes da execução</a> do <a href="#pipeline-run-details">pipeline</a> - onde você pode acessar os detalhes (por exemplo, a saída do console) para uma execução específica do Pipeline/item e</p>
@@ -11524,7 +11524,7 @@ Editor de Pipeline
 <p><strong>Identifique a precisão</strong> quando for necessária intervenção e/ou surgirem problemas. O Blue Ocean mostra onde é necessária atenção no pipeline, facilitando o tratamento de exceções e aumentando a produtividade.</p>
 </li>
 <li>
-<p><strong>A integração nativa para solicitações de ramificação e recebimento</strong> , permite a produtividade máxima do desenvolvedor ao colaborar com código com outras pessoas no GitHub e Bitbucket.</p>
+<p><strong>A integração nativa para solicitações de branch e recebimento</strong> , permite a produtividade máxima do desenvolvedor ao colaborar com código com outras pessoas no GitHub e Bitbucket.</p>
 </li>
 </ul>
 </div>
@@ -11964,8 +11964,8 @@ como <code>/home/cloned-git-repos/my-git-repo.git</code>), você pode continuar 
  <strong>Criar Pipeline</strong> .</p>
 </div>
 <div class="paragraph">
-<p>O Blue Ocean examinará as ramificações do seu repositório local em busca de um <code>Jenkinsfile</code>
-e começará uma execução de Pipeline para cada ramificação que contenha a <code>Jenkinsfile</code>. Se o Blue Ocean não conseguir encontrar nenhum <code>Jenkinsfile</code>, você será solicitado a começar a criar um através do <a href="#doc_book_blueocean_pipeline-editor">editor de Pipeline</a>.</p>
+<p>O Blue Ocean examinará as branches do seu repositório local em busca de um <code>Jenkinsfile</code>
+e começará uma execução de Pipeline para cada branch que contenha a <code>Jenkinsfile</code>. Se o Blue Ocean não conseguir encontrar nenhum <code>Jenkinsfile</code>, você será solicitado a começar a criar um através do <a href="#doc_book_blueocean_pipeline-editor">editor de Pipeline</a>.</p>
 </div>
 <div class="paragraph">
 <p>Repositórios locais geralmente são limitados ao acesso ao sistema de arquivos. Eles geralmente são visíveis apenas no node principal. Sabe-se também que os repositórios locais exigem nomes de caminho mais complicados nos computadores Windows do que a maioria dos usuários deseja gerenciar. Os usuários são aconselhados a executar tarefas nos agentes, em vez de executá-las diretamente no mestre. Por esses motivos, use um repositório remoto em vez de um repositório local para obter a melhor experiência do Blue Ocean.</p>
@@ -12031,8 +12031,8 @@ da <a href="https://git-scm.com/book/en/v2/">documentação</a> do <a href="http
 <p>Clique no botão <strong>Criar pipeline</strong> .</p>
 </div>
 <div class="paragraph">
-<p>O Blue Ocean examinará as ramificações do seu repositório local em busca de um <code>Jenkinsfile</code>
-e começará uma execução de Pipeline para cada ramificação que contenha a <code>Jenkinsfile</code>. Se o Blue Ocean não conseguir encontrar nenhum <code>Jenkinsfile</code>, você será solicitado a começar a criar um através do <a href="#doc_book_blueocean_pipeline-editor">editor de Pipeline</a>.</p>
+<p>O Blue Ocean examinará as branches do seu repositório local em busca de um <code>Jenkinsfile</code>
+e começará uma execução de Pipeline para cada branch que contenha a <code>Jenkinsfile</code>. Se o Blue Ocean não conseguir encontrar nenhum <code>Jenkinsfile</code>, você será solicitado a começar a criar um através do <a href="#doc_book_blueocean_pipeline-editor">editor de Pipeline</a>.</p>
 </div>
 </div>
 </div>
@@ -12127,10 +12127,10 @@ Jenkins registra essa credencial com os seguintes detalhes para esse usuário:</
 </li>
 <li>
 <p>Clique em <strong>Criar pipeline</strong> . <br>
-O Blue Ocean examinará as ramificações do seu repositório local em busca de um <code>Jenkinsfile</code>
-e começará uma execução de Pipeline para cada ramificação que contenha a <code>Jenkinsfile</code>. Se o Blue Ocean não conseguir encontrar nenhum <code>Jenkinsfile</code>, você será solicitado a começar a criar um através do <a href="#doc_book_blueocean_pipeline-editor">editor de Pipeline</a> (clicando em
+O Blue Ocean examinará as branches do seu repositório local em busca de um <code>Jenkinsfile</code>
+e começará uma execução de Pipeline para cada branch que contenha a <code>Jenkinsfile</code>. Se o Blue Ocean não conseguir encontrar nenhum <code>Jenkinsfile</code>, você será solicitado a começar a criar um através do <a href="#doc_book_blueocean_pipeline-editor">editor de Pipeline</a> (clicando em
  <strong>Criar Pipeline</strong> novamente). <br>
-<strong>Nota:</strong> Sob o capô, um projeto de Pipeline criado através do Blue Ocean é na verdade "Pipeline de várias filiais". Portanto, o Jenkins procura a presença de pelo menos um arquivo Jenkins em qualquer ramo do seu repositório.</p>
+<strong>Nota:</strong> Sob o capô, um projeto de Pipeline criado através do Blue Ocean é na verdade "Pipeline multibranch". Portanto, o Jenkins procura a presença de pelo menos um arquivo Jenkins em qualquer ramo do seu repositório.</p>
 </li>
 </ol>
 </div>
@@ -12208,10 +12208,10 @@ abaixo.</p>
 </li>
 <li>
 <p>Clique em <strong>Criar pipeline</strong> . <br>
-O Blue Ocean examinará as ramificações do seu repositório local em busca de um <code>Jenkinsfile</code>
-e começará uma execução de Pipeline para cada ramificação que contenha a <code>Jenkinsfile</code>. Se o Blue Ocean não conseguir encontrar nenhum <code>Jenkinsfile</code>, você será solicitado a começar a criar um através do <a href="#doc_book_blueocean_pipeline-editor">editor de Pipeline</a> (clicando em
+O Blue Ocean examinará as branches do seu repositório local em busca de um <code>Jenkinsfile</code>
+e começará uma execução de Pipeline para cada branch que contenha a <code>Jenkinsfile</code>. Se o Blue Ocean não conseguir encontrar nenhum <code>Jenkinsfile</code>, você será solicitado a começar a criar um através do <a href="#doc_book_blueocean_pipeline-editor">editor de Pipeline</a> (clicando em
  <strong>Criar Pipeline</strong> novamente). <br>
-<strong>Nota:</strong> Sob o capô, um projeto de Pipeline criado através do Blue Ocean é na verdade "Pipeline de várias filiais". Portanto, o Jenkins procura a presença de pelo menos um arquivo Jenkins em qualquer ramo do seu repositório.</p>
+<strong>Nota:</strong> Sob o capô, um projeto de Pipeline criado através do Blue Ocean é na verdade "Pipeline multibranch". Portanto, o Jenkins procura a presença de pelo menos um arquivo Jenkins em qualquer ramo do seu repositório.</p>
 </li>
 </ol>
 </div>
@@ -12297,10 +12297,10 @@ para mostrar itens que contêm o texto digitado nesse campo.</p>
 <p><a href="#pipeline-health"><strong>SAÚDE</strong></a> do item ,</p>
 </li>
 <li>
-<p>Os números de <strong>BRANCH</strong> es e solicitações pull ( <strong>PRs</strong> ) do repositório de source control do Pipeline que estão passando ou com falha e</p>
+<p>Os números de <strong>BRANCH</strong> es e pull requests ( <strong>PRs</strong> ) do repositório de source control do Pipeline que estão passando ou com falha e</p>
 </li>
 <li>
-<p>Uma estrela indicando se a ramificação padrão/principal do item foi ou não adicionada manualmente à <a href="#favorites-list">lista de Favoritos</a> do usuário atual do Jenkins .</p>
+<p>Uma estrela indicando se a branch padrão/principal do item foi ou não adicionada manualmente à <a href="#favorites-list">lista de Favoritos</a> do usuário atual do Jenkins .</p>
 </li>
 </ul>
 </div>
@@ -12310,10 +12310,10 @@ para mostrar itens que contêm o texto digitado nesse campo.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Adicionando a ramificação padrão do repositório do item à lista de Favoritos do usuário atual (indicada por um sólido "★") e</p>
+<p>Adicionando a branch padrão do repositório do item à lista de Favoritos do usuário atual (indicada por um sólido "★") e</p>
 </li>
 <li>
-<p>Removendo a ramificação padrão do item desta lista (indicada por um "☆" destacado).</p>
+<p>Removendo a branch padrão do item desta lista (indicada por um "☆" destacado).</p>
 </li>
 </ul>
 </div>
@@ -12331,29 +12331,29 @@ para mostrar itens que contêm o texto digitado nesse campo.</p>
 quando pelo menos um Pipeline/item está presente na lista de Favoritos do usuário.</p>
 </div>
 <div class="paragraph">
-<p>Esta lista fornece informações e ações importantes para um subconjunto principal dos itens acessíveis do usuário na <a href="#pipelines-list">lista Pipelines</a>. Essas informações importantes incluem o <a href="#run-status">status</a> atual da <a href="#run-status">execução</a> de um item e sua ramificação do repositório, além de outros detalhes sobre a execução do item, incluindo o nome da ramificação, a parte inicial do hash de confirmação e a hora da última execução. Os itens desta lista também incluem ícones clicáveis ​​para executar ou executar novamente o item na ramificação do repositório indicada.</p>
+<p>Esta lista fornece informações e ações importantes para um subconjunto principal dos itens acessíveis do usuário na <a href="#pipelines-list">lista Pipelines</a>. Essas informações importantes incluem o <a href="#run-status">status</a> atual da <a href="#run-status">execução</a> de um item e sua branch do repositório, além de outros detalhes sobre a execução do item, incluindo o nome da branch, a parte inicial do hash de confirmação e a hora da última execução. Os itens desta lista também incluem ícones clicáveis ​​para executar ou executar novamente o item na branch do repositório indicada.</p>
 </div>
 <div class="paragraph">
-<p>Você só deve adicionar um item (ou uma das ramificações específicas do repositório) à sua lista de Favoritos se precisar examinar a ramificação desse item regularmente. A adição de uma ramificação específica de um item à sua lista de Favoritos pode ser feita na <a href="#doc_book_blueocean_activity">Visualização de Atividade</a> do item .</p>
+<p>Você só deve adicionar um item (ou uma das branches específicas do repositório) à sua lista de Favoritos se precisar examinar a branch desse item regularmente. A adição de uma branch específica de um item à sua lista de Favoritos pode ser feita na <a href="#doc_book_blueocean_activity">Visualização de Atividade</a> do item .</p>
 </div>
 <div class="paragraph">
-<p>O Blue Ocean adiciona automaticamente ramificações ou PRs a essa lista quando eles contêm uma execução que possui alterações de autoria do usuário atual.</p>
+<p>O Blue Ocean adiciona automaticamente branches ou PRs a essa lista quando eles contêm uma execução que possui alterações de autoria do usuário atual.</p>
 </div>
 <div class="paragraph">
 <p>Você também pode remover itens manualmente da sua lista de Favoritos clicando no sólido "★" nesta lista. Quando o último item é removido desta lista, a lista é removida da interface.</p>
 </div>
 <div class="paragraph">
 <p>Clicar em um item na lista Favoritos abrirá os <a href="#doc_book_blueocean_pipeline-run-details">detalhes da execução</a> do
- <a href="#doc_book_blueocean_pipeline-run-details">Pipeline</a> para a execução mais recente na ramificação do repositório ou PR indicado.</p>
+ <a href="#doc_book_blueocean_pipeline-run-details">Pipeline</a> para a execução mais recente na branch do repositório ou PR indicado.</p>
 </div>
 <div class="sect2">
 <h3 id="pipeline-health"><a class="anchor" href="#pipeline-health"></a>Ícones de saúde<a class="anchorjs-link " aria-label="Âncora" data-anchorjs-icon="" href="#pipeline-health" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h3>
 <div class="paragraph">
-<p>O Blue Ocean representa a integridade geral de um Pipeline/item ou de uma das ramificações de seu repositório usando ícones climáticos, que mudam dependendo do número de compilações recentes que foram aprovadas.</p>
+<p>O Blue Ocean representa a integridade geral de um Pipeline/item ou de uma das branches de seu repositório usando ícones climáticos, que mudam dependendo do número de compilações recentes que foram aprovadas.</p>
 </div>
 <div class="paragraph">
-<p>Os ícones de integridade no Painel representam a integridade geral do Pipeline, enquanto os ícones de integridade na <a href="#branches">guia Ramificações da Exibição de Atividade</a> 
-representam a integridade geral de cada ramificação.</p>
+<p>Os ícones de integridade no Painel representam a integridade geral do Pipeline, enquanto os ícones de integridade na <a href="#branches">guia Branches da Exibição de Atividade</a> 
+representam a integridade geral de cada branch.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <caption class="title">Tabela 1. Ícones de integridade (do melhor ao pior)</caption>
@@ -12394,7 +12394,7 @@ representam a integridade geral de cada ramificação.</p>
 <div class="sect2">
 <h3 id="run-status"><a class="anchor" href="#run-status"></a>Status de execução<a class="anchorjs-link " aria-label="Âncora" data-anchorjs-icon="" href="#run-status" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h3>
 <div class="paragraph">
-<p>Blue Ocean representa o status de execução de um Pipeline/item ou de uma das ramificações de seu repositório usando um conjunto consistente de ícones.</p>
+<p>Blue Ocean representa o status de execução de um Pipeline/item ou de uma das branches de seu repositório usando um conjunto consistente de ícones.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <caption class="title">Tabela 2. Ícones de status de execução</caption>
@@ -12462,7 +12462,7 @@ Vista de atividade
 <li><a href="#navigation-bar">Barra de navegação</a></li>
 <li><a href="#activity">Atividade</a></li>
 <li><a href="#branches">Ramos</a></li>
-<li><a href="#pull-requests">Solicitações Pull</a></li>
+<li><a href="#pull-requests">Pull Requests</a></li>
 </ul>
 </div>
 <div id="preamble">
@@ -12494,7 +12494,7 @@ na parte superior, com uma barra de navegação local abaixo dela. A barra de na
 </li>
 <li>
 <p><strong>Guias</strong> 
-( <a href="#activity">atividade</a>, <a href="#branches">ramificações</a>, <a href="#pull-requests">solicitações de recebimento</a> ) - Clicar em uma delas exibirá a guia da tela Atividade.</p>
+( <a href="#activity">atividade</a>, <a href="#branches">branches</a>, <a href="#pull-requests">solicitações de recebimento</a> ) - Clicar em uma delas exibirá a guia da tela Atividade.</p>
 </li>
 </ul>
 </div>
@@ -12505,10 +12505,10 @@ na parte superior, com uma barra de navegação local abaixo dela. A barra de na
 <div class="sectionbody">
 <div class="paragraph">
 <p>A guia padrão da Exibição de atividade, a guia "Atividade", mostra uma lista das últimas execuções concluídas ou em andamento. Cada linha da lista mostra o <a href="#run-status">status</a> da execução, número de identificação, informações de confirmação, duração e quando a execução foi concluída. Clicar em uma execução exibirá os <a href="#doc_book_blueocean_pipeline-run-details">detalhes da execução</a> do <a href="#doc_book_blueocean_pipeline-run-details">pipeline</a> 
-para essa execução. As execuções "Em andamento" podem ser canceladas nesta lista clicando no símbolo "Parar" (um quadrado "◼" dentro de um círculo). As execuções concluídas podem ser executadas novamente clicando no símbolo "Re-run" (uma seta no sentido anti-horário "↺"). A lista pode ser filtrada por ramificação ou solicitação de recebimento clicando no menu suspenso "ramificação" no cabeçalho da lista.</p>
+para essa execução. As execuções "Em andamento" podem ser canceladas nesta lista clicando no símbolo "Parar" (um quadrado "◼" dentro de um círculo). As execuções concluídas podem ser executadas novamente clicando no símbolo "Re-run" (uma seta no sentido anti-horário "↺"). A lista pode ser filtrada por branch ou solicitação de recebimento clicando no menu suspenso "branch" no cabeçalho da lista.</p>
 </div>
 <div class="paragraph">
-<p>Esta lista não permite que as corridas sejam editadas ou marcadas como favoritas. Essas ações podem ser realizadas na guia " <a href="#branches">ramificações</a> ".</p>
+<p>Esta lista não permite que as corridas sejam editadas ou marcadas como favoritas. Essas ações podem ser realizadas na guia " <a href="#branches">branches</a> ".</p>
 </div>
 </div>
 </div>
@@ -12516,25 +12516,25 @@ para essa execução. As execuções "Em andamento" podem ser canceladas nesta l
 <h2 id="branches"><a class="anchor" href="#branches"></a>Ramos<a class="anchorjs-link " aria-label="Âncora" data-anchorjs-icon="" href="#branches" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>A guia "Ramificações" mostra uma lista de todas as ramificações que têm uma execução concluída ou em andamento no pipeline atual. Cada linha da lista corresponde a uma ramificação no source control,
+<p>A guia "Branches" mostra uma lista de todas as branches que têm uma execução concluída ou em andamento no pipeline atual. Cada linha da lista corresponde a uma branch no source control,
  <sup class="footnote" id="_footnote_scm">[ <a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="Ver nota de rodapé.">1</a> ]</sup> 
 mostrando
- <a href="#pipeline-health">a integridade geral da ramificação com</a> base nas execuções recentes, status da execução mais recente, número de identificação, informações de confirmação, duração e quando a execução foi concluída.</p>
+ <a href="#pipeline-health">a integridade geral da branch com</a> base nas execuções recentes, status da execução mais recente, número de identificação, informações de confirmação, duração e quando a execução foi concluída.</p>
 </div>
 <div class="paragraph">
 <p><span class="image center"><img src="../images/blueocean/activity/branches.png" alt="Guia Ramos da exibição de atividades"></span></p>
 </div>
 <div class="paragraph">
-<p>Clicar em uma ramificação nesta lista exibirá os <a href="#doc_book_blueocean_pipeline-run-details">Detalhes da execução</a> do
+<p>Clicar em uma branch nesta lista exibirá os <a href="#doc_book_blueocean_pipeline-run-details">Detalhes da execução</a> do
  <a href="#doc_book_blueocean_pipeline-run-details">pipeline</a> 
-para a última <a href="#doc_book_blueocean_pipeline-run-details">execução</a> concluída ou em andamento dessa ramificação. As execuções "Em andamento" podem ser abortadas dessa lista clicando no símbolo "Parar" (um quadrado "◼" dentro de um círculo). Solicitações pull cuja última execução foi concluída podem ser executadas novamente clicando no símbolo "Reproduzir" (um triângulo "▶" dentro de um círculo). Clicar no símbolo "Editar" (semelhante a um lápis "✎") abre o
+para a última <a href="#doc_book_blueocean_pipeline-run-details">execução</a> concluída ou em andamento dessa branch. As execuções "Em andamento" podem ser abortadas dessa lista clicando no símbolo "Parar" (um quadrado "◼" dentro de um círculo). Pull requests cuja última execução foi concluída podem ser executadas novamente clicando no símbolo "Reproduzir" (um triângulo "▶" dentro de um círculo). Clicar no símbolo "Editar" (semelhante a um lápis "✎") abre o
  <a href="#doc_book_blueocean_pipeline-editor">editor de pipeline</a> no Pipeline para esse braach. Clicar no símbolo "Favorito" (um contorno em estrela "☆") adiciona um ramo à lista de favoritos mostrada na lista <a href="#favorites">"Favoritos"</a> do
- <a href="#favorites">Painel</a> para este usuário. Uma filial favorita mostrará uma estrela sólida "★"</p>
+ <a href="#favorites">Painel</a> para este usuário. Uma branch favorita mostrará uma estrela sólida "★"</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="pull-requests"><a class="anchor" href="#pull-requests"></a>Solicitações Pull<a class="anchorjs-link " aria-label="Âncora" data-anchorjs-icon="" href="#pull-requests" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h2>
+<h2 id="pull-requests"><a class="anchor" href="#pull-requests"></a>Pull Requests<a class="anchorjs-link " aria-label="Âncora" data-anchorjs-icon="" href="#pull-requests" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>A guia "Solicitações de recebimento" mostra uma lista de todas as solicitações de recebimento do pipeline atual que têm uma execução concluída ou em andamento. (Alguns sistemas de source control chamam isso de "Solicitações de mesclagem", outros não os suportam.) Cada linha da lista corresponde a uma solicitação de recebimento no source control, mostrando o status da execução mais recente, número de identificação, informações de confirmação, duração e quando a execução foi concluída.</p>
@@ -12543,9 +12543,9 @@ para a última <a href="#doc_book_blueocean_pipeline-run-details">execução</a>
 <p><span class="image center"><img src="../images/blueocean/activity/pull-requests.png" alt="Visualização Solicitações de extração de atividade"></span></p>
 </div>
 <div class="paragraph">
-<p>O Blue Ocean exibe solicitações de recebimento separadamente das ramificações, mas, caso contrário, a lista de solicitações de recepção se comporta de maneira semelhante à lista de ramificações. Clicar em uma solicitação de recebimento nesta lista exibirá os <a href="#doc_book_blueocean_pipeline-run-details">Detalhes da execução</a> do
+<p>O Blue Ocean exibe solicitações de recebimento separadamente das branches, mas, caso contrário, a lista de solicitações de recepção se comporta de maneira semelhante à lista de branches. Clicar em uma solicitação de recebimento nesta lista exibirá os <a href="#doc_book_blueocean_pipeline-run-details">Detalhes da execução</a> do
  <a href="#doc_book_blueocean_pipeline-run-details">pipeline</a> 
-para a execução mais recente concluída ou em andamento dessa solicitação de recebimento. As execuções "Em andamento" podem ser abortadas dessa lista clicando no símbolo "Parar" (um quadrado "◼" dentro de um círculo). Solicitações pull cuja última execução foi concluída podem ser executadas novamente clicando no símbolo "Reproduzir" (um triângulo "▶" dentro de um círculo). A solicitação pull não exibe <a href="#pipeline-health">"Heath Icons"</a> 
+para a execução mais recente concluída ou em andamento dessa solicitação de recebimento. As execuções "Em andamento" podem ser abortadas dessa lista clicando no símbolo "Parar" (um quadrado "◼" dentro de um círculo). Pull requests cuja última execução foi concluída podem ser executadas novamente clicando no símbolo "Reproduzir" (um triângulo "▶" dentro de um círculo). A pull request não exibe <a href="#pipeline-health">"Heath Icons"</a> 
 e não pode ser editada ou marcada como favorita.</p>
 </div>
 <div class="admonitionblock note">
@@ -12555,7 +12555,7 @@ e não pode ser editada ou marcada como favorita.</p>
 <i class="fa icon-note" title="Nota"></i>
 </td>
 <td class="content">
-Por padrão, quando uma solicitação de recebimento é fechada, o Jenkins removerá o pipeline do Jenkins (a ser limpo posteriormente) e as execuções para esse pedido de solicitação não estarão mais acessíveis no Jenkins. Isso pode ser alterado alterando a configuração do trabalho subjacente do Pipeline de várias filiais.
+Por padrão, quando uma solicitação de recebimento é fechada, o Jenkins removerá o pipeline do Jenkins (a ser limpo posteriormente) e as execuções para esse pedido de solicitação não estarão mais acessíveis no Jenkins. Isso pode ser alterado alterando a configuração do trabalho subjacente do Pipeline multibranch.
 </td>
 </tr>
 </tbody></table>
@@ -12628,7 +12628,7 @@ Exibição de detalhes da execução do pipeline
 <p><strong>Nome do Pipeline</strong> - O nome do Pipeline dessa execução.</p>
 </li>
 <li>
-<p><strong>Número da Execução</strong> - O número de identificação para esta execução do Pipeline. Números de identificação exclusivos para cada Filial (e solicitação de recebimento) de um pipeline.</p>
+<p><strong>Número da Execução</strong> - O número de identificação para esta execução do Pipeline. Números de identificação exclusivos para cada Branch (e solicitação de recebimento) de um pipeline.</p>
 </li>
 <li>
 <p><strong>Seletor</strong> de <a href="#tabs">guias</a> - Veja uma das <a href="#tabs">guias</a> detalhadas para esta execução. O padrão é " <a href="#pipeline">Pipeline</a> ".</p>
@@ -12646,7 +12646,7 @@ Exibição de detalhes da execução do pipeline
 <p><strong>Fechar detalhes</strong> - fecha a visualização Detalhes e retorna o usuário à &lt;&lt; atividade, visualização Atividade&gt; deste pipeline.</p>
 </li>
 <li>
-<p><strong>Filial</strong> ou <strong>Pull Request</strong> - o pedido ramo ou puxar para esta corrida.</p>
+<p><strong>Branch</strong> ou <strong>Pull Request</strong> - o pedido ramo ou puxar para esta corrida.</p>
 </li>
 <li>
 <p><strong>Confirmar ID</strong> - Confirme o ID para esta execução.</p>
@@ -12684,7 +12684,7 @@ Exibição de detalhes da execução do pipeline
 <div class="sect2">
 <h3 id="pipelines-outside-of-souce-control"><a class="anchor" href="#pipelines-outside-of-souce-control"></a>Pipelines fora do Souce Control<a class="anchorjs-link " aria-label="Âncora" data-anchorjs-icon="" href="#pipelines-outside-of-souce-control" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h3>
 <div class="paragraph">
-<p>Para os pipelines que não são baseados no source control, o Blue Ocean ainda mostra o "ID de confirmação", "Filial" e "Alterações", mas esses campos são deixados em branco. Nesse caso, a barra de menus superior não inclui a opção "Editar".</p>
+<p>Para os pipelines que não são baseados no source control, o Blue Ocean ainda mostra o "ID de confirmação", "Branch" e "Alterações", mas esses campos são deixados em branco. Nesse caso, a barra de menus superior não inclui a opção "Editar".</p>
 </div>
 </div>
 <div class="sect2">
@@ -12710,7 +12710,7 @@ Exibição de detalhes da execução do pipeline
 <div class="sect2">
 <h3 id="pipeline"><a class="anchor" href="#pipeline"></a>Pipeline<a class="anchorjs-link " aria-label="Âncora" data-anchorjs-icon="" href="#pipeline" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h3>
 <div class="paragraph">
-<p>Essa é a guia padrão e fornece uma visão geral do fluxo dessa execução de pipeline. Ele mostra cada stage e ramificação paralela, as steps nesses stages e a saída do console dessas steps. A imagem geral acima mostra uma execução bem-sucedida do Pipeline. Se uma step específica durante a execução falhar, essa guia será automaticamente padronizada para mostrar o log do console da step com falha. A imagem abaixo mostra uma falha na execução.</p>
+<p>Essa é a guia padrão e fornece uma visão geral do fluxo dessa execução de pipeline. Ele mostra cada stage e branch paralela, as steps nesses stages e a saída do console dessas steps. A imagem geral acima mostra uma execução bem-sucedida do Pipeline. Se uma step específica durante a execução falhar, essa guia será automaticamente padronizada para mostrar o log do console da step com falha. A imagem abaixo mostra uma falha na execução.</p>
 </div>
 <div class="paragraph">
 <p><span class="image center"><img src="../images/blueocean/pipeline-run-details/pipeline-failed.png" alt="Falha na execução"></span></p>
@@ -12779,7 +12779,7 @@ Editor de Pipeline
 <li><a href="#pipeline-settings">Configurações de pipeline</a>
 <ul class="sectlevel2">
 <li><a href="#agent">Agente</a></li>
-<li><a href="#environment">Meio Ambiente</a></li>
+<li><a href="#environment">Environment</a></li>
 </ul>
 </li>
 <li><a href="#stage-editor">Editor de stage</a></li>
@@ -12858,7 +12858,7 @@ na parte superior, com uma barra de navegação local abaixo dela. A barra de na
 <div class="ulist">
 <ul>
 <li>
-<p><strong>Nome do Pipeline</strong> - Isso incluirá a ramificação dependendo ou como</p>
+<p><strong>Nome do Pipeline</strong> - Isso incluirá a branch dependendo ou como</p>
 </li>
 <li>
 <p><strong>Cancelar</strong> - descartar as alterações feitas no pipeline.</p>
@@ -12885,7 +12885,7 @@ que não seja um Stage ou um dos botões "Adicionar Stage".</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="environment"><a class="anchor" href="#environment"></a>Meio Ambiente<a class="anchorjs-link " aria-label="Âncora" data-anchorjs-icon="" href="#environment" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h3>
+<h3 id="environment"><a class="anchor" href="#environment"></a>Environment<a class="anchorjs-link " aria-label="Âncora" data-anchorjs-icon="" href="#environment" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h3>
 <div class="paragraph">
 <p>As seções "Ambiente" nos permitem definir variáveis ​​de ambiente para o Pipeline. É o mesmo que a <a href="#environment">diretiva "ambiente"</a>.</p>
 </div>
@@ -12956,7 +12956,7 @@ que não seja um Stage ou um dos botões "Adicionar Stage".</p>
 <p><span class="image center"><img src="../images/blueocean/editor/save-pipeline.png" alt="Caixa de diálogo Salvar pipeline"></span></p>
 </div>
 <div class="paragraph">
-<p>Uma descrição útil das alterações pode ser adicionada ou deixada em branco. A caixa de diálogo também suporta salvar alterações na mesma ramificação ou inserir uma nova ramificação na qual salvar. Clicar em "Salvar e executar" salvará as alterações no pipeline como uma nova confirmação, iniciará uma nova execução do pipeline com base nessas alterações e navegará para a
+<p>Uma descrição útil das alterações pode ser adicionada ou deixada em branco. A caixa de diálogo também suporta salvar alterações na mesma branch ou inserir uma nova branch na qual salvar. Clicar em "Salvar e executar" salvará as alterações no pipeline como uma nova confirmação, iniciará uma nova execução do pipeline com base nessas alterações e navegará para a
  <a href="#doc_book_blueocean_activity">Exibição de atividade</a> desse pipeline.</p>
 </div>
 </div>
@@ -13819,7 +13819,7 @@ Padrão:
 Descrição:
 </strong>
 <div class="paragraph">
-<p>Use nomes mais curtos, mas enigmáticos, nos diretórios da área de trabalho de construção da matriz. Evita problemas com limite de 256 caracteres nos caminhos do Cygwin, problemas de profundidade do caminho no Windows e problemas de metacaracteres do shell com expressões de rótulo na maioria das plataformas. Veja <a href="https://issues.jenkins-ci.org/browse/JENKINS-25783">JENKINS-25783</a>.</p>
+<p>Use nomes mais curtos, mas enigmáticos, nos diretórios da workspace de construção da matriz. Evita problemas com limite de 256 caracteres nos caminhos do Cygwin, problemas de profundidade do caminho no Windows e problemas de metacaracteres do shell com expressões de rótulo na maioria das plataformas. Veja <a href="https://issues.jenkins-ci.org/browse/JENKINS-25783">JENKINS-25783</a>.</p>
 </div>
 </dd>
 <dt id="hudson-model-abstractitem-skippermissioncheck">
@@ -16523,7 +16523,7 @@ Padrão:
 Descrição:
 </strong>
 <div class="paragraph">
-<p>Quando construções simultâneas estão ativadas, um nome de diretório exclusivo da área de trabalho é necessário para cada construção simultânea. Para criar esse nome, esse token é colocado entre o nome do projeto e um ID exclusivo, por exemplo, "my-project @ 123".</p>
+<p>Quando construções simultâneas estão ativadas, um nome de diretório exclusivo da workspace é necessário para cada construção simultânea. Para criar esse nome, esse token é colocado entre o nome do projeto e um ID exclusivo, por exemplo, "my-project @ 123".</p>
 </div>
 </dd>
 <dt id="hudson-tasks-artifactarchiver-warnonempty">
@@ -17923,7 +17923,7 @@ Padrão:
 Descrição:
 </strong>
 <div class="paragraph">
-<p>Obsoleto: foi usado como o nome do diretório da área de trabalho padrão no layout de diretório da área de trabalho herdada (diretórios da área de trabalho nos diretórios da tarefa).</p>
+<p>Obsoleto: foi usado como o nome do diretório da workspace padrão no layout de diretório da workspace herdada (diretórios da workspace nos diretórios da tarefa).</p>
 </div>
 </dd>
 <dt id="jenkins-model-jenkins-workspacesdir">
@@ -20980,7 +20980,7 @@ java -jar jenkins.war</code></pre>
 <p><a href="https://wiki.jenkins.io/display/JENKINS/Allow+broken+build+claiming+on+every+jobs">Permitir reivindicações de construção quebradas em todos os trabalhos</a> - Com o script simples a seguir, você pode ativar a opção em todos os trabalhos do servidor de uma só vez.</p>
 </li>
 <li>
-<p><a href="https://wiki.jenkins.io/display/JENKINS/Batch-Update+Mercurial+branch+that+is+checked+out">Atualização em lote da filial do Mercurial com check-out</a> - Atualizações para vários trabalhos cuja filial será retirada da Hg</p>
+<p><a href="https://wiki.jenkins.io/display/JENKINS/Batch-Update+Mercurial+branch+that+is+checked+out">Atualização em lote da branch do Mercurial com check-out</a> - Atualizações para vários trabalhos cuja branch será retirada da Hg</p>
 </li>
 <li>
 <p><a href="https://wiki.jenkins.io/display/JENKINS/Bulk+rename+projects">Renomear projetos em massa</a></p>
@@ -21088,7 +21088,7 @@ java -jar jenkins.war</code></pre>
 <p><a href="https://wiki.jenkins.io/display/JENKINS/Set+GitBlitRepositoryBrowser+with+custum+settings+on+all+repos">Definir GitBlitRepositoryBrowser com configurações de custum em todos os repositórios</a> - Este script permite atualizar o navegador de repositório. Pode ser adaptado a qualquer outro navegador, não apenas ao gitblit.</p>
 </li>
 <li>
-<p><a href="https://wiki.jenkins.io/display/JENKINS/Update+maven+jobs+to+use+the+post+build+task+to+deploy+artifacts">Atualizar tarefas maven para usar a tarefa pós-construção para implantar artefatos</a> - Esse script atualiza todas as tarefas maven com um objetivo de implantação instalando e ativando a step pós-construção para implantar artefatos no final da construção</p>
+<p><a href="https://wiki.jenkins.io/display/JENKINS/Update+maven+jobs+to+use+the+post+build+task+to+deploy+artifacts">Atualizar tarefas maven para usar a tarefa pós-construção para deploy artefatos</a> - Esse script atualiza todas as tarefas maven com um objetivo de implantação instalando e ativando a step pós-construção para deploy artefatos no final da construção</p>
 </li>
 <li>
 <p><a href="https://wiki.jenkins.io/display/JENKINS/Update+SVN+Browser">Atualizar o navegador SVN</a></p>
@@ -21643,7 +21643,7 @@ Os temas Jenkins são fornecidos "como estão", sem garantia de qualquer tipo, i
 <p>Os usuários podem denunciar problemas de compatibilidade descobertos aos mantenedores de temas e enviar patches para eles. É possível corrigir apenas um tema localmente, mas outros usuários do tema apreciariam correções de compatibilidade nos repositórios upstream.</p>
 </div>
 <div class="paragraph">
-<p>Geralmente, rejeitaremos os relatórios de erros para os principais plugins/Jenkins, envolvendo elementos de interface do usuário quebrados com um tema personalizado. Consideraremos solicitações pull que restauram a compatibilidade e não bloqueiam a evolução da interface do usuário da Web.</p>
+<p>Geralmente, rejeitaremos os relatórios de erros para os principais plugins/Jenkins, envolvendo elementos de interface do usuário quebrados com um tema personalizado. Consideraremos pull requests que restauram a compatibilidade e não bloqueiam a evolução da interface do usuário da Web.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -23696,7 +23696,7 @@ Inventário hospedado de plug-ins e metadados de plug-ins para permitir a instal
 <dd>
 <p>Um <a href="#pipeline">pipeline</a> ou <a href="#project">projeto</a> configurado que aciona um pipeline ou projeto separado como parte de sua execução.</p>
 </dd>
-<dt id="workspace">Área de trabalho<a class="anchorjs-link " aria-label="Âncora" data-anchorjs-icon="" href="#workspace" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></dt>
+<dt id="workspace">Workspace<a class="anchorjs-link " aria-label="Âncora" data-anchorjs-icon="" href="#workspace" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></dt>
 <dd>
 <p>Um diretório descartável no sistema de arquivos de um <a href="#node">Node</a> 
 onde o trabalho pode ser realizado por um <a href="#pipeline">Pipeline</a> ou <a href="#project">Projeto</a>. Os workspaces geralmente são mantidos no local após a execução de uma <a href="#build">compilação</a> ou
@@ -23872,7 +23872,7 @@ Criando seu primeiro pipeline
 <p>Pode ser necessário modificar um dos exemplos <code>Jenkinsfile</code> para executá-lo com seu projeto. Tente modificar o <code>sh</code> comando para executar o mesmo comando que você executaria em sua máquina local.</p>
 </div>
 <div class="paragraph">
-<p>Após a configuração do seu pipeline, o Jenkins detectará automaticamente quaisquer novas ramificações ou solicitações pull criadas em seu repositório e começará a executar pipelines para eles.</p>
+<p>Após a configuração do seu pipeline, o Jenkins detectará automaticamente quaisquer novas branches ou pull requests criadas em seu repositório e começará a executar pipelines para eles.</p>
 </div>
 <div class="paragraph">
 <p><strong><a href="#doc_pipeline_tour_running-multiple-steps">Continue em "Executar várias steps"</a></strong></p>
@@ -24070,7 +24070,7 @@ Executando várias steps
 </ul>
 </div>
 <div class="paragraph">
-<p>Os pipelines são compostos de várias steps que permitem criar, testar e implantar aplicativos. O Jenkins Pipeline permite compor várias steps de uma maneira fácil que pode ajudá-lo a modelar qualquer tipo de processo de automação.</p>
+<p>Os pipelines são compostos de várias steps que permitem criar, testar e deploy aplicativos. O Jenkins Pipeline permite compor várias steps de uma maneira fácil que pode ajudá-lo a modelar qualquer tipo de processo de automação.</p>
 </div>
 <div class="paragraph">
 <p>Pense em um "passo" como um único comando que executa uma única ação. Quando um passo é bem-sucedido, ele passa para o próximo passo. Quando uma step falha na execução correta, o Pipeline falha.</p>
@@ -24784,7 +24784,7 @@ Desdobramento, desenvolvimento
 <h2 id="stages-as-deployment-environments"><a class="anchor" href="#stages-as-deployment-environments"></a>Steps como ambientes de implantação<a class="anchorjs-link " aria-label="Âncora" data-anchorjs-icon="" href="#stages-as-deployment-environments" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Um padrão comum é estender o número de stages para capturar ambientes de implementação adicionais, como "test" ou "produção", conforme mostrado no snippet a seguir.</p>
+<p>Um padrão comum é estender o número de stages para capturar ambientes de implementação adicionais, como "test" ou "produção", conforme mostrado no trecho a seguir.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -25184,7 +25184,7 @@ comando criará automaticamente o volume para você.</td>
 </tbody></table>
 </div>
 <div class="paragraph">
-<p><strong>Nota:</strong> Se copiar e colar o snippet de comando acima não funcionar, tente copiar e colar esta versão sem anotações aqui:</p>
+<p><strong>Nota:</strong> Se copiar e colar o trecho de comando acima não funcionar, tente copiar e colar esta versão sem anotações aqui:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -25421,10 +25421,10 @@ no site do GitHub para obter mais informações.</p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p>No GitHub, clique no botão verde <strong>Clonar ou baixar</strong> no seu repositório bifurcado e, em seguida, em <strong>Abrir na área de trabalho</strong> .</p>
+<p>No GitHub, clique no botão verde <strong>Clonar ou baixar</strong> no seu repositório bifurcado e, em seguida, em <strong>Abrir na workspace</strong> .</p>
 </li>
 <li>
-<p>Na área de trabalho do GitHub, antes de clicar em <strong>Clonar</strong> na caixa de diálogo <strong>Clonar um repositório</strong> , verifique <strong>o Caminho local</strong> para:</p>
+<p>Na workspace do GitHub, antes de clicar em <strong>Clonar</strong> na caixa de diálogo <strong>Clonar um repositório</strong> , verifique <strong>o Caminho local</strong> para:</p>
 <div class="ulist">
 <ul>
 <li>
@@ -26059,7 +26059,7 @@ comando criará automaticamente o volume para você.</td>
 </tbody></table>
 </div>
 <div class="paragraph">
-<p><strong>Nota:</strong> Se copiar e colar o snippet de comando acima não funcionar, tente copiar e colar esta versão sem anotações aqui:</p>
+<p><strong>Nota:</strong> Se copiar e colar o trecho de comando acima não funcionar, tente copiar e colar esta versão sem anotações aqui:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -26295,10 +26295,10 @@ no site do GitHub para obter mais informações.</p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p>No GitHub, clique no botão verde <strong>Clonar ou baixar</strong> no seu repositório bifurcado e, em seguida, em <strong>Abrir na área de trabalho</strong> .</p>
+<p>No GitHub, clique no botão verde <strong>Clonar ou baixar</strong> no seu repositório bifurcado e, em seguida, em <strong>Abrir na workspace</strong> .</p>
 </li>
 <li>
-<p>Na área de trabalho do GitHub, antes de clicar em <strong>Clonar</strong> na caixa de diálogo <strong>Clonar um repositório</strong> , verifique <strong>o Caminho local</strong> para:</p>
+<p>Na workspace do GitHub, antes de clicar em <strong>Clonar</strong> na caixa de diálogo <strong>Clonar um repositório</strong> , verifique <strong>o Caminho local</strong> para:</p>
 <div class="ulist">
 <ul>
 <li>
@@ -26474,7 +26474,7 @@ seção <code>docker</code>) baixa a <a href="https://hub.docker.com/_/node/"><c
 <td><i class="conum" data-value="4"></i><b>4</b></td>
 <td>Esta
  <a href="https://www.jenkins.io/doc/pipeline/steps/workflow-durable-task-step/#code-sh-code-shell-script"><code>sh</code></a>
-step (da <a href="#steps"><code>steps</code></a> seção) executa o <code>npm</code> comando para garantir que todas as dependências necessárias para executar seu aplicativo tenham sido baixadas no <code>node_modules</code> diretório da área de trabalho (dentro do <code>/var/jenkins_home/workspace/simple-node-js-react-npm-app</code> diretório no contêiner Jenkins).</td>
+step (da <a href="#steps"><code>steps</code></a> seção) executa o <code>npm</code> comando para garantir que todas as dependências necessárias para executar seu aplicativo tenham sido baixadas no <code>node_modules</code> diretório da workspace (dentro do <code>/var/jenkins_home/workspace/simple-node-js-react-npm-app</code> diretório no contêiner Jenkins).</td>
 </tr>
 </tbody></table>
 </div>
@@ -26795,7 +26795,7 @@ vi App.js <i class="conum" data-value="3"></i><b>(3)</b></code></pre>
 </tr>
 <tr>
 <td><i class="conum" data-value="2"></i><b>2</b></td>
-<td>Uma vez no contêiner, altere o diretório para o diretório de origem Node.js e React (no diretório da área de trabalho do Jenkins na home do Jenkins).</td>
+<td>Uma vez no contêiner, altere o diretório para o diretório de origem Node.js e React (no diretório da workspace do Jenkins na home do Jenkins).</td>
 </tr>
 <tr>
 <td><i class="conum" data-value="3"></i><b>3</b></td>
@@ -26851,7 +26851,7 @@ Criação de projeto de pipeline multibranch de ponta a ponta
 </ul>
 </li>
 <li><a href="#fork-sample-repository">Bifurque e clone o repositório de amostra no GitHub</a></li>
-<li><a href="#create-development-and-production-branches-in-your-repository">Crie ramificações de desenvolvimento e produção em seu repositório</a></li>
+<li><a href="#create-development-and-production-branches-in-your-repository">Crie branches de desenvolvimento e produção em seu repositório</a></li>
 <li><a href="#create-your-pipeline-project-in-blue-ocean">Crie o seu projeto de Pipeline no Blue Ocean</a></li>
 <li><a href="#create-your-initial-pipeline-as-a-jenkinsfile-with-build-and-test-stages">Crie seu Pipeline inicial como um arquivo Jenkins com stages de construção e teste</a></li>
 <li><a href="#add-deliver-and-deploy-stages-to-your-pipeline">Adicione steps de entrega e implantação ao seu Pipeline</a></li>
@@ -26877,7 +26877,7 @@ aplicativo <a href="https://nodejs.org/en/">Node.js</a> e <a href="https://react
 </div>
 <div class="paragraph">
 <p>Neste tutorial, você usará o mesmo aplicativo em que o aplicativo
- <a href="#doc_tutorials_build-a-node-js-and-react-app-with-npm">Build a Node.js e React with npm</a> se baseia. Portanto, você criará e testará o mesmo aplicativo, mas desta vez sua entrega será diferente, dependendo do ramo Git em que Jenkins cria. Ou seja, a ramificação que está sendo construída determina qual stage de entrega do seu Pipeline é executado.</p>
+ <a href="#doc_tutorials_build-a-node-js-and-react-app-with-npm">Build a Node.js e React with npm</a> se baseia. Portanto, você criará e testará o mesmo aplicativo, mas desta vez sua entrega será diferente, dependendo do ramo Git em que Jenkins cria. Ou seja, a branch que está sendo construída determina qual stage de entrega do seu Pipeline é executado.</p>
 </div>
 <div class="paragraph">
 <p><strong>Duração:</strong> este tutorial leva de 30 a 50 minutos para ser concluído (supondo que você já cumpriu os <a href="#prerequisites">pré</a> - <a href="#prerequisites">requisitos</a> abaixo). A duração exata dependerá da velocidade da sua máquina e se ou não você já
@@ -27021,7 +27021,7 @@ comando criará automaticamente o volume para você.</td>
 </tbody></table>
 </div>
 <div class="paragraph">
-<p><strong>Nota:</strong> Se copiar e colar o snippet de comando acima não funcionar, tente copiar e colar esta versão sem anotações aqui:</p>
+<p><strong>Nota:</strong> Se copiar e colar o trecho de comando acima não funcionar, tente copiar e colar esta versão sem anotações aqui:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -27257,10 +27257,10 @@ no site do GitHub para obter mais informações.</p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p>No GitHub, clique no botão verde <strong>Clonar ou baixar</strong> no seu repositório bifurcado e, em seguida, em <strong>Abrir na área de trabalho</strong> .</p>
+<p>No GitHub, clique no botão verde <strong>Clonar ou baixar</strong> no seu repositório bifurcado e, em seguida, em <strong>Abrir na workspace</strong> .</p>
 </li>
 <li>
-<p>Na área de trabalho do GitHub, antes de clicar em <strong>Clonar</strong> na caixa de diálogo <strong>Clonar um repositório</strong> , verifique <strong>o Caminho local</strong> para:</p>
+<p>Na workspace do GitHub, antes de clicar em <strong>Clonar</strong> na caixa de diálogo <strong>Clonar um repositório</strong> , verifique <strong>o Caminho local</strong> para:</p>
 <div class="ulist">
 <ul>
 <li>
@@ -27313,9 +27313,9 @@ onde <code>YOUR-GITHUB-ACCOUNT-NAME</code> está o nome da sua conta do GitHub.<
 </div>
 </div>
 <div class="sect2">
-<h3 id="create-development-and-production-branches-in-your-repository"><a class="anchor" href="#create-development-and-production-branches-in-your-repository"></a>Crie ramificações de desenvolvimento e produção em seu repositório<a class="anchorjs-link " aria-label="Âncora" data-anchorjs-icon="" href="#create-development-and-production-branches-in-your-repository" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h3>
+<h3 id="create-development-and-production-branches-in-your-repository"><a class="anchor" href="#create-development-and-production-branches-in-your-repository"></a>Crie branches de desenvolvimento e produção em seu repositório<a class="anchorjs-link " aria-label="Âncora" data-anchorjs-icon="" href="#create-development-and-production-branches-in-your-repository" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h3>
 <div class="paragraph">
-<p>Antes de criar seu projeto Pipeline no Jenkins, crie ramificações de "desenvolvimento" e "produção" do seu repositório Git clonado localmente. Você criará um único arquivo Jenkins (inicialmente no <code>master</code> ramo, do qual você puxará os outros ramos) cujos stages serão executados seletivamente com base no ramo que o Jenkins está construindo.</p>
+<p>Antes de criar seu projeto Pipeline no Jenkins, crie branches de "desenvolvimento" e "produção" do seu repositório Git clonado localmente. Você criará um único arquivo Jenkins (inicialmente no <code>master</code> ramo, do qual você puxará os outros ramos) cujos stages serão executados seletivamente com base no ramo que o Jenkins está construindo.</p>
 </div>
 <div class="paragraph">
 <p>Dentro do <code>building-a-multibranch-pipeline-project</code> diretório (ou seja, seu clone local do repositório de amostra):</p>
@@ -27323,7 +27323,7 @@ onde <code>YOUR-GITHUB-ACCOUNT-NAME</code> está o nome da sua conta do GitHub.<
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Execute os seguintes comandos para criar essas ramificações (a partir do conteúdo da <code>master</code> ramificação):</p>
+<p>Execute os seguintes comandos para criar essas branches (a partir do conteúdo da <code>master</code> branch):</p>
 <div class="ulist">
 <ul>
 <li>
@@ -27347,8 +27347,8 @@ e</p>
 </div>
 </li>
 <li>
-<p>Se o asterisco (indicando a ramificação atual) não aparecer ao lado
- <code>master</code>, execute o comando <code>git checkout master</code> para garantir que essa <code>master</code> seja a ramificação atual.</p>
+<p>Se o asterisco (indicando a branch atual) não aparecer ao lado
+ <code>master</code>, execute o comando <code>git checkout master</code> para garantir que essa <code>master</code> seja a branch atual.</p>
 </li>
 </ol>
 </div>
@@ -27356,7 +27356,7 @@ e</p>
 <div class="sect2">
 <h3 id="create-your-pipeline-project-in-blue-ocean"><a class="anchor" href="#create-your-pipeline-project-in-blue-ocean"></a>Crie o seu projeto de Pipeline no Blue Ocean<a class="anchorjs-link " aria-label="Âncora" data-anchorjs-icon="" href="#create-your-pipeline-project-in-blue-ocean" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h3>
 <div class="paragraph">
-<p>Sempre que você cria <em>qualquer</em> projeto de Pipeline no Blue Ocean, Jenkins realmente o cria como um projeto de Pipeline com várias filiais nos bastidores. Isso se torna aparente se você acessar a interface clássica de Jenkins após criar um projeto Pipeline no Blue Ocean; você verá que Jenkins terá criado seu projeto como um projeto "Pipeline multibranch".</p>
+<p>Sempre que você cria <em>qualquer</em> projeto de Pipeline no Blue Ocean, Jenkins realmente o cria como um projeto de Pipeline com várias branches nos bastidores. Isso se torna aparente se você acessar a interface clássica de Jenkins após criar um projeto Pipeline no Blue Ocean; você verá que Jenkins terá criado seu projeto como um projeto "Pipeline multibranch".</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -27401,7 +27401,7 @@ diretório do contêiner Jenkins - ou seja,</p>
 </li>
 <li>
 <p>Clique em <strong>Salvar</strong> para salvar seu novo projeto de Pipeline. <br>
-O Blue Ocean detecta a presença do <code>Jenkinsfile</code>"stub Pipeline" em cada filial e passa a executar cada Pipeline na respectiva ramificação, cujos resultados de compilação são mostrados na página <strong>Atividade</strong> da interface principal do Blue Ocean.</p>
+O Blue Ocean detecta a presença do <code>Jenkinsfile</code>"stub Pipeline" em cada branch e passa a executar cada Pipeline na respectiva branch, cujos resultados de compilação são mostrados na página <strong>Atividade</strong> da interface principal do Blue Ocean.</p>
 <div class="paragraph boxshadow">
 <p><span class="image"><img src="../images/tutorials/multibranch-pipeline-01-main-blueocean-interface.png" alt="Interface principal do Blue Ocean" width="100%"></span></p>
 </div>
@@ -27421,10 +27421,10 @@ O Blue Ocean detecta a presença do <code>Jenkinsfile</code>"stub Pipeline" em c
  <a href="#stage"><code>stage</code></a> diretiva.</p>
 </div>
 <div class="paragraph">
-<p>A razão pela qual o <code>building-a-multibranch-pipeline-project</code> repositório inclui um <code>Jenkinsfile</code> esboço do Pipeline é que sua presença em uma filial faz com que a Blue Ocean detecte que há algo a ser construído (isto é <code>Jenkinsfile</code>) imediatamente após a criação do projeto Pipeline na Blue Ocean, que por sua vez torna essas ramificações acessíveis através do Blue Ocean interface.</p>
+<p>A razão pela qual o <code>building-a-multibranch-pipeline-project</code> repositório inclui um <code>Jenkinsfile</code> esboço do Pipeline é que sua presença em uma branch faz com que a Blue Ocean detecte que há algo a ser construído (isto é <code>Jenkinsfile</code>) imediatamente após a criação do projeto Pipeline na Blue Ocean, que por sua vez torna essas branches acessíveis através do Blue Ocean interface.</p>
 </div>
 <div class="paragraph">
-<p>Se você criou um projeto de Pipeline no Blue Ocean, mas não tinha um arquivo Jenkins em uma ou mais ramificações do seu repositório, acesse as ramificações no Blue Ocean depois de puxar/adicionar um <code>Jenkinsfile</code> a essas ramificações posteriormente :</p>
+<p>Se você criou um projeto de Pipeline no Blue Ocean, mas não tinha um arquivo Jenkins em uma ou mais branches do seu repositório, acesse as branches no Blue Ocean depois de puxar/adicionar um <code>Jenkinsfile</code> a essas branches posteriormente :</p>
 </div>
 <div class="ulist">
 <ul>
@@ -27446,7 +27446,7 @@ ou</p>
 <h3 id="create-your-initial-pipeline-as-a-jenkinsfile-with-build-and-test-stages"><a class="anchor" href="#create-your-initial-pipeline-as-a-jenkinsfile-with-build-and-test-stages"></a>Crie seu Pipeline inicial como um arquivo Jenkins com stages de construção e teste<a class="anchorjs-link " aria-label="Âncora" data-anchorjs-icon="" href="#create-your-initial-pipeline-as-a-jenkinsfile-with-build-and-test-stages" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h3>
 <div class="paragraph">
 <p>Agora você está pronto para criar o Pipeline que automatizará a criação do aplicativo Node.js e React no Jenkins. Seu Pipeline será criado como um
- <code>Jenkinsfile</code>, que será confirmado na <code>master</code> ramificação do seu repositório Git clonado localmente ( <code>building-a-multibranch-pipeline-project</code>).</p>
+ <code>Jenkinsfile</code>, que será confirmado na <code>master</code> branch do seu repositório Git clonado localmente ( <code>building-a-multibranch-pipeline-project</code>).</p>
 </div>
 <div class="paragraph">
 <p>Primeiro, crie um Pipeline inicial para baixar uma imagem do Node Docker e execute-a como um contêiner do Docker que criará seu aplicativo Node.js. e React simples. Adicione também um stage "Build" ao Pipeline para começar a orquestrar todo o processo e um stage "Test" para verificar se o aplicativo é renderizado satisfatoriamente.</p>
@@ -27455,7 +27455,7 @@ ou</p>
 <ol class="arabic">
 <li>
 <p>Usando seu editor de texto favorito ou IDE, abra o existente <code>Jenkinsfile</code> na raiz do seu <code>building-a-multibranch-pipeline-project</code> repositório Git local e <em>limpe</em> seu conteúdo. <br>
-<strong>Nota:</strong> Certifique-se de executar esta step na <code>master</code> ramificação do seu repositório.</p>
+<strong>Nota:</strong> Certifique-se de executar esta step na <code>master</code> branch do seu repositório.</p>
 </li>
 <li>
 <p>Copie o seguinte código de pipeline declarativo e cole-o no seu vazio
@@ -27525,10 +27525,10 @@ em seguida,<br>
 <li>
 <p>Clique no ícone executar
 <span class="image"><img src="../images/tutorials/multibranch-pipeline-12-run-icon.png" alt="Executar ícone" width="3%"></span>
-da <code>master</code> filial do seu projeto Pipeline, clique rapidamente no 
+da <code>master</code> branch do seu projeto Pipeline, clique rapidamente no 
 link <strong>OPEN</strong> que aparece brevemente no canto inferior direito para ver Jenkins criando a
- <code>master</code> filial com as alterações <code>Jenkinsfile</code>. Se você não conseguiu clicar no link <strong>ABRIR</strong> , clique na linha <em>superior</em> na página <strong>Atividade do</strong> Blue Ocean para acessar esse recurso. <br>
-Dentro de alguns minutos, a interface do Blue Ocean ficará verde se Jenkins criar seu aplicativo Node.js e React com êxito a partir de sua <code>master</code> filial.</p>
+ <code>master</code> branch com as alterações <code>Jenkinsfile</code>. Se você não conseguiu clicar no link <strong>ABRIR</strong> , clique na linha <em>superior</em> na página <strong>Atividade do</strong> Blue Ocean para acessar esse recurso. <br>
+Dentro de alguns minutos, a interface do Blue Ocean ficará verde se Jenkins criar seu aplicativo Node.js e React com êxito a partir de sua <code>master</code> branch.</p>
 <div class="paragraph boxshadow">
 <p><span class="image"><img src="../images/tutorials/multibranch-pipeline-13-build-and-test-stages-run-successfully-with-output.png" alt="Os stages de construção e teste são executados com êxito com saída" width="100%"></span></p>
 </div>
@@ -27542,11 +27542,11 @@ Dentro de alguns minutos, a interface do Blue Ocean ficará verde se Jenkins cri
 <div class="sect2">
 <h3 id="add-deliver-and-deploy-stages-to-your-pipeline"><a class="anchor" href="#add-deliver-and-deploy-stages-to-your-pipeline"></a>Adicione steps de entrega e implantação ao seu Pipeline<a class="anchorjs-link " aria-label="Âncora" data-anchorjs-icon="" href="#add-deliver-and-deploy-stages-to-your-pipeline" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h3>
 <div class="paragraph">
-<p>Em seguida, adicione os stages "Entregar para desenvolvimento" e "Implantar para produção" ao seu Pipeline, que o Jenkins executará seletivamente com base na ramificação da qual o Jenkins está construindo.</p>
+<p>Em seguida, adicione os stages "Entregar para desenvolvimento" e "Deploy para produção" ao seu Pipeline, que o Jenkins executará seletivamente com base na branch da qual o Jenkins está construindo.</p>
 </div>
 <div class="paragraph">
 <p>Isso leva o conceito "Pipeline como código" a um novo nível, no qual um
- <code>Jenkinsfile</code> descreve os processos completos de compilação, teste, entrega e implantação do seu projeto no Jenkins para cada filial do seu repositório. Leia mais sobre o Pipeline e o que é
+ <code>Jenkinsfile</code> descreve os processos completos de compilação, teste, entrega e implantação do seu projeto no Jenkins para cada branch do seu repositório. Leia mais sobre o Pipeline e o que é
  <a href="#doc_book_pipeline/jenkinsfile">um Jenkinsfile nas</a> seções <a href="#doc_book_pipeline">Pipeline</a> e <a href="#doc_book_pipeline/jenkinsfile">Using a Jenkinsfile</a> do Manual do Usuário.</p>
 </div>
 <div class="olist arabic">
@@ -27677,13 +27677,13 @@ em seguida,<br>
 <li>
 <p>Clique no ícone executar
 <span class="image"><img src="../images/tutorials/multibranch-pipeline-12-run-icon.png" alt="Executar ícone" width="3%"></span>
-da <code>master</code> filial do seu projeto Pipeline, clique rapidamente no 
+da <code>master</code> branch do seu projeto Pipeline, clique rapidamente no 
 link <strong>OPEN</strong> que aparece brevemente no canto inferior direito para ver Jenkins criando a
- <code>master</code> filial com as alterações <code>Jenkinsfile</code>. Se você não conseguiu clicar no link <strong>ABRIR</strong> , clique na linha <em>superior</em> na página <strong>Atividade do</strong> Blue Ocean para acessar esse recurso. <br>
-Observe como o Jenkins ignora os dois últimos stages que você adicionou, pois a ramificação da qual você está executando a compilação ( <code>master</code>) não atende às condições das <code>when</code> diretivas
+ <code>master</code> branch com as alterações <code>Jenkinsfile</code>. Se você não conseguiu clicar no link <strong>ABRIR</strong> , clique na linha <em>superior</em> na página <strong>Atividade do</strong> Blue Ocean para acessar esse recurso. <br>
+Observe como o Jenkins ignora os dois últimos stages que você adicionou, pois a branch da qual você está executando a compilação ( <code>master</code>) não atende às condições das <code>when</code> diretivas
  <code>branch</code> nesses stages.</p>
 <div class="paragraph boxshadow">
-<p><span class="image"><img src="../images/tutorials/multibranch-pipeline-21-complete-pipeline-runs-successfully-on-master-branch.png" alt="O pipeline completo é executado com êxito na ramificação 'master'" width="100%"></span></p>
+<p><span class="image"><img src="../images/tutorials/multibranch-pipeline-21-complete-pipeline-runs-successfully-on-master-branch.png" alt="O pipeline completo é executado com êxito na branch 'master'" width="100%"></span></p>
 </div>
 </li>
 <li>
@@ -27695,7 +27695,7 @@ Observe como o Jenkins ignora os dois últimos stages que você adicionou, pois 
 <div class="sect2">
 <h3 id="pull-your-updated-jenkinsfile-into-the-other-repository-branches"><a class="anchor" href="#pull-your-updated-jenkinsfile-into-the-other-repository-branches"></a>Puxe seu Jenkinsfile atualizado para os outros ramos do repositório<a class="anchorjs-link " aria-label="Âncora" data-anchorjs-icon="" href="#pull-your-updated-jenkinsfile-into-the-other-repository-branches" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h3>
 <div class="paragraph">
-<p>Agora que você concluiu <code>Jenkinsfile</code> a compilação do aplicativo no Jenkins, pode extrair esse arquivo da <code>master</code> ramificação do repositório local para as ramificações <code>development</code> e <code>production</code>.</p>
+<p>Agora que você concluiu <code>Jenkinsfile</code> a compilação do aplicativo no Jenkins, pode extrair esse arquivo da <code>master</code> branch do repositório local para as branches <code>development</code> e <code>production</code>.</p>
 </div>
 <div class="paragraph">
 <p>No <code>building-a-multibranch-pipeline-project</code>
@@ -27752,8 +27752,8 @@ e</p>
 <li>
 <p>Clique no ícone executar
 <span class="image"><img src="../images/tutorials/multibranch-pipeline-12-run-icon.png" alt="Executar ícone" width="3%"></span>
-da <code>development</code> filial do seu projeto Pipeline, clique rapidamente no
- link <strong>OPEN</strong> que aparece brevemente no canto inferior direito para ver Jenkins criando a <code>development</code> filial com as alterações <code>Jenkinsfile</code>. Se você não conseguiu clicar no link <strong>ABRIR</strong> , clique na linha <em>superior</em> na 
+da <code>development</code> branch do seu projeto Pipeline, clique rapidamente no
+ link <strong>OPEN</strong> que aparece brevemente no canto inferior direito para ver Jenkins criando a <code>development</code> branch com as alterações <code>Jenkinsfile</code>. Se você não conseguiu clicar no link <strong>ABRIR</strong> , clique na linha <em>superior</em> na 
 página <strong>Atividade do</strong> Blue Ocean para acessar esse recurso.</p>
 </li>
 <li>
@@ -27761,8 +27761,8 @@ página <strong>Atividade do</strong> Blue Ocean para acessar esse recurso.</p>
  stage <strong>Entregar para desenvolvimento</strong> (clique se necessário) e clique na step verde <strong>Shell Script</strong> superior para expandir seu conteúdo e rolar para baixo até ver o <code>http://localhost:3000</code> link.</p>
 <div class="paragraph boxshadow">
 <p><span class="image"><img src="../images/tutorials/multibranch-pipeline-31-deliver-for-development-stage-opened.png" alt="Step Shell Script 'Entregar para desenvolvimento' aberta" width="100%"></span><br>
-    <strong>Nota:</strong> Como você está construindo o aplicativo em uma ramificação diferente, a <code>npm
-    install</code> step exigirá alguns minutos para <code>npm</code> fazer o download das muitas dependências necessárias para executar o aplicativo Node.js e React (armazenado em um <code>node_modules</code> diretório local no diretório inicial do Jenkins). Essas dependências são baixadas novamente porque essa compilação Jenkins seria a primeira vez que você executaria seu projeto Pipeline na <code>development</code> filial e cada filial teria seu próprio diretório de workspace (contendo seu próprio
+    <strong>Nota:</strong> Como você está construindo o aplicativo em uma branch diferente, a <code>npm
+    install</code> step exigirá alguns minutos para <code>npm</code> fazer o download das muitas dependências necessárias para executar o aplicativo Node.js e React (armazenado em um <code>node_modules</code> diretório local no diretório inicial do Jenkins). Essas dependências são baixadas novamente porque essa compilação Jenkins seria a primeira vez que você executaria seu projeto Pipeline na <code>development</code> branch e cada branch teria seu próprio diretório de workspace (contendo seu próprio
      <code>node_modules</code> diretório) dentro do diretório inicial do Jenkins.</p>
 </div>
 </li>
@@ -27771,11 +27771,11 @@ página <strong>Atividade do</strong> Blue Ocean para acessar esse recurso.</p>
 </li>
 <li>
 <p>Quando terminar de visualizar a página/site, clique no botão <strong>Continuar</strong> em Blue Ocean para concluir a execução do Pipeline. <br>
-A interface do Blue Ocean fica verde se Jenkins criou seu aplicativo Node.js e React com êxito a partir de sua <code>development</code> filial. Observe como o
+A interface do Blue Ocean fica verde se Jenkins criou seu aplicativo Node.js e React com êxito a partir de sua <code>development</code> branch. Observe como o
  stage <strong>Entregar para desenvolvimento</strong> foi executado, mas o 
 stage <strong>Implementar para produção</strong> não.</p>
 <div class="paragraph boxshadow">
-<p><span class="image"><img src="../images/tutorials/multibranch-pipeline-32-complete-pipeline-runs-successfully-on-development-branch.png" alt="O pipeline completo é executado com êxito na ramificação 'development'" width="100%"></span></p>
+<p><span class="image"><img src="../images/tutorials/multibranch-pipeline-32-complete-pipeline-runs-successfully-on-development-branch.png" alt="O pipeline completo é executado com êxito na branch 'development'" width="100%"></span></p>
 </div>
 </li>
 <li>
@@ -27794,14 +27794,14 @@ stage <strong>Implementar para produção</strong> não.</p>
 <li>
 <p>Clique no ícone executar
 <span class="image"><img src="../images/tutorials/multibranch-pipeline-12-run-icon.png" alt="Executar ícone" width="3%"></span>
-da <code>production</code> filial do seu projeto Pipeline, clique rapidamente no
- link <strong>OPEN</strong> que aparece brevemente no canto inferior direito para ver Jenkins criando a <code>production</code> filial com as alterações <code>Jenkinsfile</code>. Se você não conseguiu clicar no link <strong>ABRIR</strong> , clique na linha <em>superior</em> na página <strong>Atividade do</strong> Blue Ocean para acessar esse recurso.</p>
+da <code>production</code> branch do seu projeto Pipeline, clique rapidamente no
+ link <strong>OPEN</strong> que aparece brevemente no canto inferior direito para ver Jenkins criando a <code>production</code> branch com as alterações <code>Jenkinsfile</code>. Se você não conseguiu clicar no link <strong>ABRIR</strong> , clique na linha <em>superior</em> na página <strong>Atividade do</strong> Blue Ocean para acessar esse recurso.</p>
 </li>
 <li>
 <p>Dentro de alguns minutos e quando a construção for pausada, verifique se você está visualizando o
  stage <strong>Implementar para produção</strong> (clique se necessário) e clique na step superior verde <strong>Shell Script</strong> para expandir seu conteúdo e rolar para baixo até ver o <code>http://localhost:5000</code> link.</p>
 <div class="paragraph boxshadow">
-<p><span class="image"><img src="../images/tutorials/multibranch-pipeline-41-deploy-for-production-stage-opened.png" alt="Step Shell Script 'Implantar para produção' aberta" width="100%"></span><br></p>
+<p><span class="image"><img src="../images/tutorials/multibranch-pipeline-41-deploy-for-production-stage-opened.png" alt="Step Shell Script 'Deploy para produção' aberta" width="100%"></span><br></p>
 </div>
 </li>
 <li>
@@ -27811,11 +27811,11 @@ build</code> comando). Novamente, você deverá ver uma página/site com o títu
 </li>
 <li>
 <p>Quando terminar de visualizar a página/site, clique no botão <strong>Continuar</strong> em Blue Ocean para concluir a execução do Pipeline. <br>
-A interface do Blue Ocean fica verde se Jenkins criou seu aplicativo Node.js e React com êxito a partir de sua <code>production</code> filial. Observe como o
+A interface do Blue Ocean fica verde se Jenkins criou seu aplicativo Node.js e React com êxito a partir de sua <code>production</code> branch. Observe como o
  stage <strong>Implementar para produção</strong> foi executado, mas o 
 stage <strong>Entregar para desenvolvimento</strong> foi ignorado.</p>
 <div class="paragraph boxshadow">
-<p><span class="image"><img src="../images/tutorials/multibranch-pipeline-42-complete-pipeline-runs-successfully-on-production-branch.png" alt="O pipeline completo é executado com êxito na filial 'produção'" width="100%"></span></p>
+<p><span class="image"><img src="../images/tutorials/multibranch-pipeline-42-complete-pipeline-runs-successfully-on-production-branch.png" alt="O pipeline completo é executado com êxito na branch 'produção'" width="100%"></span></p>
 </div>
 </li>
 <li>
@@ -27828,14 +27828,14 @@ stage <strong>Entregar para desenvolvimento</strong> foi ignorado.</p>
 <div class="sect2">
 <h3 id="follow-up-optional"><a class="anchor" href="#follow-up-optional"></a>Acompanhamento (opcional)<a class="anchorjs-link " aria-label="Âncora" data-anchorjs-icon="" href="#follow-up-optional" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h3>
 <div class="paragraph">
-<p>Esta seção leva você a um fluxo de trabalho de desenvolvimento simulado usando o Jenkins, no qual as alterações feitas no seu aplicativo (ou seja, o <code>App.js</code> arquivo de origem) podem ser examinadas a partir da <code>development</code> ramificação antes de serem implantadas na produção (a partir da <code>production</code> ramificação) através da <code>master</code> ramificação.</p>
+<p>Esta seção leva você a um fluxo de trabalho de desenvolvimento simulado usando o Jenkins, no qual as alterações feitas no seu aplicativo (ou seja, o <code>App.js</code> arquivo de origem) podem ser examinadas a partir da <code>development</code> branch antes de serem implantadas na produção (a partir da <code>production</code> branch) através da <code>master</code> branch.</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
 <p>No <code>building-a-multibranch-pipeline-project</code>
 diretório do seu repositório local , execute o comando <code>git checkout development</code> para mudar para a
- <code>development</code> ramificação.</p>
+ <code>development</code> branch.</p>
 </li>
 <li>
 <p>Volte ao seu editor de texto/IDE e abra o <code>App.js</code> arquivo no <code>src</code>
@@ -27890,13 +27890,13 @@ em seguida,<br>
 <code>git commit -m "Update 'App.js'"</code></p>
 </li>
 <li>
-<p>De volta ao Blue Ocean, execute seu Pipeline na <code>development</code> filial (como você fez
+<p>De volta ao Blue Ocean, execute seu Pipeline na <code>development</code> branch (como você fez
  <a href="#run-your-pipeline-on-the-development-branch">acima</a> ) e verifique os resultados <code>http://localhost:3000</code> para ver sua nova linha adicionada.</p>
 </li>
 <li>
 <p>Supondo que você esteja satisfeito com a alteração e, no <code>building-a-multibranch-pipeline-project</code> diretório do repositório local
- , execute o seguinte conjunto de comandos para puxar sua alteração para a <code>production</code> ramificação (via <code>master</code>
-ramificação):</p>
+ , execute o seguinte conjunto de comandos para puxar sua alteração para a <code>production</code> branch (via <code>master</code>
+branch):</p>
 <div class="ulist">
 <ul>
 <li>
@@ -27926,7 +27926,7 @@ e</p>
 <p>Como é provável que seu navegador armazene em cache o conteúdo do <code>serve</code> módulo npm , talvez você precise atualizar a página do navegador para ver suas alterações.</p>
 </li>
 <li>
-<p>Em um ambiente real de desenvolvimento de software com equipes pequenas e grandes de pessoas, é mais provável que as mudanças entre as ramificações sejam realizadas usando solicitações de recebimento em um serviço Git hospedado na nuvem ou na Web (como GitHub ou BitBucket).</p>
+<p>Em um ambiente real de desenvolvimento de software com equipes pequenas e grandes de pessoas, é mais provável que as mudanças entre as branches sejam realizadas usando solicitações de recebimento em um serviço Git hospedado na nuvem ou na Web (como GitHub ou BitBucket).</p>
 </li>
 </ul>
 </div>
@@ -28162,7 +28162,7 @@ comando criará automaticamente o volume para você.</td>
 </tbody></table>
 </div>
 <div class="paragraph">
-<p><strong>Nota:</strong> Se copiar e colar o snippet de comando acima não funcionar, tente copiar e colar esta versão sem anotações aqui:</p>
+<p><strong>Nota:</strong> Se copiar e colar o trecho de comando acima não funcionar, tente copiar e colar esta versão sem anotações aqui:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -28453,8 +28453,8 @@ e clique em <strong>Connect</strong> .<br></p>
 </li>
 <li>
 <p>Clique em <strong>Criar pipeline</strong> . <br>
-O Blue Ocean detecta que não há arquivo Jenkins no nível raiz da <code>master</code> ramificação do repositório e continua para ajudá-lo a criar um. (Portanto, você precisará clicar em outro <strong>Create Pipeline</strong> no final da página para prosseguir.) <br>
-<strong>Nota:</strong> Por baixo, um projeto de Pipeline criado através do Blue Ocean é na verdade "Pipeline com várias filiais". Portanto, o Jenkins procura a presença de pelo menos um arquivo Jenkins em qualquer ramo do seu repositório.</p>
+O Blue Ocean detecta que não há arquivo Jenkins no nível raiz da <code>master</code> branch do repositório e continua para ajudá-lo a criar um. (Portanto, você precisará clicar em outro <strong>Create Pipeline</strong> no final da página para prosseguir.) <br>
+<strong>Nota:</strong> Por baixo, um projeto de Pipeline criado através do Blue Ocean é na verdade "Pipeline com várias branches". Portanto, o Jenkins procura a presença de pelo menos um arquivo Jenkins em qualquer ramo do seu repositório.</p>
 </li>
 </ol>
 </div>
@@ -28562,7 +28562,7 @@ install</code>.<br></p>
 <div class="paragraph boxshadow">
 <p><span class="image"><img src="../images/tutorials/pipeline-in-blueocean-19b-main-blue-ocean-interface.png" alt="Interface principal do Blue Ocean" width="100%"></span><br>
     <strong>Nota:</strong> Antes de continuar, você pode verificar se o Jenkins criou um
-     <code>Jenkinsfile</code> para você na raiz do seu repositório GitHub bifurcado (na única <code>master</code> ramificação do repositório ).</p>
+     <code>Jenkinsfile</code> para você na raiz do seu repositório GitHub bifurcado (na única <code>master</code> branch do repositório ).</p>
 </div>
 </li>
 </ol>
@@ -28574,15 +28574,15 @@ install</code>.<br></p>
 <ol class="arabic">
 <li>
 <p>Na interface principal do Blue Ocean, clique em <strong>Ramos</strong> no canto superior direito para acessar a página de ramos do seu repositório, onde você pode acessar o<code>master</code> 
-ramificação.<br></p>
+branch.<br></p>
 <div class="paragraph boxshadow">
-<p><span class="image"><img src="../images/tutorials/pipeline-in-blueocean-21-repository-branches-page.png" alt="Página de ramificações do repositório" width="100%"></span></p>
+<p><span class="image"><img src="../images/tutorials/pipeline-in-blueocean-21-repository-branches-page.png" alt="Página de branches do repositório" width="100%"></span></p>
 </div>
 </li>
 <li>
-<p>Clique no <code>master</code> ícone "Editar pipeline" da filial
-<span class="image"><img src="../images/tutorials/pipeline-in-blueocean-21a-edit-pipeline-on-branch.png" alt="Editar pipeline na ramificação" width="3%"></span>
-para abrir o editor de pipeline para esta ramificação.<br></p>
+<p>Clique no <code>master</code> ícone "Editar pipeline" da branch
+<span class="image"><img src="../images/tutorials/pipeline-in-blueocean-21a-edit-pipeline-on-branch.png" alt="Editar pipeline na branch" width="3%"></span>
+para abrir o editor de pipeline para esta branch.<br></p>
 </li>
 <li>
 <p>No editor principal do Pipeline, clique no ícone <strong>+</strong> à direita do 
@@ -28651,12 +28651,12 @@ Se o seu Pipeline alterado foi executado com êxito, veja como deve ser a interf
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Na interface principal do Blue Ocean, clique em <strong>Ramos</strong> no canto superior direito para acessar a <code>master</code> filial do seu repositório .</p>
+<p>Na interface principal do Blue Ocean, clique em <strong>Ramos</strong> no canto superior direito para acessar a <code>master</code> branch do seu repositório .</p>
 </li>
 <li>
-<p>Clique no <code>master</code> ícone "Editar pipeline" da filial
-<span class="image"><img src="../images/tutorials/pipeline-in-blueocean-21a-edit-pipeline-on-branch.png" alt="Editar pipeline na ramificação" width="3%"></span>
-para abrir o editor de pipeline para esta ramificação.</p>
+<p>Clique no <code>master</code> ícone "Editar pipeline" da branch
+<span class="image"><img src="../images/tutorials/pipeline-in-blueocean-21a-edit-pipeline-on-branch.png" alt="Editar pipeline na branch" width="3%"></span>
+para abrir o editor de pipeline para esta branch.</p>
 </li>
 <li>
 <p>No editor principal do Pipeline, clique no ícone <strong>+</strong> à direita do 
@@ -28774,11 +28774,11 @@ diretiva. A localização desta diretiva no stage "Test" significa que a variáv
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Na interface principal do Blue Ocean, clique em <strong>Ramos</strong> no canto superior direito para acessar a <code>master</code> filial do seu repositório .</p>
+<p>Na interface principal do Blue Ocean, clique em <strong>Ramos</strong> no canto superior direito para acessar a <code>master</code> branch do seu repositório .</p>
 </li>
 <li>
-<p>Clique no <code>master</code> ícone "Editar pipeline" da filial
-<span class="image"><img src="../images/tutorials/pipeline-in-blueocean-21a-edit-pipeline-on-branch.png" alt="Editar pipeline na ramificação" width="3%"></span> para abrir o editor de pipeline para esta ramificação.</p>
+<p>Clique no <code>master</code> ícone "Editar pipeline" da branch
+<span class="image"><img src="../images/tutorials/pipeline-in-blueocean-21a-edit-pipeline-on-branch.png" alt="Editar pipeline na branch" width="3%"></span> para abrir o editor de pipeline para esta branch.</p>
 </li>
 <li>
 <p>No editor principal do Pipeline, clique no stage <strong>Teste que</strong> você criou
@@ -29320,7 +29320,7 @@ Apprenda Plugin
 <ul>
 <li>
 <a href="https://www.jenkins.io/doc/pipeline/steps/apprenda/#stepclass-apprendabuilder-deploy-to-apprenda">
-<code>step([$class: 'ApprendaBuilder'])</code>: Implantar no Apprenda
+<code>step([$class: 'ApprendaBuilder'])</code>: Deploy no Apprenda
 </a>
 </li>
 </ul>
@@ -29800,7 +29800,7 @@ Plug-in do AWS CodeDeploy para Jenkins
 <ul>
 <li>
 <a href="https://www.jenkins.io/doc/pipeline/steps/codedeploy/#stepclass-awscodedeploypublisher-deploy-an-application-to-aws-codedeploy">
-<code>step([$class: 'AWSCodeDeployPublisher'])</code>: Implantar um aplicativo no AWS CodeDeploy
+<code>step([$class: 'AWSCodeDeployPublisher'])</code>: Deploy um aplicativo no AWS CodeDeploy
 </a>
 </li>
 </ul>
@@ -29940,12 +29940,12 @@ Plug-in do Serviço de Contêiner do Azure
 <ul>
 <li>
 <a href="https://www.jenkins.io/doc/pipeline/steps/azure-acs/#acsdeploy-deploy-to-azure-container-service-aks">
-<code>acsDeploy</code>: Implantar no Serviço de Contêiner do Azure (AKS)
+<code>acsDeploy</code>: Deploy no Serviço de Contêiner do Azure (AKS)
 </a>
 </li>
 <li>
 <a href="https://www.jenkins.io/doc/pipeline/steps/azure-acs/#stepclass-acsdeploymentbuilder-deploy-to-azure-container-service-aks">
-<code>step([$class: 'ACSDeploymentBuilder'])</code>: Implantar no Serviço de Contêiner do Azure (AKS)
+<code>step([$class: 'ACSDeploymentBuilder'])</code>: Deploy no Serviço de Contêiner do Azure (AKS)
 </a>
 </li>
 </ul>
@@ -30030,12 +30030,12 @@ Plug-in do Azure Service Fabric
 <ul>
 <li>
 <a href="https://www.jenkins.io/doc/pipeline/steps/service-fabric/#azureservicefabricpublish-deploy-service-fabric-project">
-<code>azureServiceFabricPublish</code>: Implantar projeto do Service Fabric
+<code>azureServiceFabricPublish</code>: Deploy projeto do Service Fabric
 </a>
 </li>
 <li>
 <a href="https://www.jenkins.io/doc/pipeline/steps/service-fabric/#stepclass-servicefabricpublisher-deploy-service-fabric-project">
-<code>step([$class: 'ServiceFabricPublisher'])</code>: Implantar projeto do Service Fabric
+<code>step([$class: 'ServiceFabricPublisher'])</code>: Deploy projeto do Service Fabric
 </a>
 </li>
 </ul>
@@ -30433,12 +30433,12 @@ Plug-in do CA Service Virtualization
 <ul>
 <li>
 <a href="https://www.jenkins.io/doc/pipeline/steps/ca-service-virtualization/#svdeploytest-ca-service-virtualization-deploy-test">
-<code>svDeployTest</code>: CA Service Virtualization - Implantar teste
+<code>svDeployTest</code>: CA Service Virtualization - Deploy teste
 </a>
 </li>
 <li>
 <a href="https://www.jenkins.io/doc/pipeline/steps/ca-service-virtualization/#svdeployvirtualservice-ca-service-virtualization-deploy-virtual-service">
-<code>svDeployVirtualService</code>: CA Service Virtualization - Implantar serviço virtual
+<code>svDeployVirtualService</code>: CA Service Virtualization - Deploy serviço virtual
 </a>
 </li>
 <li>
@@ -30750,7 +30750,7 @@ CloudBees Flow
 </li>
 <li>
 <a href="https://www.jenkins.io/doc/pipeline/steps/electricflow/#cloudbeesflowdeployapplication-cloudbees-flow-deploy-application">
-<code>cloudBeesFlowDeployApplication</code>: CloudBees Flow - Implantar aplicativo
+<code>cloudBeesFlowDeployApplication</code>: CloudBees Flow - Deploy aplicativo
 </a>
 </li>
 <li>
@@ -30765,7 +30765,7 @@ CloudBees Flow
 </li>
 <li>
 <a href="https://www.jenkins.io/doc/pipeline/steps/electricflow/#cloudbeesflowcreateanddeployappfromjenkinspackage-cloudbees-flow-createdeploy-application-from-deployment-package">
-<code>cloudBeesFlowCreateAndDeployAppFromJenkinsPackage</code>: CloudBees Flow - Criar/implantar aplicativos a partir do pacote de implantação
+<code>cloudBeesFlowCreateAndDeployAppFromJenkinsPackage</code>: CloudBees Flow - Criar/deploy aplicativos a partir do pacote de implantação
 </a>
 </li>
 <li>
@@ -31302,7 +31302,7 @@ Continuum Plugin
 </li>
 <li>
 <a href="https://www.jenkins.io/doc/pipeline/steps/continuum/#ctmsetpidata-set-workspace-data-on-a-running-continuum-pipeline-instance">
-<code>ctmSetPiData</code>: Defina os dados da área de trabalho em uma instância de pipeline do Continuum em execução.
+<code>ctmSetPiData</code>: Defina os dados da workspace em uma instância de pipeline do Continuum em execução.
 </a>
 </li>
 </ul>
@@ -31423,7 +31423,7 @@ Plug-in de Implementador de Pacotes de Conteúdo CRX
 </li>
 <li>
 <a href="https://www.jenkins.io/doc/pipeline/steps/crx-content-package-deployer/#crxdeploy-deploy-content-packages-to-crx">
-<code>crxDeploy</code>: Implantar pacotes de conteúdo no CRX
+<code>crxDeploy</code>: Deploy pacotes de conteúdo no CRX
 </a>
 </li>
 <li>
@@ -31614,7 +31614,7 @@ Delphix Plugin
 </li>
 <li>
 <a href="https://www.jenkins.io/doc/pipeline/steps/deploy-dashboard/">
-Implantar o plug-in do painel da Namecheap
+Deploy o plug-in do painel da Namecheap
 </a>
 <ul>
 <li>
@@ -31631,12 +31631,12 @@ Implantar o plug-in do painel da Namecheap
 </li>
 <li>
 <a href="https://www.jenkins.io/doc/pipeline/steps/deploy/">
-Implantar no contêiner Plugin
+Deploy no contêiner Plugin
 </a>
 <ul>
 <li>
 <a href="https://www.jenkins.io/doc/pipeline/steps/deploy/#deploy-deploy-warear-to-a-container">
-<code>deploy</code>: Implantar war/ear em um contêiner
+<code>deploy</code>: Deploy war/ear em um contêiner
 </a>
 </li>
 </ul>
@@ -32600,7 +32600,7 @@ Plugin GitHub
 </li>
 <li>
 <a href="https://www.jenkins.io/doc/pipeline/steps/ghprb/">
-Construtor de solicitações pull do GitHub
+Construtor de pull requests do GitHub
 </a>
 <ul>
 <li>
@@ -32729,7 +32729,7 @@ Plug-in do mecanismo do Google Kubernetes
 <ul>
 <li>
 <a href="https://www.jenkins.io/doc/pipeline/steps/google-kubernetes-engine/#kubernetesenginedeploy-deploy-to-google-kubernetes-engine">
-<code>kubernetesEngineDeploy</code>: Implantar no Google Kubernetes Engine
+<code>kubernetesEngineDeploy</code>: Deploy no Google Kubernetes Engine
 </a>
 </li>
 </ul>
@@ -33134,7 +33134,7 @@ Plugin Inedo BuildMaster.
 </li>
 <li>
 <a href="https://www.jenkins.io/doc/pipeline/steps/inedo-buildmaster/#buildmasterdeploybuildtostage-deploy-buildmaster-build-to-stage">
-<code>buildMasterDeployBuildToStage</code>: Implantar BuildMaster Build no stage
+<code>buildMasterDeployBuildToStage</code>: Deploy BuildMaster Build no stage
 </a>
 </li>
 <li>
@@ -33386,7 +33386,7 @@ Steps do pipeline do JIRA
 </li>
 <li>
 <a href="https://www.jenkins.io/doc/pipeline/steps/jira-steps/#jiradownloadattachment-jira-steps-download-a-file-to-workspace-directory-is-optional">
-<code>jiraDownloadAttachment</code>: Steps do JIRA: Faça o download de um arquivo para a área de trabalho (o diretório é opcional)
+<code>jiraDownloadAttachment</code>: Steps do JIRA: Faça o download de um arquivo para a workspace (o diretório é opcional)
 </a>
 </li>
 <li>
@@ -33556,7 +33556,7 @@ Steps do pipeline do JIRA
 </li>
 <li>
 <a href="https://www.jenkins.io/doc/pipeline/steps/jira-steps/#jirauploadattachment-jira-steps-attach-a-file-from-workspace-to-an-issue">
-<code>jiraUploadAttachment</code>: Steps do JIRA: Anexar um arquivo da área de trabalho a um problema
+<code>jiraUploadAttachment</code>: Steps do JIRA: Anexar um arquivo da workspace a um problema
 </a>
 </li>
 <li>
@@ -33928,12 +33928,12 @@ Plug-in de implantação contínua do Kubernetes
 <ul>
 <li>
 <a href="https://www.jenkins.io/doc/pipeline/steps/kubernetes-cd/#kubernetesdeploy-deploy-to-kubernetes">
-<code>kubernetesDeploy</code>: Implantar no Kubernetes
+<code>kubernetesDeploy</code>: Deploy no Kubernetes
 </a>
 </li>
 <li>
 <a href="https://www.jenkins.io/doc/pipeline/steps/kubernetes-cd/#stepclass-kubernetesdeploy-deploy-to-kubernetes">
-<code>step([$class: 'KubernetesDeploy'])</code>: Implantar no Kubernetes
+<code>step([$class: 'KubernetesDeploy'])</code>: Deploy no Kubernetes
 </a>
 </li>
 </ul>
@@ -34444,7 +34444,7 @@ Ferramentas de automação de aplicativos Micro Focus
 </li>
 <li>
 <a href="https://www.jenkins.io/doc/pipeline/steps/hp-application-automation-tools-plugin/#stepclass-svdeploybuilder-sv-deploy-virtual-service">
-<code>step([$class: 'SvDeployBuilder'])</code>: SV: implantar serviço virtual
+<code>step([$class: 'SvDeployBuilder'])</code>: SV: deploy serviço virtual
 </a>
 </li>
 <li>
@@ -34479,7 +34479,7 @@ Ferramentas de automação de aplicativos Micro Focus
 </li>
 <li>
 <a href="https://www.jenkins.io/doc/pipeline/steps/hp-application-automation-tools-plugin/#svdeploystep-sv-deploy-virtual-service">
-<code>svDeployStep</code>: SV: implantar serviço virtual
+<code>svDeployStep</code>: SV: deploy serviço virtual
 </a>
 </li>
 <li>
@@ -35170,12 +35170,12 @@ OSF Builder Suite para Salesforce Commerce Cloud :: Importação de dados
 </li>
 <li>
 <a href="https://www.jenkins.io/doc/pipeline/steps/osf-builder-suite-for-sfcc-deploy/">
-OSF Builder Suite para Salesforce Commerce Cloud :: Implantar
+OSF Builder Suite para Salesforce Commerce Cloud :: Deploy
 </a>
 <ul>
 <li>
 <a href="https://www.jenkins.io/doc/pipeline/steps/osf-builder-suite-for-sfcc-deploy/#osfbuildersuiteforsfccdeploy-osf-builder-suite-for-salesforce-commerce-cloud-deploy">
-<code>osfBuilderSuiteForSFCCDeploy</code>: OSF Builder Suite para Salesforce Commerce Cloud :: Implantar
+<code>osfBuilderSuiteForSFCCDeploy</code>: OSF Builder Suite para Salesforce Commerce Cloud :: Deploy
 </a>
 </li>
 </ul>
@@ -35527,7 +35527,7 @@ Steps do utilitário de pipeline
 </li>
 <li>
 <a href="https://www.jenkins.io/doc/pipeline/steps/pipeline-utility-steps/#findfiles-find-files-in-the-workspace">
-<code>findFiles</code>: Encontre arquivos na área de trabalho
+<code>findFiles</code>: Encontre arquivos na workspace
 </a>
 </li>
 <li>
@@ -35537,12 +35537,12 @@ Steps do utilitário de pipeline
 </li>
 <li>
 <a href="https://www.jenkins.io/doc/pipeline/steps/pipeline-utility-steps/#readcsv-read-content-from-a-csv-file-in-the-workspace">
-<code>readCSV</code>: Leia o conteúdo de um arquivo CSV na área de trabalho.
+<code>readCSV</code>: Leia o conteúdo de um arquivo CSV na workspace.
 </a>
 </li>
 <li>
 <a href="https://www.jenkins.io/doc/pipeline/steps/pipeline-utility-steps/#readjson-read-json-from-files-in-the-workspace">
-<code>readJSON</code>: Leia JSON de arquivos na área de trabalho.
+<code>readJSON</code>: Leia JSON de arquivos na workspace.
 </a>
 </li>
 <li>
@@ -35557,12 +35557,12 @@ Steps do utilitário de pipeline
 </li>
 <li>
 <a href="https://www.jenkins.io/doc/pipeline/steps/pipeline-utility-steps/#readproperties-read-properties-from-files-in-the-workspace-or-text">
-<code>readProperties</code>: Leia as propriedades dos arquivos na área de trabalho ou texto.
+<code>readProperties</code>: Leia as propriedades dos arquivos na workspace ou texto.
 </a>
 </li>
 <li>
 <a href="https://www.jenkins.io/doc/pipeline/steps/pipeline-utility-steps/#readyaml-read-yaml-from-files-in-the-workspace-or-text">
-<code>readYaml</code>: Leia o yaml de arquivos na área de trabalho ou texto.
+<code>readYaml</code>: Leia o yaml de arquivos na workspace ou texto.
 </a>
 </li>
 <li>
@@ -35577,7 +35577,7 @@ Steps do utilitário de pipeline
 </li>
 <li>
 <a href="https://www.jenkins.io/doc/pipeline/steps/pipeline-utility-steps/#touch-create-a-file-if-not-already-exist-in-the-workspace-and-set-the-timestamp">
-<code>touch</code>: Crie um arquivo (se ainda não existir) na área de trabalho e defina o carimbo de data e hora
+<code>touch</code>: Crie um arquivo (se ainda não existir) na workspace e defina o carimbo de data e hora
 </a>
 </li>
 <li>
@@ -35587,12 +35587,12 @@ Steps do utilitário de pipeline
 </li>
 <li>
 <a href="https://www.jenkins.io/doc/pipeline/steps/pipeline-utility-steps/#writecsv-write-content-to-a-csv-file-in-the-workspace">
-<code>writeCSV</code>: Grave conteúdo em um arquivo CSV na área de trabalho.
+<code>writeCSV</code>: Grave conteúdo em um arquivo CSV na workspace.
 </a>
 </li>
 <li>
 <a href="https://www.jenkins.io/doc/pipeline/steps/pipeline-utility-steps/#writejson-write-json-to-a-file-in-the-workspace">
-<code>writeJSON</code>: Grave JSON em um arquivo na área de trabalho.
+<code>writeJSON</code>: Grave JSON em um arquivo na workspace.
 </a>
 </li>
 <li>
@@ -35679,7 +35679,7 @@ Pipeline: steps da AWS
 </li>
 <li>
 <a href="https://www.jenkins.io/doc/pipeline/steps/pipeline-aws/#deployapi-deploy-the-given-api-gateway-api">
-<code>deployAPI</code>: Implantar a API API Gateway fornecida
+<code>deployAPI</code>: Deploy a API API Gateway fornecida
 </a>
 </li>
 <li>
@@ -35808,7 +35808,7 @@ Pipeline: steps básicas
 </li>
 <li>
 <a href="https://www.jenkins.io/doc/pipeline/steps/workflow-basic-steps/#deletedir-recursively-delete-the-current-directory-from-the-workspace">
-<code>deleteDir</code>: Exclua recursivamente o diretório atual da área de trabalho
+<code>deleteDir</code>: Exclua recursivamente o diretório atual da workspace
 </a>
 </li>
 <li>
@@ -35828,7 +35828,7 @@ Pipeline: steps básicas
 </li>
 <li>
 <a href="https://www.jenkins.io/doc/pipeline/steps/workflow-basic-steps/#fileexists-verify-if-file-exists-in-workspace">
-<code>fileExists</code>: Verifique se o arquivo existe na área de trabalho
+<code>fileExists</code>: Verifique se o arquivo existe na workspace
 </a>
 </li>
 <li>
@@ -35848,7 +35848,7 @@ Pipeline: steps básicas
 </li>
 <li>
 <a href="https://www.jenkins.io/doc/pipeline/steps/workflow-basic-steps/#readfile-read-file-from-workspace">
-<code>readFile</code>: Ler arquivo da área de trabalho
+<code>readFile</code>: Ler arquivo da workspace
 </a>
 </li>
 <li>
@@ -36064,7 +36064,7 @@ Pipeline: Multibranch
 </li>
 <li>
 <a href="https://www.jenkins.io/doc/pipeline/steps/workflow-multibranch/#resolvescm-resolves-an-scm-from-an-scm-source-and-a-list-of-candidate-target-branch-names">
-<code>resolveScm</code>: Resolve um SCM a partir de uma origem do SCM e uma lista de nomes de filiais de destino candidatos
+<code>resolveScm</code>: Resolve um SCM a partir de uma origem do SCM e uma lista de nomes de branches de destino candidatos
 </a>
 </li>
 </ul>
@@ -36312,7 +36312,7 @@ Plug-in de integração pré-testada
 <ul>
 <li>
 <a href="https://www.jenkins.io/doc/pipeline/steps/pretested-integration/#pretestedintegrationpublisher-pretested-integration-publisher-to-push-to-integration-branch">
-<code>pretestedIntegrationPublisher</code>: Publicador de integração pré-testada para enviar para a filial de integração
+<code>pretestedIntegrationPublisher</code>: Publicador de integração pré-testada para enviar para a branch de integração
 </a>
 </li>
 </ul>
@@ -36464,7 +36464,7 @@ Puppet Enterprise Pipeline
 <ul>
 <li>
 <a href="https://www.jenkins.io/doc/pipeline/steps/puppet-enterprise-pipeline/#puppetcode-deploy-puppet-environment-code">
-<code>puppetCode</code>: Implantar código de ambiente fantoche
+<code>puppetCode</code>: Deploy código de ambiente fantoche
 </a>
 </li>
 <li>
@@ -36737,7 +36737,7 @@ Rancher Plugin
 <ul>
 <li>
 <a href="https://www.jenkins.io/doc/pipeline/steps/rancher/#rancher-deployupgrade-rancher-service">
-<code>rancher</code>: Implantar/atualizar serviço Rancher
+<code>rancher</code>: Deploy/atualizar serviço Rancher
 </a>
 </li>
 </ul>
@@ -36768,12 +36768,12 @@ Raspberry Pi Build Status Plugin
 </li>
 <li>
 <a href="https://www.jenkins.io/doc/pipeline/steps/redeploy-rancher2-workload/">
-Reimplantar o plug-in de carga de trabalho do Rancher2.x
+Redeploy o plug-in de carga de trabalho do Rancher2.x
 </a>
 <ul>
 <li>
 <a href="https://www.jenkins.io/doc/pipeline/steps/redeploy-rancher2-workload/#rancherredeploy-redeploy-rancher2-x-workload">
-<code>rancherRedeploy</code>: Reimplantar a carga de trabalho do Rancher2.x
+<code>rancherRedeploy</code>: Redeploy a carga de trabalho do Rancher2.x
 </a>
 </li>
 </ul>
@@ -38381,7 +38381,7 @@ Plug-in do vSphere
 </li>
 <li>
 <a href="https://www.jenkins.io/doc/pipeline/steps/vsphere-cloud/#stepclass-deploy-deploy-vm-from-template">
-<code>step([$class: 'Deploy'])</code>: Implantar VM do modelo
+<code>step([$class: 'Deploy'])</code>: Deploy VM do modelo
 </a>
 </li>
 <li>
@@ -38624,12 +38624,12 @@ Plug-in do Worksoft Execution Manager
 </li>
 <li>
 <a href="https://www.jenkins.io/doc/pipeline/steps/ws-cleanup/">
-Plug-in de limpeza da área de trabalho
+Plug-in de limpeza da workspace
 </a>
 <ul>
 <li>
 <a href="https://www.jenkins.io/doc/pipeline/steps/ws-cleanup/#cleanws-delete-workspace-when-build-is-done">
-<code>cleanWs</code>: Excluir área de trabalho quando a compilação for concluída
+<code>cleanWs</code>: Excluir workspace quando a compilação for concluída
 </a>
 </li>
 </ul>
@@ -38700,7 +38700,7 @@ XebiaLabs XL Deploy Plugin
 </li>
 <li>
 <a href="https://www.jenkins.io/doc/pipeline/steps/deployit-plugin/#xlddeploy-deploy-a-package-to-a-environment">
-<code>xldDeploy</code>: Implantar um pacote em um ambiente
+<code>xldDeploy</code>: Deploy um pacote em um ambiente
 </a>
 </li>
 <li>
